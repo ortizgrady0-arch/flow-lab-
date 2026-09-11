@@ -195,7 +195,7 @@ Assumptions (all labelled): price $199 base, $249 with integration; setup $250 (
 
 Net monthly at month 6 base: $597 - 3 x $40 - $50 = **~$427**. Month 12 base: $1,045 - 5 x $40 - $50 = **~$795**.
 
-**Hours and effective hourly:** 10-12 h/wk (~45 h/mo). Month 6 base ~$427 / 45 h = **~$9-10/hr** (demand skeptic: $10-15; the difference is the skeptic's lower hours assumption); month 12 base ~$795 + a $250 setup / 45 h = **~$23/hr**; upside month 12 ~$1,750 net / 50 h = ~$35/hr. Cumulative over the first six months is near $0-8/hr (execution skeptic) because months 1-2 are unpaid.
+**Hours and effective hourly:** 10-12 h/wk (~45 h/mo). Month 6 base ~$427 / 45 h = **~$9-10/hr** (demand skeptic: $10-15); month 12 base ~$795 + a $250 setup / 45 h = **~$23/hr**; upside month 12 ~$1,750 net / 50 h = ~$35/hr. Cumulative over the first six months is near $0-8/hr (execution skeptic) because months 1-2 are unpaid.
 
 **Break-even:** fixed $50/mo is covered by one shop. Cumulative cash (startup $150 + $50/mo burn) is recovered by the first setup fee plus first month, i.e. at the first go-live (pilot day 15), around day 35-60 in the base ramp and day 60-90 if pilot 1 slips. The asset case only starts at 5+ retained shops.
 

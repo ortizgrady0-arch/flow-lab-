@@ -14,18 +14,18 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 
 - **Precondition check before day 1:** can you make 30+ local touches a week inside 7-8 am, 12-1 pm and 4-6 pm? If no, do not start; swap to podcast clipping per [[decisions/final-selection]].
 - **Week 1** builds the plumbing demo agent on Retell, a demo number, a one-page site with privacy/terms (needed for 10DLC), the prospect list of 100 off-suite plumbing shops within 30 minutes' drive, and makes the first 10 touches by day 7.
-- **Day 30 target:** 120+ touches, 12+ replies, 4+ live demos, 2 free pilots running. **Day 60 (kill gate):** 2+ paying shops (setup fee invoiced) or stop. **Day 90:** 3 paying, first weekly reports delivered, HVAC template forked for February.
+- **Day 30 target:** 105+ touches (120 if week 1 hits 30), 10+ replies, 3+ live demos, 2 free pilots running. **Day 60 (kill gate):** 2+ paying shops (setup fee invoiced at go-live, day 15 of each pilot) or stop. **Day 90:** 2 paying is the base case ($398 MRR, the same ramp as the report's month-3 base), 3 paying ($597) is the double-down case; first weekly reports delivered; HVAC template forked for February.
 - Acquisition is walk-ins and phone calls to owners, referral asks from every pilot, supply-house and trade-group presence; no cold email blasts, no cold SMS, no AI outbound (the documented beginner attempt, ClawOps, got zero replies from email in six weeks and every vendor already emails these owners).
-- Conversion assumptions are labelled: reply rate 10% of touches, demo rate 30% of replies, pilot rate 50% of demos, paid conversion 50% of pilots [all assumption; the skeptics found no data]. That chain needs ~130 touches per paying shop, so 30/wk yields one close per month, which is the base case.
+- Conversion assumptions are labelled: reply rate 10% of touches, demo rate 30% of replies, pilot rate 50% of demos, paid conversion 50% of pilots [all assumption; the skeptics found no data]. That chain needs ~130 touches per paying shop, so 30/wk yields one close per month from week 3, i.e. pilot 1 converting in week 5-6 and pilot 2 in week 7-8: two paying shops by day 60 with no margin, which is the base case and exactly the kill gate.
 - Templates included: walk-in script, phone script, voicemail, referral ask, 3-line follow-up text, pitch one-pager copy, onboarding questionnaire (18 fields), go-live SOP, service agreement clauses, 10DLC privacy/terms snippet.
-- Weekly time budget 12 h: outreach 5, build/onboarding 3, QA/babysitting 2, admin/reporting 1, learning 1. KPI dashboard: touches, replies, demos, pilots, paying shops, MRR, churn, intake accuracy, bookings/shop, hours/shop.
+- Weekly time budget 12 h at 0-2 shops: outreach 5, build/onboarding 3, QA/babysitting 1 h + 0.75 h per live shop (1.25 h for a shop in its first month), admin/reporting 1, learning 1. From shop 4 the QA block alone is ~4 h, so outreach drops to 3 h/wk unless you have 15 h; that trade-off is a day-90 gate input. KPI dashboard: touches, replies, demos, pilots, paying shops, MRR, churn, intake accuracy, bookings/shop, hours/shop.
 
 ## 1. Prerequisites checklist
 
 **Accounts and tools**
 - [ ] Retell account, $10 free credit, API key; one agent named for the plumbing template ([Retell pricing](https://www.retellai.com/pricing), 2026: $0.07/min engine, ~$0.13-0.31 all-in per CloudTalk/Cekura)
-- [ ] Twilio account, one local number (~$1.15/mo), voice + SMS enabled; A2P 10DLC Low-Volume Standard brand ($4.50) + campaign vetting ($15) for your own line (Twilio docs / Sociocs, 2026)
-- [ ] n8n self-hosted on a $5-7 VPS or free tier; Claude Pro; Claude API key with a $10 cap
+- [ ] Twilio account upgraded out of trial ($20 credit; a trial account plays an announcement on every call and only accepts inbound calls from 5 verified numbers, Twilio Help 2026), one local number (~$1.15/mo), voice + SMS enabled; Trust Hub Primary Business Profile created with business type **"ISV Reseller or Partner"** and approved, because every shop's 10DLC registration is a Secondary Customer Profile under that primary (Twilio ISV onboarding docs, 2026); A2P 10DLC Low-Volume Standard brand ($4.50) + campaign vetting ($15) for your own line (Twilio docs / Sociocs, 2026)
+- [ ] n8n reachable at a public HTTPS URL (Retell webhooks and Twilio status callbacks need it): either n8n Cloud trial for weeks 1-4 then migrate, or self-hosted with the docker-compose + Caddy + Postgres template on a $5-7 Hetzner/DigitalOcean droplet under a subdomain of your site (Nordbastion 2026 guide; budget 2-3 h, see Day 4); Claude Pro; Claude API key with a $10 cap
 - [ ] Google Workspace or free Google account: Calendar, Sheets, Drive, Forms
 - [ ] Stripe account with Billing enabled (2.9% + $0.30; Billing 0.7%)
 - [ ] Loom free, a Google Voice or cell number you will give owners
@@ -38,23 +38,23 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 - [ ] Service agreement (template clauses in section 7), onboarding questionnaire (Google Form), go-live SOP
 
 **Legal and admin basics (US, general information, not legal advice)**
-- [ ] Business name: sole proprietorship under your own name is enough to start; a DBA/LLC in your state is a $50-300 filing [assumption on cost range]; get an EIN (free, IRS) so you are not handing out your SSN to Twilio and Stripe
+- [ ] Business name: sole proprietorship under your own name is enough to start; a DBA/LLC in your state is a $50-300 filing [assumption on cost range]; get your own EIN first (IRS online, ~15 min, free) because the Twilio ISV primary profile and Stripe both ask for it and you do not want to hand out your SSN
 - [ ] Tax: self-employment income; set aside ~25-30% of net; track platform costs as expenses [assumption on rate; no specific guidance found]
 - [ ] Insurance: not required by any platform found; buy general liability only if a client contract asks (cost: no data found)
-- [ ] Compliance one-pager for yourself: AI disclosure first sentence; recording consent by state (11-13 all-party states per Sembly/Viirtue 2026); inbound-only rule; 10DLC per shop under the shop's EIN
+- [ ] Compliance one-pager for yourself: AI disclosure first sentence (satisfies Utah SB 149, Maine LD 1727 Chatbot Disclosure Act in force since 2025-09-24 and covering voice callbots, and California B.O.T.; Colorado's AI Act is delayed to 2027-01-01 by SB 189); recording consent by state (treat CA, DE, FL, IL, MD, MA, MT, NV, NH, PA, WA as all-party, plus CT, MI, OR, VT as all-party to be safe; Recording Law / NextPhone / Viirtue 2026); inbound-only rule and the text-back rules (one informational SMS to a consumer-initiated contact, inbound call logged as consent, STOP included); 10DLC per shop via the Twilio ISV flow (secondary customer profile under the shop's legal name and EIN)
 - [ ] Retell Partner Program application once shop #1 is live (tiers start at 1-8 customers onboarded in 6 months)
 
-## 2. Week 1, day by day (start Thursday 2026-09-11)
+## 2. Week 1, day by day (start Thursday 2026-09-17; 2026-09-11 is a Friday, so use the intervening days to read this package, get your EIN and open the accounts)
 
 | Day | Tasks | Expected output |
 |---|---|---|
-| **Day 1 (Thu)** | 1) Create Retell, Twilio, n8n, Stripe accounts; buy the Twilio number. 2) Paste the plumbing system prompt (automation-stack 4.1) into a Retell agent with placeholder shop values; pick a natural voice; set the first-sentence disclosure. 3) Make 5 calls from your cell; fix the worst turn. | A demo line that answers, discloses, triages and takes a message |
+| **Day 1 (Thu)** | 1) Create Retell, Twilio and Stripe accounts; upgrade Twilio out of trial ($20 credit) and buy the number, or use a Retell-provisioned number ($2/mo) for the voice-only demo; in Twilio Trust Hub create the Primary Business Profile as "ISV Reseller or Partner" with your own EIN (approval takes days; needed before any shop's 10DLC). 2) Paste the plumbing system prompt (automation-stack 4.1) into a Retell agent with placeholder shop values; pick a natural voice; set the first-sentence disclosure. 3) Make 5 calls from your cell; fix the worst turn. | A demo line that answers, discloses, triages and takes a message |
 | **Day 2 (Fri)** | 1) Add `get_availability`/`book_slot` tools pointing at a stub n8n webhook that returns two fake windows. 2) Generate 40 test scenarios (prompt 4.5); run 15; score in a sheet. 3) Draft the one-page site copy with Claude; publish on Carrd/Framer/Google Sites with privacy + terms pages. | Booking works on the demo line; scoresheet started; site live |
 | **Day 3 (Sat)** | 1) Submit your own 10DLC brand + campaign (use the live site URLs). 2) Build the prospect list: Google Maps "plumber" + "drain cleaning" within 30 min drive; 100 rows with name, phone, address, website, review count, whether the site shows Jobber/HCP/ServiceTitan booking widgets, whether recent reviews mention "never called back". 3) Claude scores each 1-5 for fit (1-5 trucks, no suite, review complaints). | 100-shop list ranked; 10DLC submitted |
-| **Day 4 (Sun)** | 1) Record a 60-second Loom of a demo call. 2) Write the walk-in script, phone script and voicemail (section 5), practise out loud 10 times. 3) Draft the onboarding questionnaire as a Google Form (section 7). 4) Print 20 one-pagers. | Sales kit ready |
+| **Day 4 (Sun)** | 1) n8n (budget 2-3 h): either (a) start an n8n Cloud free trial for weeks 1-4 and migrate later, or (b) self-host with the official docker-compose + Caddy + Postgres template on a $5-7 Hetzner/DigitalOcean droplet, pointed at a subdomain of your site (A record, WEBHOOK_URL set to the https URL); done when a test webhook URL returns 200 over HTTPS from your phone. 2) Record a 60-second Loom of a demo call. 3) Write the walk-in script, phone script and voicemail (section 5), practise out loud 10 times. 4) Print 20 one-pagers. | n8n live over HTTPS; sales kit ready |
 | **Day 5 (Mon)** | 1) 7:30-8:00 am: 4 phone calls to top-ranked shops (owners answer early). 2) 12:00-1:00: 3 walk-ins at shops with a visible office. 3) Log every touch and reply in the outreach sheet. 4) Evening: run 10 more test scenarios; fix address read-back. | 7 touches logged; first reactions noted |
-| **Day 6 (Tue)** | 1) 7:30 am: 4 calls. 2) 4:30-6:00 pm: 3 walk-ins (owners back from jobs). 3) Visit one plumbing supply house counter and ask who the good small shops are; leave 3 cards. 4) Evening: n8n A1 skeleton (webhook receives post-call JSON, appends to sheet). | 10+ touches cumulative; A1 logging live |
-| **Day 7 (Wed)** | 1) 7:30 am: 4 calls including follow-ups to anyone who said "call me back". 2) Lunch: 2 walk-ins. 3) Weekly review: touches, replies, objections heard verbatim; rewrite the opener with Claude using real objections. 4) Book the first demo or pilot start if any reply is warm. | Week 1 close: 15-20 touches, 1-3 replies, opener v2, list of objections |
+| **Day 6 (Tue)** | 1) 7:30 am: 4 calls. 2) 4:30-6:00 pm: 3 walk-ins (owners back from jobs). 3) Visit one plumbing supply house counter and ask who the good small shops are; leave 3 cards. 4) Evening: n8n A1 skeleton on the Day-4 instance (Retell post-call webhook received over HTTPS, JSON appended to sheet). | 10+ touches cumulative; A1 logging live |
+| **Day 7 (Wed)** | 1) 7:30 am: 4 calls including follow-ups to anyone who said "call me back". 2) Lunch: 2 walk-ins. 3) Weekly review: touches, replies, objections heard verbatim; rewrite the opener with Claude using real objections. 4) Evening: draft the onboarding questionnaire as a Google Form (section 7). 5) Book the first demo or pilot start if any reply is warm. | Week 1 close: 15-20 touches, 1-3 replies, opener v2, list of objections, questionnaire ready |
 
 ## 3. 30 / 60 / 90-day plan
 
@@ -66,26 +66,26 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 | 2 | 30 touches; 10DLC approved for own line; A1 booking write to Google Calendar working | touches 30; replies 3; demos 1 |
 | 3 | 30 touches; first free pilot live (voice only, manual booking entry) | touches 30; demos 2; pilots 1 |
 | 4 | 30 touches; second pilot; daily transcript skim; first owner alert SMS delivered | touches 30; pilots 2; intake accuracy measured on >=20 real calls |
-| **Day 30 gate** | | cumulative touches 120+; replies 12+; demos 4+; pilots 2; intake accuracy >=80% |
+| **Day 30 gate** | | cumulative touches 105+ (15-20 in week 1 + 3 x 30; 120 only if week 1 hits 30); replies 10+; demos 3+; pilots 2; intake accuracy >=80% |
 
 **Days 31-60: convert pilots, automate A1/A2, hit the kill gate**
 
 | Week | Milestones | KPIs |
 |---|---|---|
-| 5 | Pilot 1 converts: setup invoice $250 + $199/mo on Stripe; submit shop's 10DLC | paying 1; MRR $199 |
+| 5 | Pilot 1 go-live (day 15 of its pilot): $250 setup invoice + $199/mo subscription raised together on Stripe; submit the shop's 10DLC (subaccount + secondary customer profile + brand + campaign) | paying 1; MRR $199 |
 | 6 | A2 text-back live for shop 1 once campaign approved; A1 owner SMS + daily digest automated; 30 touches with a referral ask to pilot owners | touches 30; referrals asked 2 |
-| 7 | Pilot 2 converts or is replaced; first weekly recovered-calls report emailed; nightly transcript export | paying 2; reports sent 2 |
-| 8 | Third pilot from a referral or supply-house intro; Retell partner application | pilots 1 new; cumulative touches 240+ |
+| 7 | Pilot 2 goes live (converts) or is replaced; first weekly recovered-calls report emailed; nightly transcript export | paying 2; reports sent 2 |
+| 8 | Third pilot from a referral or supply-house intro; Retell partner application | pilots 1 new; cumulative touches 225+ |
 | **Day 60 kill gate** | | **2+ paying shops** with setup fees invoiced, or stop; intake accuracy >=80%; no agent broken twice in a month; 10DLC approved within 30 days of go-live |
 
 **Days 61-90: third shop, template hardening, HVAC fork**
 
 | Week | Milestones | KPIs |
 |---|---|---|
-| 9 | Shop 3 live; onboarding time <=4 h; smoke-test workflow after Retell changelogs | paying 3; onboarding hours logged |
+| 9 | Pilot 3 live (converts by week 11-12 in the double-down case); onboarding time <=4 h; smoke-test workflow after Retell changelogs | paying 2 (base) to 3; onboarding hours logged |
 | 10 | Monthly review call with shop 1; offer annual $149 or integration upgrade $249 | upsell/annual conversions 1 |
 | 11 | Fork the HVAC template (no-heat/no-cool rules, thermostat/CO script); build HVAC prospect list for a Feb-Apr push | HVAC template scored >=36/40 on scripted calls |
-| 12 | Quarterly numbers: MRR, churn, hours/shop, cost/shop; decide double-down/adjust/kill (section 6) | MRR $600+ base; churn events <=1; hours/shop <=6/mo |
+| 12 | Quarterly numbers: MRR, churn, hours/shop, cost/shop, total hours; decide double-down/adjust/kill (section 6) | MRR $398 base / $597 double-down; cumulative touches 345+; churn events <=1; hours/shop <=6/mo; total hours <=12 or outreach cut to 3 h |
 
 ## 4. Acquisition playbook: first 10 paying shops
 
@@ -137,9 +137,9 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 
 | Gate | Double down if | Adjust if | Kill (or swap) if |
 |---|---|---|---|
-| **Day 30** | 2 pilots live, intake accuracy >=80%, replies >=10% of touches | pilots 1 or replies 5-10%: rewrite opener, re-rank list, add supply-house channel | 0 pilots after 120 touches AND replies <5%; or intake accuracy <70% on 20+ real calls; or you could not make 30 touches/wk (schedule condition failed) -> swap to podcast clipping |
+| **Day 30** | 2 pilots live, intake accuracy >=80%, replies >=10% of touches | pilots 1 or replies 5-10%: rewrite opener, re-rank list, add supply-house channel | 0 pilots after 105 touches AND replies <5%; or intake accuracy <70% on 20+ real calls; or you could not make 30 touches/wk (schedule condition failed) -> swap to podcast clipping |
 | **Day 60** | 2+ paying shops, MRR >=$398, 10DLC approved for shop 1, zero double-breaks | 1 paying: extend 30 days only if 2 pilots are live and accuracy >=80% | <2 paying after 60 days of 30+ touches/wk (binding criterion); or agent broken twice in a month by platform updates; or 10DLC not approved within 30 days of go-live |
-| **Day 90** | 3+ paying, churn 0-1, hours/shop <=6/mo, one referral-sourced close | 2 paying or hours/shop >8: template harder, cut integration tier, keep going to day 120 | <2 paying or 2+ churned of 3; move to pivot options in the report |
+| **Day 90** | 3+ paying, churn 0-1, hours/shop <=6/mo, total hours <=12 (or outreach consciously cut to 3 h/wk at 4+ shops), one referral-sourced close | 2 paying (base): keep the cadence to day 120; hours/shop >8 or total hours >12 with outreach still at 5 h: template harder, cut integration tier, decide whether you have 15 h/wk | <2 paying or 2+ churned of 3; move to pivot options in the report |
 
 ## 7. Ready-to-use templates
 
@@ -154,17 +154,17 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 > **$199/month after the trial · $250 setup · cancel any month.** Call {{demo number}} and try to book a fake burst pipe.
 
 **Onboarding questionnaire (18 fields, Google Form)**
-1. Shop name, owner name, owner cell (for alerts) 2. Trade(s) and services you do NOT do 3. Business hours per day; holidays 4. Service area: ZIPs or radius from address 5. Emergency definition (what gets same-day/after-hours) 6. Urgent definition (next available) 7. After-hours: transfer to on-call (number) or take message with callback promise (minutes) 8. Dispatch/service-call fee and the exact sentence you want said about pricing 9. Calendar or CRM to book into; booking windows (e.g. 8-12, 12-4, 4-7; weekends?) 10. Gas utility name and number for the safety script 11. Existing-customer handling (invoice, warranty questions) 12. Spanish needed? 13. Current phone setup: carrier, main number, who answers, how many rings before voicemail 14. State(s) you serve (recording consent) and whether recording is OK 15. Website URL, privacy policy and terms page URLs (for SMS registration); EIN for 10DLC 16. Average job value (optional; used only in your own report) 17. Name you want the assistant to use 18. Anything the assistant must never say.
+1. Shop name, owner name, owner cell (for alerts) 2. Trade(s) and services you do NOT do 3. Business hours per day; holidays 4. Service area: ZIPs or radius from address 5. Emergency definition (what gets same-day/after-hours) 6. Urgent definition (next available) 7. After-hours: transfer to on-call (number) or take message with callback promise (minutes) 8. Dispatch/service-call fee and the exact sentence you want said about pricing 9. Calendar or CRM to book into; booking windows (e.g. 8-12, 12-4, 4-7; weekends?) 10. Gas utility name and number for the safety script 11. Existing-customer handling (invoice, warranty questions) 12. Spanish needed? 13. Current phone setup: carrier, main number, who answers, how many rings before voicemail 14. State(s) you serve, including any neighbouring state your service area crosses into; cross-check against the all-party list (CA, DE, FL, IL, MD, MA, MT, NV, NH, PA, WA, plus CT, MI, OR, VT treated as all-party) and record whether recording is OK 15. For SMS registration (Twilio ISV flow): legal business name exactly as registered with the IRS, EIN, business address, website URL, privacy policy and terms page URLs, and an authorized representative (the owner): name, title, email and cell 16. Average job value (optional; used only in your own report) 17. Name you want the assistant to use 18. Anything the assistant must never say.
 
 **Go-live SOP (checklist, ~2 h templated)**
-1. Convert form to prompt + config (automation-stack 4.6); owner approves the pricing sentence in writing. 2. Configure Retell agent, tools, voice, disclosure; transfer number tested. 3. Twilio number assigned; A1 config row added; calendar shared to the service account. 4. Owner sets conditional call forwarding (no answer/busy) on his carrier; test from two cells. 5. 10DLC brand + campaign submitted under shop EIN; SMS flag off until approved. 6. 40 scripted calls; >=36/40; zero violations. 7. Loom walkthrough sent; first live alert confirmed by owner reply. 8. Stripe: setup invoice + subscription starting day 15 of pilot. 9. Calendar reminder: day-7 check-in, day-14 conversion call.
+1. Convert form to prompt + config (automation-stack 4.6); owner approves the pricing sentence in writing. 2. Configure Retell agent, tools, voice, disclosure; transfer number tested. 3. Twilio number assigned; A1 config row added; calendar shared to the service account. 4. Owner sets conditional call forwarding (no answer/busy) on his carrier; test from two cells. 5. 10DLC via the ISV flow: create a Twilio subaccount + Secondary Customer Profile from field 15 -> Low-Volume Standard brand ($4.50) -> campaign ($15) with the text-back described in the message-flow field as one informational SMS to a consumer-initiated inbound call; SMS flag off in n8n until the campaign is approved. 6. 40 scripted calls; >=36/40; zero violations. 7. Loom walkthrough sent; first live alert confirmed by owner reply. 8. Stripe: $250 setup invoice + $199/mo subscription both dated go-live (day 15 of the pilot); nothing is invoiced at pilot start. 9. Calendar reminder: day-7 check-in, day-14 conversion call.
 
 **Service agreement clauses (have a lawyer review before signing the third client; general information only)**
 - Service: inbound call answering, intake, booking, SMS follow-up and reporting as configured; no outbound marketing calls or texts.
 - AI disclosure and recording: the assistant identifies itself as AI and discloses recording; client is responsible for confirming recording is permitted in its state or instructs provider to disable it.
 - Accuracy: the assistant may mis-hear or mis-book; provider will correct configuration promptly; client reviews daily digests; provider's liability is capped at fees paid in the prior month.
 - Data: transcripts and caller data belong to the client, exported nightly; provider retains configurations and workflows.
-- Fees: $250 setup invoiced at go-live; $199/month in advance; cancel with 30 days' written notice; price changes with 30 days' notice.
+- Fees: pilot start (day 1) is free for 14 days; go-live is day 15, when the pilot auto-converts; the $250 setup fee and the first $199 month are invoiced together on go-live; $199/month in advance thereafter; cancel with 30 days' written notice; price changes with 30 days' notice.
 - Platform dependency: service relies on third-party providers (Retell, Twilio); outages beyond provider's control are not breaches, but fees are prorated for outages over 24 hours.
 
 **10DLC privacy/terms snippet for the shop's site (paste in footer pages)**
@@ -177,30 +177,32 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 
 | KPI | Target (day 30 / 60 / 90) | Source |
 |---|---|---|
-| Local touches (cumulative) | 120 / 240 / 360 | manual log |
+| Local touches (cumulative) | 105 / 225 / 345 (15-20 in week 1, then 30/wk) | manual log |
 | Reply rate | >=10% | manual log |
-| Demos (live calls to demo line by a prospect) | 4 / 8 / 12 | Retell demo-line log |
+| Demos (live calls to demo line by a prospect) | 3 / 7 / 10 | Retell demo-line log |
 | Pilots started | 2 / 3 / 4 | manual |
-| Paying shops | 0-1 / 2 / 3 | Stripe |
-| MRR | $0-199 / $398 / $597 | Stripe |
-| Setup fees banked | $0-250 / $500 / $750 | Stripe |
+| Paying shops | 0-1 / 2 / 2 (base) to 3 (double-down) | Stripe |
+| MRR | $0-199 / $398 / $398 (base) to $597 | Stripe |
+| Setup fees banked | $0-250 / $500 / $500-750 | Stripe |
 | Churn events / pause requests | 0 / 0 / <=1 | Stripe + manual |
 | Intake accuracy (weekly 20-transcript score) | >=80% | QA sheet |
 | Bookings per shop per week | measure; expect 2-3 real messages/day per the operator log, bookings fewer | A1 log |
 | Hang-up rate <10 s | <45% | Retell |
-| Platform cost per shop | <=$40 | Retell + Twilio exports |
+| Platform cost per shop (all-in incl. Stripe fees) | <=$45 | Retell + Twilio + Stripe exports |
 | Operator hours per shop per month | <=6 | timer |
-| Hours per week total | <=12 | timer |
+| Hours per week total | <=12 (at 4+ shops: <=12 only with outreach cut to 3 h, else <=15) | timer |
 
-**Weekly time budget (12 h)**
+**Weekly time budget (12 h at 0-2 live shops; scales with shops)**
 
 | Block | Hours | When |
 |---|---|---|
-| Outreach: calls, walk-ins, follow-ups, referral asks | 5 | 7:30-8 am x5, two lunch slots, two 4:30-6 pm slots |
+| Outreach: calls, walk-ins, follow-ups, referral asks | 5 (drops to 3 at 4+ shops unless you have 15 h) | 7:30-8 am x5, two lunch slots, two 4:30-6 pm slots |
 | Build and onboarding (pilots, go-lives, HVAC fork) | 3 | two evenings |
-| QA and babysitting (transcripts, smoke tests, owner support) | 2 | daily 10 min + Monday 45 min |
+| QA and babysitting (transcripts, smoke tests, owner support) | 1 h + 0.75 h per live shop (1.25 h for a shop in its first month, per automation-stack steps 15 and 18): ~2.5 h at 2 shops, ~3.25 h at 3, ~4.75 h at 5 | daily 10 min + Monday 45 min per shop in month 1, 20 min after |
 | Admin, reporting, billing, dashboard | 1 | Friday |
 | Learning (trade vocabulary, Retell changelog, n8n) | 1 | weekend |
+
+Worked totals: 2 shops = 12.5 h; 3 shops = 13.25 h; 5 shops = 14.75 h with outreach at 5 h, or 12.75 h with outreach at 3 h. The report's "10-12 h/wk at 5 shops" therefore assumes outreach has been cut to ~3 h; decide that explicitly at the day-90 gate.
 
 ## Sources
 
@@ -214,13 +216,23 @@ The 90-day sequence for [[reports/ai-front-desk-home-services/report]], running 
 - [CloudTalk: Retell AI pricing 2026](https://www.cloudtalk.io/retell-ai-pricing/)
 - [Retell AI: How the certified partner program works (tiers by customers onboarded)](https://www.retellai.com/blog/how-retell-ais-certified-partners-work)
 - [Twilio Help: Low Volume Standard vs Standard registration for A2P 10DLC](https://help.twilio.com/articles/4407882914971-Comparison-between-Starter-Low-Volume-Standard-and-Standard-registration-for-A2P-10DLC)
+- [Twilio docs: ISV A2P 10DLC onboarding overview, ISV Reseller/Partner primary profile and secondary customer profiles (2026)](https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/onboarding-isv)
+- [Twilio docs: A2P 10DLC, gather the required business information (2026)](https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/collect-business-info)
+- [Twilio error 30909: Campaign rejected, message flow or call to action incomplete (2026)](https://www.twilio.com/docs/api/errors/30909)
+- [Twilio Help: Free trial account restrictions and limitations (2026)](https://support.twilio.com/hc/en-us/articles/360036052753-Twilio-Free-Trial-Limitations)
+- [Nordbastion: Self-host n8n on a VPS with Docker, Postgres, Caddy (2026)](https://nordbastion.com/guides/self-host-n8n-on-a-vps/)
 - [Twilio Help: A2P 10DLC campaign vetting FAQ ($15)](https://help.twilio.com/articles/11587910480155-A2P-10DLC-Campaign-Vetting-FAQ)
 - [Twilio error 30934: Terms and Conditions URL required from 2026-06-30](https://www.twilio.com/docs/api/errors/30934)
 - [Twilio error 30908: compliant privacy policy required (third-party sharing statement)](https://www.twilio.com/docs/api/errors/30908)
 - [Sociocs: Twilio 10DLC registration and pricing explained](https://www.sociocs.com/post/twilio-10dlc-explained/)
 - [Checkout Page: Stripe fees explained 2026](https://checkoutpage.com/blog/stripe-processing-fees)
 - [Sembly AI: Call recording laws 2026](https://www.sembly.ai/blog/call-recording-laws-one-party-vs-two-party-consent/)
-- [Viirtue: Call recording consent laws by state 2026](https://viirtue.com/call-recording-consent-laws-by-state-2026-guide/)
+- [Viirtue: Call recording consent laws by state 2026 (via reviewer; egress-blocked 2026-09-11)](https://viirtue.com/call-recording-consent-laws-by-state-2026-guide/)
+- [Recording Law: Nevada recording laws 2026 (NRS 200.620, all-party for phone calls)](https://www.recordinglaw.com/united-states-recording-laws/one-party-consent-states/nevada-recording-laws/)
+- [NextPhone: Call recording laws by state 2026](https://www.getnextphone.com/blog/call-recording-laws-by-state)
+- [Verrill: Maine LD 1727 chatbot disclosure law, in force 2025-09-24 (2025)](https://www.verrill-law.com/news/maine-law-now-requires-limited-disclosures-of-artificial-intelligence-technology/)
+- [Hunton: Colorado AI Act amended and delayed to 2027-01-01 (May 2026)](https://www.hunton.com/privacy-and-cybersecurity-law-blog/colorado-ai-act-amended-and-effective-date-delayed)
+- [Wipfli: TCPA informational text messages, rules and requirements (2026)](https://www.wipfli.com/insights/articles/tcpa-informational-text-messages-rules-and-requirements)
 - [JustCall: AI voice agent disclosure laws 2026 (FCC NPRM 24-84 still pending Aug 2026)](https://justcall.io/blog/ai-voice-agent-disclosure-laws.html)
 - [Henson Legal: AI voice agent compliance 2026](https://www.henson-legal.com/ai-voice-compliance)
 - [FCC Declaratory Ruling FCC 24-17 (PDF)](https://docs.fcc.gov/public/attachments/FCC-24-17A1.pdf)
