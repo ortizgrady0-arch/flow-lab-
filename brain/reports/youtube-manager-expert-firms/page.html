@@ -1,0 +1,1055 @@
+<title>Channel of Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    /* light: warm-grey bond paper, blue-black ink, compliance-stamp red */
+    --paper:      #E9E7E2;
+    --sheet:      #F5F4F1;
+    --sheet-2:    #EFEDE7;
+    --ink:        #14191F;
+    --ink-2:      #4E5661;
+    --ink-3:      #767D86;
+    --rule:       #D6D2CB;
+    --rule-2:     #C1BCB3;
+    --stamp:      #9C2B1C;
+    --stamp-bg:   rgba(156, 43, 28, 0.09);
+    --verify:     #00705E;
+    --verify-bg:  rgba(0, 112, 94, 0.11);
+    --neutral:    #6B6F74;
+    --neutral-bg: rgba(107, 111, 116, 0.11);
+    --band:       rgba(0, 112, 94, 0.13);
+    --shadow:     0 1px 2px rgba(20, 25, 31, 0.06);
+
+    --display: "Newsreader", Georgia, "Times New Roman", serif;
+    --body: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #14181B;
+      --sheet:      #1B2126;
+      --sheet-2:    #20282E;
+      --ink:        #E6E8E5;
+      --ink-2:      #9BA4AC;
+      --ink-3:      #7C858D;
+      --rule:       #2C343A;
+      --rule-2:     #3B454C;
+      --stamp:      #E2745C;
+      --stamp-bg:   rgba(226, 116, 92, 0.13);
+      --verify:     #3EBBA6;
+      --verify-bg:  rgba(62, 187, 166, 0.14);
+      --neutral:    #98A0A8;
+      --neutral-bg: rgba(152, 160, 168, 0.14);
+      --band:       rgba(62, 187, 166, 0.15);
+      --shadow:     0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #14181B;
+    --sheet:      #1B2126;
+    --sheet-2:    #20282E;
+    --ink:        #E6E8E5;
+    --ink-2:      #9BA4AC;
+    --ink-3:      #7C858D;
+    --rule:       #2C343A;
+    --rule-2:     #3B454C;
+    --stamp:      #E2745C;
+    --stamp-bg:   rgba(226, 116, 92, 0.13);
+    --verify:     #3EBBA6;
+    --verify-bg:  rgba(62, 187, 166, 0.14);
+    --neutral:    #98A0A8;
+    --neutral-bg: rgba(152, 160, 168, 0.14);
+    --band:       rgba(62, 187, 166, 0.15);
+    --shadow:     0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 28px 72px;
+  }
+
+  /* ---------- filing header ---------- */
+  .filing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule-2);
+  }
+  .filing b { color: var(--ink-2); font-weight: 500; }
+
+  /* ---------- layout ---------- */
+  .cols { display: block; }
+  @media (min-width: 1000px) {
+    .cols {
+      display: grid;
+      grid-template-columns: 168px minmax(0, 1fr);
+      gap: 56px;
+      align-items: start;
+    }
+  }
+
+  nav.rail { display: none; }
+  @media (min-width: 1000px) {
+    nav.rail {
+      display: block;
+      position: sticky;
+      top: 24px;
+      padding-top: 8px;
+    }
+    nav.rail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+    nav.rail a {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding: 2px 0;
+      border-bottom: 1px solid transparent;
+    }
+    nav.rail a span { color: var(--rule-2); }
+    nav.rail a:hover { color: var(--ink); }
+    nav.rail a:hover span { color: var(--stamp); }
+    nav.rail .note {
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      line-height: 1.5;
+      color: var(--ink-3);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  }
+
+  main > section { padding-block: 40px 0; }
+
+  /* ---------- masthead ---------- */
+  header.mast { padding-top: 30px; }
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.5rem, 7vw, 3.9rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .standfirst {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.1rem, 2.3vw, 1.32rem);
+    line-height: 1.48;
+    color: var(--ink-2);
+    max-width: 34em;
+    margin: 0 0 8px;
+  }
+  .standfirst strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- spec strip ---------- */
+  .spec {
+    margin-top: 30px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    gap: 0 26px;
+  }
+  .spec div { padding: 13px 0 15px; }
+  .spec dt {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 5px;
+  }
+  .spec dd {
+    margin: 0;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 1.06rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .spec dd small { display: block; font-size: 10.5px; color: var(--ink-3); font-weight: 400; letter-spacing: 0.02em; margin-top: 3px; }
+
+  /* ---------- evidence chips ---------- */
+  .chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 2px;
+    white-space: nowrap;
+    vertical-align: 1px;
+  }
+  .chip i { font-style: normal; }
+  .c-ver { color: var(--verify); background: var(--verify-bg); }
+  .c-cor { color: var(--stamp); background: var(--stamp-bg); }
+  .c-asm { color: var(--neutral); background: var(--neutral-bg); }
+
+  .legend-key {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    align-items: baseline;
+    font-size: 13.5px;
+    color: var(--ink-2);
+    max-width: 60em;
+  }
+  .legend-key p { margin: 0; flex: 1 1 100%; color: var(--ink-3); font-size: 13px; }
+
+  /* ---------- headings ---------- */
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3.4vw, 2.05rem);
+    line-height: 1.14;
+    letter-spacing: -0.012em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .sec-head {
+    border-top: 1px solid var(--rule-2);
+    padding-top: 12px;
+    margin-bottom: 22px;
+  }
+  .sec-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stamp);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .sec-head p {
+    margin: 8px 0 0;
+    color: var(--ink-2);
+    max-width: 62ch;
+    font-size: 15.5px;
+  }
+  h3 {
+    font-family: var(--body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    margin: 30px 0 10px;
+  }
+  p { max-width: 65ch; margin: 0 0 14px; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule-2); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--stamp); }
+  :focus-visible { outline: 2px solid var(--stamp); outline-offset: 2px; }
+  strong { font-weight: 700; }
+  .lede { font-size: 17px; color: var(--ink); }
+
+  /* ---------- dated timeline ---------- */
+  .why { display: grid; gap: 0; margin-bottom: 18px; }
+  .why > li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 4px 20px;
+    padding: 16px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .why > li:first-child { border-top: 0; }
+  .why time {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-top: 3px;
+  }
+  .why h4 { margin: 0 0 5px; font-size: 16px; font-weight: 700; }
+  .why p { margin: 0; font-size: 14.5px; color: var(--ink-2); max-width: 58ch; }
+  @media (max-width: 560px) {
+    .why > li { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- tables ---------- */
+  .scroll { overflow-x: auto; margin: 18px 0 10px; border-bottom: 1px solid var(--rule-2); }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+  caption {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-bottom: 9px;
+  }
+  th, td { text-align: left; padding: 10px 14px 10px 0; vertical-align: top; border-top: 1px solid var(--rule); }
+  thead th {
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    padding-bottom: 9px;
+  }
+  td.num, th.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tbody tr:hover { background: var(--sheet); }
+  td small { color: var(--ink-3); display: block; font-size: 12.5px; line-height: 1.45; margin-top: 2px; }
+  .row-hi td { background: var(--verify-bg); }
+
+  /* ---------- pipeline ---------- */
+  .pipe { margin: 22px 0 8px; }
+  .pipe > li { list-style: none; }
+  .stage {
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 16px;
+    padding: 13px 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .stage:first-of-type { border-top: 2px solid var(--ink); }
+  .lane {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 3px 0 0;
+    color: var(--ink-3);
+  }
+  .lane.machine { color: var(--verify); }
+  .lane.human { color: var(--ink-2); }
+  .stage b { font-weight: 700; font-size: 15px; display: block; }
+  .stage span { font-size: 13.5px; color: var(--ink-2); display: block; margin-top: 2px; }
+  .stage em { font-family: var(--mono); font-style: normal; font-size: 12px; color: var(--ink-3); }
+  .fan {
+    border-left: 1px solid var(--rule-2);
+    margin-left: 90px;
+    padding-left: 18px;
+  }
+  .fan .stage { grid-template-columns: 74px minmax(0, 1fr); }
+  .fan .stage:first-of-type { border-top: 1px solid var(--rule); }
+
+  .gate {
+    margin: 18px 0;
+    padding: 18px 20px;
+    background: var(--stamp-bg);
+    border-top: 2px solid var(--stamp);
+    border-bottom: 2px solid var(--stamp);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    align-items: center;
+  }
+  .gate .mark {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--stamp);
+    border: 1.5px solid var(--stamp);
+    padding: 9px 13px;
+    text-align: center;
+    line-height: 1.35;
+    transform: rotate(-2.2deg);
+    flex: 0 0 auto;
+  }
+  .gate .mark b { display: block; font-size: 13px; letter-spacing: 0.09em; }
+  .gate div.txt { flex: 1 1 300px; }
+  .gate p { margin: 0; font-size: 14.5px; color: var(--ink-2); max-width: 54ch; }
+  .gate p b { color: var(--ink); }
+
+  .loopback {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    border-top: 1px dashed var(--rule-2);
+    padding-top: 11px;
+    margin-top: 4px;
+  }
+
+  /* ---------- callout panels ---------- */
+  .panel {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 20px 22px;
+    margin: 22px 0;
+    box-shadow: var(--shadow);
+  }
+  .panel.flag { border-left: 3px solid var(--stamp); }
+  .panel h3 { margin-top: 0; }
+  .panel ul { margin: 0; padding-left: 20px; }
+  .panel li { margin-bottom: 7px; font-size: 14.5px; color: var(--ink-2); }
+  .panel li b, .panel li strong { color: var(--ink); }
+  .panel li:last-child { margin-bottom: 0; }
+  .panel > p:last-child { margin-bottom: 0; }
+
+  .twoup { display: grid; gap: 18px; }
+  @media (min-width: 720px) { .twoup { grid-template-columns: 1fr 1fr; } }
+  .twoup .panel { margin: 0; }
+
+  /* ---------- chart ---------- */
+  figure { margin: 20px 0 0; }
+  .chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 14px;
+  }
+  .chart-legend i { display: inline-block; width: 20px; height: 10px; margin-right: 7px; vertical-align: -1px; }
+  .sw-line { border-top: 2px solid var(--verify); height: 0 !important; margin-bottom: 3px; }
+  .sw-band { background: var(--band); border-top: 1px solid var(--verify); border-bottom: 1px solid var(--verify); }
+  .chart-scroll { overflow-x: auto; }
+  .chart-scroll svg { display: block; width: 100%; min-width: 500px; height: auto; }
+  figcaption { font-size: 13px; color: var(--ink-3); margin-top: 10px; max-width: 62ch; }
+  .g-grid { stroke: var(--rule); stroke-width: 1; }
+  .g-axis { stroke: var(--rule-2); stroke-width: 1.5; }
+  .g-tick { fill: var(--ink-3); font-family: var(--mono); font-size: 11px; }
+  .g-band { fill: var(--band); }
+  .g-line { fill: none; stroke: var(--verify); stroke-width: 2; stroke-linejoin: round; }
+  .g-dot { fill: var(--verify); }
+  .g-lab { fill: var(--ink); font-family: var(--mono); font-size: 13px; font-weight: 500; }
+  .g-ann { fill: var(--ink-3); font-family: var(--mono); font-size: 11px; }
+  .g-ann-line { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
+
+  /* ---------- code / templates ---------- */
+  pre {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.62;
+    background: var(--sheet-2);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 14px 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--ink);
+  }
+  @media (max-width: 560px) { pre { white-space: pre; word-break: normal; } }
+
+  /* ---------- gates ---------- */
+  .gates { display: grid; gap: 0; margin: 20px 0 8px; }
+  .gates > li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 6px 20px;
+    padding: 15px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .gates > li:first-child { border-top: 2px solid var(--ink); }
+  .gates .day {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--stamp);
+    padding-top: 2px;
+  }
+  .gates b { display: block; font-size: 15px; margin-bottom: 3px; }
+  .gates p { margin: 0; font-size: 14px; color: var(--ink-2); max-width: 58ch; }
+  @media (max-width: 560px) { .gates > li { grid-template-columns: 1fr; } }
+
+  /* ---------- kill list ---------- */
+  ol.kill { margin: 16px 0; padding-left: 0; counter-reset: k; }
+  ol.kill li {
+    list-style: none;
+    counter-increment: k;
+    position: relative;
+    padding: 11px 0 11px 30px;
+    border-top: 1px solid var(--rule);
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 70ch;
+  }
+  ol.kill li::before {
+    content: counter(k);
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--stamp);
+  }
+  ol.kill li b { color: var(--ink); }
+
+  /* ---------- footer ---------- */
+  footer {
+    margin-top: 56px;
+    border-top: 2px solid var(--ink);
+    padding-top: 18px;
+    font-size: 13.5px;
+    color: var(--ink-2);
+  }
+  footer p { max-width: 66ch; }
+  footer code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    background: var(--sheet-2);
+    padding: 1px 5px;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+  }
+  .fine { font-size: 12.5px; color: var(--ink-3); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <div class="filing">
+    <span>File <b>youtube-manager-expert-firms</b></span>
+    <span>Status <b>Selected &middot; 2 of 3</b></span>
+    <span>Revised <b>11 Sep 2026</b></span>
+    <span>Horizon <b>90 days</b></span>
+  </div>
+
+  <div class="cols">
+
+    <nav class="rail" aria-label="Sections">
+      <ol>
+        <li><a href="#why"><span>01</span>Why now</a></li>
+        <li><a href="#offer"><span>02</span>The offer</a></li>
+        <li><a href="#buyer"><span>03</span>Who buys</a></li>
+        <li><a href="#machine"><span>04</span>The machine</a></li>
+        <li><a href="#money"><span>05</span>The money</a></li>
+        <li><a href="#ninety"><span>06</span>First 90 days</a></li>
+        <li><a href="#risk"><span>07</span>Risk &amp; kill</a></li>
+        <li><a href="#evidence"><span>08</span>Evidence</a></li>
+      </ol>
+      <p class="note">Every figure here is the post-review number. Two adversarial reviews cut the original estimates; nothing was left at its optimistic value.</p>
+    </nav>
+
+    <main>
+
+      <header class="mast">
+        <h1>Channel of Record</h1>
+        <p class="standfirst">One licensed professional records for an hour a month. You turn that hour into three episodes, eight Shorts and tested packaging, route every item through their compliance reviewer, and publish nothing without written sign-off. <strong>The product is not video editing. It is a channel their compliance officer will approve.</strong></p>
+
+        <dl class="spec">
+          <div><dt>Startup</dt><dd>$150<small>$59&ndash;124 cash</small></dd></div>
+          <div><dt>Tools</dt><dd>$125<small>/mo, range 112&ndash;156</small></dd></div>
+          <div><dt>First dollar</dt><dd>6&ndash;10 wk<small>A/B pack</small></dd></div>
+          <div><dt>Retainer</dt><dd>$800<small>/mo, band 600&ndash;1,000</small></dd></div>
+          <div><dt>Month 6 base</dt><dd>$1,600<small>two clients</small></dd></div>
+          <div><dt>Load</dt><dd>16&ndash;22 h<small>per client-month</small></dd></div>
+          <div><dt>Ceiling</dt><dd>2 clients<small>at 10&ndash;15 h/wk</small></dd></div>
+          <div><dt>Effective rate</dt><dd>$26&ndash;34<small>/h at base</small></dd></div>
+        </dl>
+
+        <div class="legend-key">
+          <p>Claims on this page carry their evidence grade:</p>
+          <span><span class="chip c-ver"><i>&#10003;</i> verified</span> a dated source states it</span>
+          <span><span class="chip c-cor"><i>&#9651;</i> corrected</span> a reviewer cut the original number</span>
+          <span><span class="chip c-asm"><i>&mdash;</i> assumption</span> no data found; stated as a guess</span>
+        </div>
+      </header>
+
+      <section id="why">
+        <div class="sec-head">
+          <span class="sec-num">&sect;01 &mdash; Why now</span>
+          <h2>Three dated changes made a compliance-grade channel service sellable</h2>
+          <p>None of them is a trend line. They are supply-side facts with dates, which is the only kind of timing evidence that survived review.</p>
+        </div>
+
+        <ol class="why">
+          <li>
+            <time>Dec 2025</time>
+            <div>
+              <h4>YouTube gave every eligible channel native A/B testing <span class="chip c-ver"><i>&#10003;</i> verified</span></h4>
+              <p>Test &amp; Compare reached all creators with Advanced Features: up to three title and thumbnail variants, winner decided on watch time, test closes inside two weeks. That turns packaging from taste into a measured result, which is what makes a $150&ndash;300 entry product provable to a sceptical firm.</p>
+            </div>
+          </li>
+          <li>
+            <time>16 Jul 2026</time>
+            <div>
+              <h4>YouTube named AI expert personas non-monetizable <span class="chip c-ver"><i>&#10003;</i> verified</span></h4>
+              <p>The clarified inauthentic-content policy lists three buckets that cannot monetize, the third being AI personas presenting as experts on health, legal, finance or politics. A licensed human on camera is the exact opposite pattern. Your competitors in the faceless-channel trade are on the wrong side of this line; you are on the right side of it by construction.</p>
+            </div>
+          </li>
+          <li>
+            <time>Apr 2026</time>
+            <div>
+              <h4>Advisers want video and cannot produce it <span class="chip c-ver"><i>&#10003;</i> verified</span> <span class="chip c-asm"><i>&mdash;</i> vendor survey</span></h4>
+              <p>Idea Decanter&rsquo;s adviser survey: 88% think they should make video, 52% do, 83% say video helped increase assets under management, 80% give it only a few hours a month, 49% track nothing. Obstacles rank time 56%, hands-on shooting and editing expertise 52%, fresh ideas 38% &mdash; and cost last at 21%. Sample size unpublished, so treat as directional.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="panel flag">
+          <h3>The one inference that shapes the whole offer</h3>
+          <p>Cost is the smallest obstacle in that survey. Price is therefore not the objection you will face; trust and compliance are. So the thing you sell is not a lower rate than an agency. It is that nothing reaches their channel without their reviewer&rsquo;s signature, and that the archive of approved versions supports their own books-and-records duty.</p>
+        </div>
+      </section>
+
+      <section id="offer">
+        <div class="sec-head">
+          <span class="sec-num">&sect;02 &mdash; The offer</span>
+          <h2>One recording in, a month of channel out</h2>
+          <p>The client&rsquo;s time is 2&ndash;4 hours a month: the recording, plus one approval batch. Say that number in the pitch, because the review burden is what makes firms quit video.</p>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <caption>Delivered per client-month, inside 10 business days plus the client&rsquo;s approval cycle</caption>
+            <thead>
+              <tr><th>Deliverable</th><th class="num">Core</th><th class="num">Plus</th><th>Standard it must meet</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Long-form episodes, 8&ndash;15 min</td><td class="num">3</td><td class="num">4</td><td>Text-based edit, chapters, lower thirds, disclaimer card at open and close</td></tr>
+              <tr><td>Shorts, 9:16, captioned</td><td class="num">8</td><td class="num">12</td><td>Every caption proofread against the client&rsquo;s glossary of statutes and form names</td></tr>
+              <tr><td>Titles and thumbnails</td><td class="num">3 + 3</td><td class="num">3 + 3</td><td>Per episode, run through Test &amp; Compare; the client&rsquo;s real face only</td></tr>
+              <tr><td>Descriptions, chapters, pinned disclaimer, tracked links</td><td class="num">per ep.</td><td class="num">per ep.</td><td>No superlatives, no performance claims, UTM booking link in every description</td></tr>
+              <tr><td>Compliance package</td><td class="num">1</td><td class="num">1</td><td>Checklist plus an archive of approved versions, dated and attributed</td></tr>
+              <tr><td>Monthly memo</td><td class="num">1 page</td><td class="num">1 page</td><td>Three numbers, one recommendation, one question for the next recording</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <caption>Price ladder &mdash; corrected down from the original $800&ndash;1,500 band</caption>
+            <thead>
+              <tr><th>Package</th><th class="num">Price</th><th>What it buys and what anchors it</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>A/B Pack</b><small>entry product, one video</small></td>
+                <td class="num">$150&ndash;300</td>
+                <td>Three titles, three thumbnails, Test &amp; Compare configured in the client&rsquo;s own Studio, a one-page readout after two weeks, and a compliance note listing every word on every variant. <small>Anchored against ~$18 Fiverr thumbnails below and $500&ndash;1,500 agency &ldquo;basic management&rdquo; above. <span class="chip c-asm"><i>&mdash;</i> price is an assumption inside the corrected band</span></small></td>
+              </tr>
+              <tr class="row-hi">
+                <td><b>Core</b><small>the retainer to sell</small></td>
+                <td class="num">$800/mo</td>
+                <td>Everything in the table above, two consolidated revision rounds. <small>Band $600&ndash;1,000. The low anchor a law firm will quote at you is a real $250/mo published tier; the $1,000+ benchmarks are all sellers&rsquo; own cost guides. <span class="chip c-cor"><i>&#9651;</i> corrected</span></small></td>
+              </tr>
+              <tr>
+                <td><b>Plus</b></td>
+                <td class="num">$1,200&ndash;1,500</td>
+                <td>Adds a second recording or eight LinkedIn-native cutdowns with different captions, four episodes, twelve Shorts. <small>Only sell this with the extra input; do not price Core up to it.</small></td>
+              </tr>
+              <tr>
+                <td><b>Add-ons</b></td>
+                <td class="num">$200&ndash;300</td>
+                <td>Extra revision round $200&ndash;250. Florida ad filing $250 pass-through. Onboarding $300, waived for the first two clients.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Terms that matter.</strong> Monthly in advance by ACH, which costs 0.8% capped at $5 against 2.9% plus 30&cent; on cards. Thirty-day cancellation. The client owns regulatory approval. Nothing publishes without written sign-off. All deliverables assigned to the client. Five-business-day approval service level from month two, and expect two to four weeks in months one and two while their reviewer builds a template.</p>
+
+        <p><strong>The price step.</strong> Raise Core from $800 to $1,000 for new clients only after two attributable results: a consultation booked through a tracked link, or a Test &amp; Compare win with a click-through lift. That evidence is the condition for holding price above the $250 anchor, and it is what moves the effective rate from $26&ndash;34 to about $47 an hour.</p>
+      </section>
+
+      <section id="buyer">
+        <div class="sec-head">
+          <span class="sec-num">&sect;03 &mdash; Who buys</span>
+          <h2>Fee-only advisers first, estate firms second, accountants only as a test</h2>
+          <p>The buyer pool is narrow rather than large, and that is fine: you need two clients. The constraint is finding and converting them, not market size.</p>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <caption>Sub-niches, ranked</caption>
+            <thead>
+              <tr><th class="num">#</th><th>Sub-niche</th><th>Why it ranks here</th><th>Watch-out</th></tr>
+            </thead>
+            <tbody>
+              <tr class="row-hi">
+                <td class="num">1</td>
+                <td><b>Fee-only advisers making retirement, Social Security and Roth content</b></td>
+                <td>Highest value per lead, an in-house reviewer who can hold a monthly cadence, and named 2025&ndash;26 proof points to quote. 16,544 registered advisers, over 10,500 managing under $1B. <span class="chip c-ver"><i>&#10003;</i> verified</span></td>
+                <td>Lowest cold-email reply rate of any vertical, 1.5&ndash;4%. Sell a twelve-month horizon, not a quarter.</td>
+              </tr>
+              <tr>
+                <td class="num">2</td>
+                <td><b>Speciality advisers: physicians, tech equity compensation, federal employees</b></td>
+                <td>Search intent is specific and uncontested, and specificity raises watch time, which is the metric Test &amp; Compare optimises.</td>
+                <td>Fewer firms per topic to prospect.</td>
+              </tr>
+              <tr>
+                <td class="num">3</td>
+                <td><b>Estate and elder-law firms, 1&ndash;5 attorneys, in non-filing states</b></td>
+                <td>Evergreen topics, older audiences watch long-form, and bar advertising rules are lighter than investment-adviser review. 30% of firms use video.</td>
+                <td>Florida charges $250 per timely ad filing and $750 late from 1 Jul 2026; Texas requires filing within ten days. Exclude both from your first cohort.</td>
+              </tr>
+              <tr>
+                <td class="num">4</td>
+                <td><b>Business and tax attorneys, boutique injury firms</b></td>
+                <td>Highest matter values; business law overlaps accountant topics.</td>
+                <td>The most ad-regulated and most agency-served corner. Expect the $250/mo anchor.</td>
+              </tr>
+              <tr>
+                <td class="num">5</td>
+                <td><b>Accounting firms with an advisory line</b></td>
+                <td>Tax-season search volume is enormous, and &ldquo;we run it while you cannot&rdquo; is a real pitch.</td>
+                <td><span class="chip c-asm"><i>&mdash;</i> no data found</span> on accountant video adoption or spend. Twenty outbound touches in October as a test, nothing more until data exists.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="twoup">
+          <div class="panel flag">
+            <h3>Exclude from the first cohort</h3>
+            <ul>
+              <li><b>Broker-dealer affiliated advisers.</b> Principal pre-approval on every retail communication means 14&ndash;16 approval items a month. Check the adviser registration record before spending a touch. A 2026 proposal would move this to risk-based supervision; revisit in 2027 if it is adopted.</li>
+              <li><b>Law firms in Florida and Texas.</b> Per-ad filing fees and deadlines turn every deliverable into an administrative step with a cost.</li>
+              <li><b>Compliance-only accounting shops.</b> Lead value is too low to carry the retainer.</li>
+              <li><b>Channels with no recent uploads.</b> A test needs roughly 1,000&ndash;5,000 fresh impressions per variant inside two weeks, so lifetime views on an old video will read &ldquo;inconclusive&rdquo;.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>The qualification rule</h3>
+            <ul>
+              <li>Registered adviser with no broker-dealer affiliation, or a law firm in a non-filing state.</li>
+              <li>An existing recording habit: a quarterly webinar, a podcast, past videos.</li>
+              <li>Fewer than one upload a month. They have the raw material and no throughput.</li>
+              <li>For an A/B pack, the last three uploads average 1,000+ views <em>and</em> the most recent is inside 90 days.</li>
+              <li>Advanced Features enabled on the channel, which Test &amp; Compare requires. If not, it is a five-minute verification on their side.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="machine">
+        <div class="sec-head">
+          <span class="sec-num">&sect;04 &mdash; The machine</span>
+          <h2>Where the automation actually is, and where it stops</h2>
+          <p>The original estimate claimed 58% automated and twelve hours a client-month. Editing benchmarks and clip-rework rates cut that to <strong>25&ndash;40% of production time and 16&ndash;22 hours</strong>, which is why two clients is the ceiling. <span class="chip c-cor"><i>&#9651;</i> corrected</span></p>
+        </div>
+
+        <ol class="pipe">
+          <li><div class="stage"><div class="lane">client</div><div><b>Records 45&ndash;60 minutes</b><span>Camera and screen as separate tracks &mdash; put this in the contract. A composite recording forces square Shorts and costs hours.</span></div></div></li>
+          <li><div class="stage"><div class="lane machine">machine</div><div><b>Transcript and cleanup</b><span>Descript: transcript, long silences out, filler removal at moderate, studio sound on the camera track only. <em>15&ndash;20 min hands-on</em></span></div></div></li>
+          <li><div class="stage"><div class="lane machine">machine</div><div><b>Segment proposal</b><span>Claude returns three stand-alone episodes with verbatim cold opens, chapter marks, and a list of every sentence that names a rule, a form or a number so a human can verify it. <em>1 h</em></span></div></div></li>
+          <li>
+            <div class="fan">
+              <div class="stage"><div class="lane human">human</div><div><b>Cut and polish the long form</b><span>Choose the segments, text-based cut, chapters on screen, three to five stat callouts, disclaimer card. This is the single biggest block of hours. <em>7&ndash;10 h</em></span></div></div>
+              <div class="stage"><div class="lane machine">machine + human</div><div><b>Shorts</b><span>OpusClip proposes 15&ndash;20 candidates; you keep eight, fix the cuts to sentence boundaries and proofread every caption. Expect about 40% of candidates to need rework. <em>3&ndash;4 h</em></span></div></div>
+              <div class="stage"><div class="lane machine">machine + human</div><div><b>Packaging</b><span>Claude drafts titles, descriptions, chapters and the pinned disclaimer; thumbnails composed in Canva from a real frame, checked at 120 pixels wide. <em>2 h</em></span></div></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="gate">
+              <div class="mark">approved<b>for release</b>signature &middot; date</div>
+              <div class="txt">
+                <p><b>The compliance gate.</b> Claude runs a pre-check and flags performance claims, implied testimonials, superlatives and missing disclaimers. Then a human works the checklist, and the package goes to the named reviewer with an approval form. <b>Nothing is scheduled until written sign-off arrives</b>, and every approved version is archived with its date and approver. Revisions route back to the cut. <em>1&ndash;3 h including two rounds</em></p>
+              </div>
+            </div>
+          </li>
+
+          <li><div class="stage"><div class="lane human">human</div><div><b>Upload and schedule</b><span>Done by hand in Studio, deliberately not by API, so the audit trail is a person. Set Test &amp; Compare variants, end screens, playlists, and confirm the synthetic-content toggle reads No. <em>1 h</em></span></div></div></li>
+          <li><div class="stage"><div class="lane machine">machine</div><div><b>Weekly analytics pull</b><span>An n8n schedule writes impressions, click-through rate, view duration, traffic sources and tracked clicks into the client&rsquo;s sheet. <em>5 min/mo after setup</em></span></div></div></li>
+          <li><div class="stage"><div class="lane machine">machine + human</div><div><b>Monthly memo</b><span>Claude drafts from the sheet; you add the recommendation and the one question the client should answer on camera next. <em>45 min</em></span></div></div></li>
+        </ol>
+        <p class="loopback">&#8624; Memo out on the 1st, next-recording brief on the 25th, and the loop starts again.</p>
+
+        <div class="twoup">
+          <div class="panel flag">
+            <h3>Two constraints that break the automation silently</h3>
+            <ul>
+              <li><b>Set the OAuth consent screen to &ldquo;In production&rdquo; before the client authorises.</b> An app left in testing has every refresh token revoked after seven days, so a weekly Monday pull would fail every other week and the channel owner would have to re-consent each time. Channel manager permissions do not grant API access at all: only the owner can authorise it. While unverified you get an &ldquo;unverified app&rdquo; warning and a 100-user cap, both acceptable here. Keep the manual export from Studio as the permanent fallback so the memo never depends on the connection.</li>
+              <li><b>Descript meters media minutes with no rollover.</b> Upload one clean master per recording, not every re-export, or you will buy top-ups you did not budget.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>What machines cannot take over</h3>
+            <ul>
+              <li>Deciding which minutes become an episode.</li>
+              <li>Retention polish, which is most of the hours.</li>
+              <li>Proofreading statute numbers, form names and thresholds. An error here destroys credibility with this audience specifically.</li>
+              <li>The compliance pass and the approval loop.</li>
+              <li>Publishing, kept human on purpose.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <caption>Stack by budget &mdash; buy the next tier only when a client pays for it</caption>
+            <thead>
+              <tr><th class="num">Tier</th><th>Tools</th><th>What it unlocks</th><th>Where it fails</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="num">$0</td><td>Descript Free, OpusClip Free, CapCut, Canva Free, Claude free, Studio, Sheets, self-hosted n8n</td><td>A single sub-60-minute workflow test and the A/B pack.</td><td>Sixty media minutes a month cannot hold two portfolio webinars, and exports carry a watermark.</td></tr>
+              <tr><td class="num">~$50</td><td>Descript Hobbyist $24, Claude Pro $20, OpusClip Free or Starter $15, Canva Free</td><td>The portfolio, one Core client end to end, all six prompts.</td><td>No scheduler, no background remover, media minutes tight on re-uploads.</td></tr>
+              <tr class="row-hi"><td class="num">$112&ndash;156</td><td>Descript Creator $35, OpusClip Pro $29, Canva Pro $18, Claude Pro $20, n8n $0&ndash;24, top-ups $0&ndash;20, ACH fees ~$10</td><td>Two clients at Plus scope, automated analytics and memo drafts. Working midpoint <b>$125</b>.</td><td>Still 16&ndash;22 hours per client. A third client needs 15&ndash;19 hours a week.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="money">
+        <div class="sec-head">
+          <span class="sec-num">&sect;05 &mdash; The money</span>
+          <h2>Nothing for three months, then a step</h2>
+          <p>The shape matters more than any single figure: the first quarter is a zero, the first retainer lands at the end of month three or in month four, and month six is two clients at $800.</p>
+        </div>
+
+        <figure>
+          <div class="chart-legend">
+            <span><i class="sw-line"></i>Base case</span>
+            <span><i class="sw-band"></i>Conservative to upside</span>
+          </div>
+          <div class="chart-scroll">
+            <svg viewBox="0 0 620 290" role="img" aria-label="Gross monthly revenue by month. Base case: zero in month 1, about $400 in month 3, $1,600 in month 6, $2,000 in month 12. The conservative-to-upside range runs from zero up to $250 in month 1 and from $800 up to $3,400 by month 12.">
+              <line class="g-grid" x1="66" y1="49.5" x2="596" y2="49.5"></line>
+              <line class="g-grid" x1="66" y1="108.4" x2="596" y2="108.4"></line>
+              <line class="g-grid" x1="66" y1="167.2" x2="596" y2="167.2"></line>
+              <text class="g-tick" x="58" y="53.5" text-anchor="end">$3,000</text>
+              <text class="g-tick" x="58" y="112.4" text-anchor="end">$2,000</text>
+              <text class="g-tick" x="58" y="171.2" text-anchor="end">$1,000</text>
+              <text class="g-tick" x="58" y="230" text-anchor="end">$0</text>
+
+              <polygon class="g-band" points="66,211.3 162.4,164.2 306.9,49.5 596,26 596,178.9 306.9,167.2 162.4,226 66,226"></polygon>
+
+              <line class="g-ann-line" x1="210.5" y1="226" x2="210.5" y2="118"></line>
+              <text class="g-ann" x="216" y="113">first retainer</text>
+
+              <line class="g-axis" x1="66" y1="226" x2="596" y2="226"></line>
+
+              <polyline class="g-line" points="66,226 162.4,202.5 306.9,131.9 596,108.4"></polyline>
+              <circle class="g-dot" cx="66" cy="226" r="4"></circle>
+              <circle class="g-dot" cx="162.4" cy="202.5" r="4"></circle>
+              <circle class="g-dot" cx="306.9" cy="131.9" r="4"></circle>
+              <circle class="g-dot" cx="596" cy="108.4" r="4"></circle>
+
+              <text class="g-lab" x="315" y="128">$1,600</text>
+              <text class="g-lab" x="588" y="100" text-anchor="end">$2,000</text>
+
+              <text class="g-tick" x="66" y="248">M1</text>
+              <text class="g-tick" x="162.4" y="248" text-anchor="middle">M3</text>
+              <text class="g-tick" x="306.9" y="248" text-anchor="middle">M6</text>
+              <text class="g-tick" x="596" y="248" text-anchor="end">M12</text>
+            </svg>
+          </div>
+          <figcaption>Gross monthly revenue, months 1 to 12, on a linear month axis. Months 1 to 3 are the reviewer&rsquo;s &ldquo;zero to one retainer&rdquo; window, so the base case books its first retainer at the end of month three. Exact figures below.</figcaption>
+        </figure>
+
+        <div class="scroll">
+          <table>
+            <caption>Revenue scenarios, gross per month</caption>
+            <thead>
+              <tr><th>Month</th><th class="num">Conservative</th><th class="num">Base</th><th class="num">Upside</th><th>What has to be true for the base</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td class="num">$0</td><td class="num">$0</td><td class="num">$250</td><td>Portfolio built, site live, first 50&ndash;75 touches sent</td></tr>
+              <tr><td>3</td><td class="num">$0&ndash;250</td><td class="num">$250&ndash;500</td><td class="num">$1,050</td><td>One or two A/B packs sold, or the first Core signing late in the month</td></tr>
+              <tr class="row-hi"><td>6</td><td class="num">~$1,000</td><td class="num">$1,600</td><td class="num">$3,000</td><td>Two Core clients at $800, hours per client at or below 22</td></tr>
+              <tr><td>12</td><td class="num">$800&ndash;1,000</td><td class="num">~$2,000</td><td class="num">$3,000&ndash;3,400</td><td>Price stepped to $1,000 on proof, one churned client replaced</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="fine">Assumptions behind those numbers <span class="chip c-asm"><i>&mdash;</i> assumption</span>: 20&ndash;30 personalised touches a week from week two; 2&ndash;4% reply rate against a 3.43% cross-industry average and a 1.5&ndash;3.5% financial-services range; one to three meetings per hundred emails; 20&ndash;30% of meetings close; one A/B pack per 50&ndash;75 touches; one retainer per 150&ndash;300 touches; one client lost every nine to twelve months; no paid ads.</p>
+
+        <div class="twoup">
+          <div class="panel">
+            <h3>Startup, month 0</h3>
+            <ul>
+              <li>Descript Hobbyist, one month &mdash; <b>$24</b>. The free tier caps at 60 media minutes with watermarked exports, so it cannot hold two portfolio webinars.</li>
+              <li>Claude Pro &mdash; <b>$20</b>. OpusClip Free or Starter &mdash; <b>$0&ndash;15</b>. Canva Free &mdash; <b>$0</b>.</li>
+              <li>Domain and a one-page site &mdash; <b>$15&ndash;25</b>. The site also needs a privacy page and a support email, because publishing the analytics consent screen requires both.</li>
+              <li>Portfolio: two public-domain federal recordings re-cut into samples &mdash; <b>$0</b> and about ten hours. Federal works carry no copyright; label both &ldquo;sample re-edit, not a client&rdquo;.</li>
+              <li>No company, no annual plans, no paid outreach tools until the first retainer clears.</li>
+              <li><b>Total $59&ndash;124 cash; budget $150.</b> The remainder funds the $43 a month step up to paid tiers in the first client month.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Hours and what they earn, month 6</h3>
+            <ul>
+              <li><b>One client plus a pack a month, $1,000 gross.</b> 35&ndash;41 hours, about <b>$21&ndash;25 an hour</b> after tools. At or below a $25 floor, this is itself a demotion signal, not a holding pattern.</li>
+              <li><b>Two clients at $800, $1,600 gross.</b> 44&ndash;56 hours a month, 10&ndash;13 a week, <b>$26&ndash;34 an hour</b>.</li>
+              <li><b>Two clients at $1,000, templated to 16 hours each.</b> About <b>$47 an hour</b>. This is the target state and it needs the price step plus the templating.</li>
+              <li><b>Three clients at $1,000.</b> $35&ndash;45 an hour but 15&ndash;19 hours a week, over budget.</li>
+              <li><b>Break-even:</b> one A/B pack a month covers the tools; the first pack repays the whole month-0 spend.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="ninety">
+        <div class="sec-head">
+          <span class="sec-num">&sect;06 &mdash; First 90 days</span>
+          <h2>Build a portfolio you do not have a client for, then send</h2>
+          <p>Week one exists to make the first touch credible: two sample re-edits, a one-page site, ninety qualified firms, and a sending address that will not land in spam.</p>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <caption>Week one, day by day</caption>
+            <thead>
+              <tr><th class="num">Day</th><th>Do</th><th>End the day with</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="num">1</td><td>Buy the domain, create the business mailbox, set the three mail authentication records and start the warm-up. Subscribe Descript and Claude. Build the prospect sheet columns, including registration type and broker-dealer flag.</td><td>An empty but structured pipeline and both compliance checklists loaded</td></tr>
+              <tr><td class="num">2</td><td>Find 30 fee-only advisers with a webinar or podcast and under one upload a month; check the registration record for broker-dealer affiliation. Add 15 estate firms in non-filing states.</td><td>45 qualified rows with last-video view counts</td></tr>
+              <tr><td class="num">3</td><td>Re-cut portfolio sample one from a public-domain federal recording: one ten-minute episode, three Shorts, three thumbnails. Log your hours per step.</td><td>Sample set one, and your first real time log</td></tr>
+              <tr><td class="num">4</td><td>Re-cut sample two for the legal vertical. Write the mock memo. Publish the one-page site with both samples, a privacy page and a support email.</td><td>Sample set two, site live</td></tr>
+              <tr class="row-hi"><td class="num">5</td><td>Send 15 first-touch emails from your aged personal address, not the four-day-old business mailbox. Ten connection notes. Record a 90-second walkthrough of what a test changes on a real prospect&rsquo;s video.</td><td>25 touches out and a reusable walkthrough link</td></tr>
+              <tr><td class="num">6</td><td>Finish the sheet to 60 advisers and 30 law firms. Build the approval form and the six-folder client template. Set up payments and the e-sign contract.</td><td>90 rows and the delivery infrastructure</td></tr>
+              <tr><td class="num">7</td><td>Compare your logged sample hours against the 16&ndash;22 hour target. Write next week&rsquo;s send list. Check the mailbox warm-up.</td><td>Week one in the tracker</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>The first touch, verbatim</h3>
+        <p>The observation in the first line is the whole message. Financial services has the lowest reply rate of any vertical, so a generic opener is wasted volume.</p>
+        <pre>Subject: Your Roth conversion video
+
+[First name],
+
+Your "[video title]" from [month] has [N] views and the title is
+the only thing on the page that does not say what it is about: it
+reads "[current title]". The moment at [mm:ss] where you explain
+[specific point] is the hook, and it is not on the thumbnail.
+
+I run YouTube packaging and channel operations for fee-only RIAs.
+For $200 I would set up a title-and-thumbnail test on that one
+video using YouTube's built-in Test &amp; Compare (3 variants, two
+weeks), send you a one-page readout, and route everything through
+your compliance review first. Nothing goes live without your
+sign-off.
+
+Worth a two-week test on that video?
+
+[Name]
+[Site] | [City, State] | Reply "no" and I will not follow up.</pre>
+        <p class="fine">Send 15 a day at most from one mailbox for the first 30 days. Move to the business domain in week four, once it is three weeks old and authentication passes. Follow up on day 5 and day 12 with a new observation each time, never a bump.</p>
+
+        <h3>Decision gates</h3>
+        <ol class="gates">
+          <li><span class="day">Day 30</span><div><b>100+ touches, 3+ replies, one pack sold or three calls booked</b><p>Under three replies: rewrite the first line and move half the volume to connection notes. Zero replies after 100 touches and two rewrites: stop sending and get three warm introductions first.</p></div></li>
+          <li><span class="day">Day 60</span><div><b>Three A/B packs sold to channels that clear the recency rule</b><p>One or two sold: extend three weeks, cut the pack to $150, add a teardown video to every touch. Zero after 200 touches: kill, and move the hours to podcast clipping or a ghostwriting upsell.</p></div></li>
+          <li><span class="day">Day 90</span><div><b>One Core retainer at $800+ signed, or a signed start date</b><p>An adjust gate, not a kill gate. Also check the number that decides the economics: hours per client-month logged at or below 22, and approval cycle under three weeks. Continue past this only with two live proposals or a verbal yes.</p></div></li>
+          <li><span class="day">Day 120</span><div><b>The kill gate</b><p>No retainer at $800 or more after 300 personalised touches: demote this to a year-two upsell for ghostwriting clients and hand the hours over.</p></div></li>
+          <li><span class="day">Month 6</span><div><b>Two clients, hours trending toward 16, one attributable booking each</b><p>Two clients but hours over 20: stop selling, template the polish steps, then resume. One client and a churn: switch to the packaging-only micro-offer at $300&ndash;500 a month.</p></div></li>
+        </ol>
+
+        <p><strong>What the month looks like once a client is running.</strong> Memo and invoice on the 1st. Client records by the 5th. Transcript and rough cuts the 6th to 8th, polish and packaging the 9th to 12th, package to the reviewer by the 15th. On approval: one episode each Tuesday, Shorts Thursday and Saturday, a test running on every episode. Next-recording brief on the 25th.</p>
+      </section>
+
+      <section id="risk">
+        <div class="sec-head">
+          <span class="sec-num">&sect;07 &mdash; Risk &amp; kill</span>
+          <h2>The five risks that should change how you work</h2>
+          <p>Platform risk is genuinely low here, which is the point of the whole model. The real exposure is substitution, rework and the client&rsquo;s own review burden.</p>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <caption>Risk register, abridged to the items with a behavioural consequence</caption>
+            <thead>
+              <tr><th>Risk</th><th class="num">Likelihood</th><th>What you do about it</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Do-it-yourself substitution.</b> A $100 a month stack replicates roughly 60% of the deliverable, and Studio already suggests titles and thumbnails.</td><td class="num">Medium-high</td><td>Sell compliance packaging, segment judgement, the memo and reliability. If YouTube ships automatic long-to-Shorts clipping for everyone and two prospects cite it, re-price to $600&ndash;800 within 60 days or demote.</td></tr>
+              <tr><td><b>AI output quality.</b> About 38% of auto-generated clips needed rework in one test; transcription slips on proper nouns.</td><td class="num">High</td><td>A human fix pass on every Short, a 30-term glossary per client fed to the tools, and separate camera and screen tracks written into the contract.</td></tr>
+              <tr><td><b>Adviser marketing rules.</b> Everything you produce is the adviser&rsquo;s own advertisement, and they must retain it as used, with approvals.</td><td class="num">Medium</td><td>Contract puts approval on the client; nothing publishes unsigned; archive approved versions. No testimonials, no performance claims, no superlatives, ever.</td></tr>
+              <tr><td><b>The client finds it too cumbersome.</b> 6% of advisers quit video in the last year; two to four hours a month of partner and reviewer time is real.</td><td class="num">Medium</td><td>One recording, one approval batch, and a memo with an attributable number every single month. Set up tracked links during onboarding so that number exists.</td></tr>
+              <tr><td><b>Synthetic-content policy.</b> Low for this model by design.</td><td class="num">Low</td><td>Never synthesise the client&rsquo;s face or voice. Non-photorealistic backgrounds only. Keep the disclosure toggle at No and write down why.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Kill triggers</h3>
+        <ol class="kill">
+          <li>Fewer than <b>three A/B packs</b> sold to qualifying channels within eight weeks of the first send.</li>
+          <li>No retainer at <b>$800 or more by the end of month four</b>, after 300 personalised touches.</li>
+          <li>Two retainers running but <b>per-client hours still above 22 at month six</b>. The economics do not work at $800 and 22 hours.</li>
+          <li>YouTube ships <b>automatic clipping plus AI packaging for all creators</b> and two prospects name it as the reason not to buy.</li>
+        </ol>
+
+        <h3>Pivots, in order</h3>
+        <p>Cutdowns for LinkedIn sold to ghostwriting clients, reusing the same recording at about four hours a client-month. Then a packaging-and-compliance micro-offer at $300&ndash;500 for firms that already have an editor, with no editing hours at all. Then the podcast clipping retainer, which is the designated alternate. Last, white-label editing for one of the vertical specialist agencies: it trades margin for zero acquisition cost, and it is the right move if delivery quality is proven but outbound is not working.</p>
+      </section>
+
+      <section id="evidence">
+        <div class="sec-head">
+          <span class="sec-num">&sect;08 &mdash; Evidence</span>
+          <h2>What this is built on, and what to check before you sign anything</h2>
+        </div>
+
+        <p>This page is the third pass over the idea. A research dossier was written first, then two adversarial reviewers attacked it: one on demand, one on execution. Both weakened it; neither refuted it. Three judges then ranked it against nine other candidates, where it placed first on durability, second overall, and eighth on automation. Every number here is the post-review figure.</p>
+
+        <div class="panel flag">
+          <h3>The honest caveat</h3>
+          <p>No session in this research could fetch a primary page: the network proxy blocked every direct fetch. Every figure is relayed through search-result summaries of the linked sources, dated where the source is dated. Treat the whole page as &ldquo;start here and validate inside 60 days&rdquo;, not as a forecast.</p>
+        </div>
+
+        <h3>Verify these five before a contract</h3>
+        <ol class="kill">
+          <li><b>Tool prices at checkout.</b> Descript, OpusClip, Canva, Claude and n8n all come from third-party 2026 guides, not vendor pages.</li>
+          <li><b>Test &amp; Compare mechanics:</b> the impressions a variant needs and whether your prospect&rsquo;s channel has Advanced Features enabled.</li>
+          <li><b>Your state&rsquo;s sales-tax treatment of editing services delivered as files.</b> No data was found; over 30 states tax some digital products.</li>
+          <li><b>The adviser survey&rsquo;s sample size.</b> It is a vendor survey with no published n, and it is the main demand evidence.</li>
+          <li><b>Bar advertising rules in the state of any law firm you pitch</b>, including whether educational content is exempt.</li>
+        </ol>
+
+        <footer>
+          <p><strong>Where the full detail lives.</strong> This page is the readable version of three notes in the project vault: the business report with the complete risk register and sources, the automation stack with six copy-paste prompts and two workflow specifications, and the execution plan with every template, the onboarding questionnaire and the delivery procedure.</p>
+          <p class="fine">Repository <code>ortizgrady0-arch/flow-lab-</code>, branch <code>claude/ai-side-hustles-brainstorm-k6s8gd</code>, at <code>brain/reports/youtube-manager-expert-firms/</code>. Start from <code>brain/00-Index.md</code>. Operator assumptions throughout: one person in the United States, 10&ndash;15 hours a week, under $500 of capital, fluent with Claude and n8n, no audience and no professional credential.</p>
+        </footer>
+
+      </section>
+
+    </main>
+  </div>
+</div>

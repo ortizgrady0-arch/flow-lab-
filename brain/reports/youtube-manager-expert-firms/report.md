@@ -4,6 +4,7 @@ tags: [report, youtube-manager-expert-firms, youtube, b2b-service, regulated-ver
 updated: 2026-09-11
 hustle: youtube-manager-expert-firms
 type: report
+published_page: https://claude.ai/code/artifact/cbb290c3-b36d-4df0-af13-a7b9313dbf01
 ---
 
 ## TL;DR
@@ -15,6 +16,7 @@ type: report
 - Buyer pool is real but narrow: 16,544 SEC-registered advisers (IAA 2026 snapshot), 92.8% with 100 or fewer staff; the workable subset is SEC/state-registered RIAs with an in-house CCO, not broker-dealer reps (FINRA 2210 principal pre-approval on every retail communication until the proposed risk-based regime in Regulatory Notice 26-14 lands). Law-firm demand exists (30% of firms use video per ABA 2023; video a top channel for 52% per CallRail 2026) but solo-firm budgets are thin and FL/TX filing fees ($250 per ad in Florida from 1 Jul 2026) exclude some markets. CPA video adoption: still no data found.
 - Moat is not editing (a $100/mo DIY stack replicates ~60% of the deliverable): it is the compliance packaging, segment judgment on professional-tone content, the memo a partner reads, and reliability. Sell those, not "video editing".
 - Kill criteria: fewer than 3 A/B packs sold to channels clearing ~1,000 views per video on recent uploads (with Advanced Features enabled) within 8 weeks, or no RIA retainer at $800+ by month 4. Pivot: LinkedIn-cutdown add-on for the ghostwriting client base, or hand the hours to podcast clipping.
+- Published one-page brief ("Channel of Record"): https://claude.ai/code/artifact/cbb290c3-b36d-4df0-af13-a7b9313dbf01 - a reader-facing compression of these three notes; source HTML kept alongside them as `page.html`. Republish from that file to keep the same URL.
 - Companion notes: [[reports/youtube-manager-expert-firms/automation-stack]] (workflow, tools, prompts) and [[reports/youtube-manager-expert-firms/plan]] (week 1, 30/60/90, scripts). Research base: [[research/candidates/youtube-manager-expert-firms]], [[research/candidates/youtube-manager-expert-firms-skeptic-demand]], [[research/candidates/youtube-manager-expert-firms-skeptic-execution]].
 
 ## 1. Executive summary
