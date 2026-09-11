@@ -14,11 +14,11 @@ Blueprint for the delivery machine behind [[reports/linkedin-founder-ghostwritin
 
 - Design rule: **the human edit is the product.** AI does transcription, style-guide extraction, first drafts, hook variants, carousel copy, scheduling and the analytics recap; the operator does the interview, the specificity edit, the client relationship and every outreach message. Time-weighted automation is 45-50% in months 1-3 and ~55% at steady state (skeptic-corrected from the dossier's 58%); do not try to push it higher, because LinkedIn now cuts views ~40% on content it classifies as AI slop and notifies the poster.
 - Per client per month at steady state: ~10-12 operator hours; months 1-3: 13-16 hours (onboarding 4-8 h, heavier revisions). Nothing in the stack can shorten the 30-minute call; everything else can be trimmed.
-- Three tiers: **Free ($0)** = Claude free + Zoom local recording + Fireflies free uploads (delete after export) + Canva free + Buffer free + Wave; **~$50/mo** = Claude Pro $20 + Fireflies Pro $18 + Canva Pro $12 (annual) + Buffer free; **~$150/mo** = the $50 stack on monthly billing plus Taplio Growth $69 and n8n Cloud Starter $24. The $50 tier is the one to run; $150 only pays at 3+ clients.
+- Three tiers: **Free ($0)** = Claude free + Zoom local recording + Fireflies free uploads (delete after export) + Canva free + Buffer free + Wave; **~$50/mo** = Claude Pro $20 + Fireflies Pro $18 + Canva Pro $12-15 (annual, $144-180/yr) + Buffer free (operator-owned); **~$150/mo** = the $50 stack on monthly billing plus Taplio Growth $69 and n8n Cloud Starter $24 (+$9-11 for Fireflies Business only if the API turns out to be Business-only on your account). The $50 tier is the one to run; $150 only pays at 3+ clients.
 - Six copy-paste prompts below cover the core AI steps: voice guide, interview questions, transcript-to-posts, anti-slop critique, carousel copy, monthly recap. Every prompt forbids invented specifics and outputs a "needs a real number here" placeholder rather than a plausible-sounding fake.
-- Month 1 is all by hand (Claude Project + Google Docs + Fireflies). Months 2-3 automate two things: (A) transcript -> draft doc pipeline (Fireflies webhook -> n8n -> Claude API -> Google Doc -> email), (B) monthly analytics recap from a client-exported CSV. Both have specs below with failure handling.
-- Hard limits: hand-send all outreach (LinkedIn User Agreement 8.2 bars bots and automated messaging); client connects their own LinkedIn to Buffer via OAuth; never hold a client's password; no auto-comments, no engagement pods; announce recording at the top of every call and keep written consent on file (Otter and Fireflies are both in wiretap/BIPA litigation).
-- Log eight metrics weekly in one Google Sheet: messages sent, replies, calls, pilots, posts shipped, posts flagged, edit minutes per post, inbound wins reported by the client.
+- Months 1-3 are all by hand (Claude Project + Google Docs + Fireflies); every hour goes to outreach and the edit. After two completed client-months (realistically month 4-5, or at 3 clients) automate two things: (A) transcript -> draft doc pipeline (Fireflies transcript -> n8n -> Claude API -> Google Doc -> email; the trigger depends on API access on your Fireflies plan, verify before building, Drive-folder fallback specified), (B) monthly analytics recap from a client-exported CSV. Both have specs below with failure handling.
+- Hard limits: hand-send all outreach (LinkedIn User Agreement 8.2 bars bots and automated messaging); each client authorizes their own LinkedIn as a channel on the operator's Buffer via OAuth on a screen-share (revocable by them), or schedules natively from the approved Doc; never hold a client's password; no auto-comments, no engagement pods; announce recording at the top of every call and keep written consent on file from every client regardless of state (In re Otter.ai claims proceeded Aug 2026; Fricker v. Fireflies.AI pending).
+- Log eight metrics weekly in one Google Sheet: touches sent (connection requests, sample DMs, emails), replies, calls, pilots, posts shipped, posts reported as AI slop, edit minutes per post, inbound wins reported by the client.
 
 ## 1. End-to-end workflow
 
@@ -42,7 +42,7 @@ flowchart TD
     N -- "Yes" --> O["Google Doc to client; 48-h silent approval"]
     O --> P{"Client edits?"}
     P -- "Yes" --> L
-    P -- "Approved" --> Q["Client's Buffer queue (OAuth on client account)"]
+    P -- "Approved" --> Q["Operator's Buffer queue on the client's OAuth-authorized channel, or client schedules natively"]
     Q --> R["Posts publish; client replies to comments"]
     R --> S["Monthly: client exports analytics CSV"]
     S --> T["Claude drafts recap + hook library update"]
@@ -63,7 +63,7 @@ Times are per unit at steady state; months 1-3 run 20-40% slower (execution skep
 | 2 | Draft opener + sample rewrite | Claude drafts; operator edits | assisted | Claude Pro | 6-8 min / lead | Sample must quote one real detail from their profile or a post; no template phrases |
 | 3 | Send outreach | Operator, by hand | manual | LinkedIn free (or email via Gmail) | 2 min / message | Max 20-25 connection requests/day; never a bot or extension |
 | 4 | Discovery call + proposal | Operator; Claude fills proposal template | manual | Google Meet free | 30-40 min / prospect | Scope, price, consent, approval rule all stated on the call |
-| 5 | Contract, invoice, payment | Template + Wave/Stripe | full after setup | Wave $0 (2.9% + $0.60 card; 1% ACH) or Stripe 2.9% + $0.30 + 0.4% | 10 min / client / mo | Paid before onboarding starts |
+| 5 | Contract, invoice, payment | Template + Wave/Stripe | full after setup | Wave $0 (2.9% + $0.60 card; 1% ACH, $1 min) or Stripe (2.9% + $0.30 card; ACH 0.8% capped at $5; +0.4% Invoicing) | 10 min / client / mo | Paid before onboarding starts |
 | 6 | Onboarding (consent, collect 20 past posts, 45-min intake call) | Operator | manual | Fireflies Pro $18 ($10 annual) | 4-8 h one-time over 2-3 weeks | Written recording consent on file; style guide approved by client |
 | 7 | Voice/style guide | Claude from past posts + intake transcript | assisted | Claude Pro (Project) | 45-60 min one-time | Contains banned phrases, signature moves, 3 topic pillars, 5 real anecdotes |
 | 8 | Weekly interview (prep 10 min) | Operator | manual | Google Meet + Fireflies bot | 40 min / wk (45-60 min first 4-6 calls) | Every call yields at least 3 stories with a number, a name or a decision |
@@ -73,8 +73,8 @@ Times are per unit at steady state; months 1-3 run 20-40% slower (execution skep
 | 12 | Anti-slop critique | Claude critique prompt | assisted | Claude Pro | 3 min / post | Zero flagged patterns remaining |
 | 13 | Client review loop | Google Doc comments; Claude applies edits | assisted | Google Docs free | 1-3 h / mo (heavier in months 1-3) | 48-h silent approval in contract; nudge once |
 | 14 | Monthly carousel | Claude slide copy -> Canva template | assisted | Canva Pro $18 ($12 annual) | 60-90 min / mo | 1080x1350 per page, one template per client, PDF title set in Buffer |
-| 15 | Scheduling | Client's Buffer (OAuth) | full after load | Buffer free (3 channels, 10 queued/channel) | 20-30 min / mo | Operator never logs into LinkedIn as the client |
-| 16 | Engagement prompts | Claude drafts 10 comment replies/wk from a saved list (growth tier only) | assisted | Claude Pro | 30-45 min / mo | Client posts comments themselves; no automation |
+| 15 | Scheduling | Operator's Buffer; the client's LinkedIn is authorized as a channel via OAuth on a screen-share (or the client schedules natively from the approved Doc) | full after load | Buffer free (3 channels, 10 queued/channel, single user); Essentials $6/channel from client 3 | 20-30 min / mo | Operator never logs into LinkedIn as the client; client can revoke the OAuth grant any time |
+| 16 | Engagement prompts | Claude drafts 5 comment replies/wk from a saved list (growth tier only); operator reads each target post and voice-edits every reply | assisted | Claude Pro | ~2 h / mo (execution skeptic: 1-2 h; the earlier 30-45 min for 10/wk was under a minute per reply) | Client posts comments themselves; no automation |
 | 17 | Monthly recap + hook library | Claude from client CSV export | assisted | Claude Pro, Google Sheet | 45 min / mo | Reports inbound DMs, calls, saves, profile views; impressions last |
 | 18 | Renewal / upsell | Operator; Claude drafts email | manual | none | 20 min / mo | Ask for a referral on the first attributable inbound win |
 
@@ -84,11 +84,11 @@ Steady-state operator time, steps 5-18, per client: ~10-12 h/mo. Acquisition (st
 
 | Tier | Tools (exact) | Monthly cost | What it unlocks | Limits |
 |---|---|---|---|---|
-| **Free ($0)** | Claude free tier; Zoom Basic with local recording (40-min meeting cap) or Google Meet without recording plus phone-recorder app; Fireflies free (upload the file; unlimited transcription, 400 storage min per team, export and delete after each call); Canva free; Buffer free (3 channels, 10 queued posts/channel); Wave Starter free; Google Docs/Sheets | $0 + payment fees | Enough to sell and deliver one pilot | Claude free usage caps interrupt long drafting sessions; Fireflies storage housekeeping every ~13 calls; Otter free is unusable (30-min per-conversation cap) ([Claap Otter, 2026](https://www.claap.io/blog/otter-pricing); [Claap Fireflies, 2026](https://www.claap.io/blog/fireflies-pricing)) |
-| **~$50/month (run this one)** | Claude Pro $20 ([CloudZero, 2026](https://www.cloudzero.com/blog/claude-pricing/)); Fireflies Pro $18 monthly or $10 annual, 8,000 storage min ([Sonix, 2026](https://sonix.ai/resources/fireflies-ai-pricing/)); Canva Pro $12 annual ($144/yr) ([Designrr, 2026](https://designrr.io/canva-pricing/)); Buffer free; Wave free | $50 (monthly Claude + monthly Fireflies + annual Canva); $39 all-annual; $56 all-monthly | Claude Projects (one per client with the style guide pinned), reliable bot recording of every call, brand kit and carousel templates | Buffer free caps at 3 connected channels, so at client 3 add Essentials at $6/channel monthly ($5 annual) ([Blotato, 2026](https://www.blotato.com/blog/buffer-pricing)) |
-| **~$150/month (3+ clients)** | $50 stack on monthly billing ($56) + Taplio Growth $69 (AI post generator, hook writer, viral-post library, analytics; annual $49) ([Taplio pricing, 2026](https://taplio.com/blog/taplio-pricing)) + n8n Cloud Starter $24 (2,500 executions; $20 annual) ([No Code MBA, 2026](https://www.nocode.mba/articles/n8n-pricing)) | ~$149 | Transcript-to-draft pipeline runs unattended; Taplio's library replaces manual swipe-file research; per-client analytics without CSV exports | Taplio is a third-party LinkedIn tool; use it for research and analytics on the operator's own account, and schedule client posts through Buffer on the client's OAuth. Make free (1,000 ops/mo) or self-hosted n8n replaces the $24 if the operator hosts it |
+| **Free ($0)** | Claude free tier; Zoom Basic with local recording (40-min meeting cap) or Google Meet without recording plus phone-recorder app; Fireflies free (upload the file; unlimited transcription; storage 400-800 min, sources conflict: Fireflies' help page says 800 per seat, third-party guides say 400 per team, check your account; export and delete after each call); Canva free; Buffer free (3 channels, 10 queued posts/channel); Wave Starter free; Google Docs/Sheets | $0 + payment fees | Enough to sell and deliver one pilot | Claude free usage caps interrupt long drafting sessions; Fireflies storage housekeeping every ~13-26 calls; Otter free is unusable (30-min per-conversation cap) ([Claap Otter, 2026](https://www.claap.io/blog/otter-pricing); [Claap Fireflies, 2026](https://www.claap.io/blog/fireflies-pricing); [Fireflies free plan help](https://guide.fireflies.ai/articles/4027724828-learn-about-the-fireflies-free-plan)) |
+| **~$50/month (run this one)** | Claude Pro $20 ([CloudZero, 2026](https://www.cloudzero.com/blog/claude-pricing/)); Fireflies Pro $18 monthly or $10 annual, 8,000 storage min ([Sonix, 2026](https://sonix.ai/resources/fireflies-ai-pricing/)); Canva Pro $12-15 annual ($144-180/yr depending on region and promo, verify at canva.com/pricing; [Designrr, 2026](https://designrr.io/canva-pricing/); [CostBench, Aug 2026](https://costbench.com/software/design/canva/)); Buffer free (operator-owned); Wave free | $50-53 (monthly Claude + monthly Fireflies + annual Canva); $39-42 all-annual; $56 all-monthly | Claude Projects (one per client with the style guide pinned), reliable bot recording of every call, brand kit and carousel templates | Buffer free is operator-owned, single-user and caps at 3 connected channels (Free and Essentials are single-user; multi-user needs Team at $12/channel monthly, $10 annual, which this stack never needs because the operator is the only Buffer user and clients authorize their LinkedIn via OAuth), so at client 3 add Essentials at $6/channel monthly ($5 annual) ([Blotato, 2026](https://www.blotato.com/blog/buffer-pricing)) |
+| **~$150/month (3+ clients)** | $50 stack on monthly billing ($56) + Taplio Growth $69 (AI post generator, hook writer, viral-post library, analytics; annual $49) ([Taplio pricing, 2026](https://taplio.com/blog/taplio-pricing)) + n8n Cloud Starter $24 (2,500 executions; $20 annual) ([No Code MBA, 2026](https://www.nocode.mba/articles/n8n-pricing)) + Fireflies Business (+$9-11/mo over Pro: $19/seat annual or $29 monthly) only if Automation A's API trigger turns out to be Business-only on your account ([Fireflies Pro tier features](https://guide.fireflies.ai/articles/1092250300-learn-about-fireflies-pro-tier-features); [Fireflies API quickstart](https://docs.fireflies.ai/getting-started/quickstart)) | ~$149-160 | Transcript-to-draft pipeline runs unattended; Taplio's library replaces manual swipe-file research; per-client analytics without CSV exports | Taplio is a third-party LinkedIn tool; use it for research and analytics on the operator's own account, and schedule client posts through the operator's Buffer on each client's OAuth-authorized channel. Make free (1,000 ops/mo) or self-hosted n8n replaces the $24 if the operator hosts it |
 
-Add-ons never worth it at this scale: Claude Max ($100-200), Taplio Pro ($199), Fireflies Business ($29), paid lead databases.
+Add-ons never worth it at this scale: Claude Max ($100-200), Taplio Pro ($199), Fireflies Business ($29 monthly; the one exception is if the API is required for Automation A), paid lead databases.
 
 ## 4. Copy-paste prompts
 
@@ -215,7 +215,7 @@ Data:
 
 ## 5. QA checklist (every post, before it reaches the client)
 
-Platform-specific rules follow the 2026 platform facts: LinkedIn cuts views ~40% on content it classifies as AI slop and notifies the poster ([Social Media Today, Aug 2026](https://www.socialmediatoday.com/news/linkedin-says-1m-people-have-reported-ai-slop/828465/)); only ~210 characters show before "see more" on desktop, ~140 on mobile; 1,301-2,500 character posts had the highest median engagement in AuthoredUp's 372,126-post sample ([AuthoredUp, 2026](https://authoredup.com/blog/linkedin-character-limit)); native documents are the top-engaging format ([Socialinsider, 2026](https://www.socialinsider.io/social-media-benchmarks/linkedin)).
+Platform-specific rules follow the 2026 platform facts: content LinkedIn classifies as AI slop gets ~40% fewer views and the poster is notified in post analytics; reports feed the classifier and no single report changes a post's distribution ([The Register, 2026-08-24](https://www.theregister.com/ai-and-ml/2026/08/24/users-mash-linkedins-ai-slop-button-1m-times-in-3-weeks/5291802); [Social Media Today, Aug 2026](https://www.socialmediatoday.com/news/linkedin-says-1m-people-have-reported-ai-slop/828465/)); only ~210 characters show before "see more" on desktop, ~140 on mobile; 1,301-2,500 character posts had the highest median engagement in AuthoredUp's 372,126-post sample ([AuthoredUp, 2026](https://authoredup.com/blog/linkedin-character-limit)); native documents are the top-engaging format ([Socialinsider, 2026](https://www.socialinsider.io/social-media-benchmarks/linkedin)).
 
 **Specificity**
 - [ ] At least 3 concrete details (number, name, date, place, verbatim quote, decision) and every one traceable to the transcript or the anecdote bank.
@@ -236,11 +236,11 @@ Platform-specific rules follow the 2026 platform facts: LinkedIn cuts views ~40%
 - [ ] Carousel: 1080x1350, 8-10 slides, document title set in Buffer, no "swipe/follow/save" language.
 
 **Policy and legal**
-- [ ] Post expresses the client's own views about their own business; if it praises a third-party product/partner the client is paid or perked by, add "#partner" or "#ad" (FTC Endorsement Guides).
+- [ ] Post expresses the client's own views about their own business; if it praises a third-party product/partner the client is paid or perked by, disclose with "#ad" or "#[Brand]Partner" placed before the see-more fold; never "#partner" alone, which the FTC's Endorsement Guides FAQ calls ambiguous ([FTC Endorsement Guides FAQ](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking)).
 - [ ] No named customer story without written permission on file.
 - [ ] No claims about competitors that cannot be supported.
-- [ ] Recording consent for the source call is on file; call started with verbal notice.
-- [ ] Post will be published by the client (or their Buffer OAuth), not by the operator logged in as the client.
+- [ ] Recording consent for the source call is on file (required from every client regardless of state); call started with verbal notice.
+- [ ] Post will be published from the client's own LinkedIn (their OAuth-authorized channel on the operator's Buffer, or their native scheduler), never by the operator logged in as the client.
 - [ ] The doc's edit history shows the human edit (this is also the copyright-authorship record).
 
 **Process**
@@ -249,21 +249,21 @@ Platform-specific rules follow the 2026 platform facts: LinkedIn cuts views ~40%
 
 ## 6. Automation roadmap
 
-### Month 1: everything by hand
-Claude Pro Project per client (voice guide pinned), Fireflies bot on Google Meet, drafts pasted into a Google Doc, Buffer on the client's account, Wave invoices, one metrics Sheet. Do not build anything until two clients have completed a full month; the specs below assume the manual process has been run at least 8 times so the failure modes are known.
+### Months 1-3: everything by hand
+Claude Pro Project per client (voice guide pinned), Fireflies bot on Google Meet, drafts pasted into a Google Doc, Buffer channels each client authorized via OAuth, Wave invoices, one metrics Sheet. Do not build anything until two clients have completed a full month. Under the plan the second client onboards around week 9, so that gate arrives around month 4-5 (or earlier at 3 clients); every hour in months 2-3 goes to outreach and the edit, not to build time. The specs below assume the manual process has been run at least 8 times so the failure modes are known.
 
-### Months 2-3: automate two things
+### After two completed client-months (realistically month 4-5, or at 3 clients): automate two things
 
 **Automation A: transcript -> draft doc pipeline**
 
 | Field | Spec |
 |---|---|
-| Trigger | Fireflies "transcript ready" webhook (Fireflies Pro exposes webhooks and a GraphQL API) received by an n8n Webhook node. Fallback trigger if webhooks fail: n8n Schedule node every 30 min polling the Fireflies API for transcripts created since the last run. |
+| Trigger | Fireflies "transcript ready" webhook received by an n8n Webhook node. **Verify API/webhook access on your Fireflies plan before building:** Fireflies' knowledge base lists API access as a Business-tier feature ($19/seat annual, $29 monthly) while its developer docs say the API is available to all users, and 2026 third-party roundups split the same way ([Fireflies Pro tier features](https://guide.fireflies.ai/articles/1092250300-learn-about-fireflies-pro-tier-features); [Fireflies API quickstart](https://docs.fireflies.ai/getting-started/quickstart)). Plan-independent fallbacks, in order: (1) Fireflies' native Zapier or Make integration ("new transcript" event) posting to the n8n webhook; (2) the operator downloads the transcript export and drops it into a Drive folder `Transcripts - {ClientCode}`, and an n8n Google Drive trigger fires (the same pattern Automation B uses). If the API is available on your plan, the fallback for a failed webhook is an n8n Schedule node every 30 min polling the Fireflies GraphQL API for transcripts created since the last run. |
 | Inputs | Transcript id; meeting title formatted `GW - {ClientCode} - {YYYY-MM-DD}`; a Google Sheet "clients" tab mapping ClientCode -> voice-guide Doc id, drafts folder id, weekly slots, operator email. |
-| Steps | 1. Parse ClientCode from the title; if no match, stop and email the operator "unmapped call". 2. Fetch the full transcript with speaker labels via the Fireflies API. 3. Fetch the voice guide Doc text and the "asked" list from the client's Sheet tab. 4. Call the Claude API (Messages API, current Sonnet-class model; system prompt = voice guide + Prompt 3 rules; user content = transcript + this week's slots) with max_tokens ~4,000 and temperature 0.5. 5. Create a Google Doc named `Drafts - {ClientCode} - {date}` in the client's drafts folder with the response, plus a header block: "AI first draft. Not for publication. Operator edit required." 6. Append a row to the metrics Sheet (client, date, transcript length, tokens used, doc link). 7. Email or Slack the operator the Doc link and the story inventory. |
+| Steps | 1. Parse ClientCode from the title; if no match, stop and email the operator "unmapped call". 2. Fetch the full transcript with speaker labels via the Fireflies API (or read the dropped export file in the Drive fallback). 3. Fetch the voice guide Doc text and the "asked" list from the client's Sheet tab. 4. Call the Claude API (Messages API, current Sonnet-class model; system prompt = voice guide + Prompt 3 rules; user content = transcript + this week's slots) with max_tokens ~4,000 and temperature 0.5. 5. Create a Google Doc named `Drafts - {ClientCode} - {date}` in the client's drafts folder with the response, plus a header block: "AI first draft. Not for publication. Operator edit required." 6. Append a row to the metrics Sheet (client, date, transcript length, tokens used, doc link). 7. Email or Slack the operator the Doc link and the story inventory. |
 | Outputs | Draft Doc; metrics row; notification. |
 | Failure handling | Claude API error or timeout: retry 3x with backoff, then email "manual draft needed" with the transcript link. Transcript under 1,500 words: still run but prefix the Doc with "THIN TRANSCRIPT" and only request 1-2 posts. Response containing any banned-list phrase (simple regex check in a Code node): flag in the Doc header. Duplicate webhook: dedupe on transcript id stored in the Sheet. Never auto-send anything to the client or to Buffer from this flow. |
-| Cost / savings | n8n Cloud Starter $24/mo or self-hosted free; Claude API ~$0.05-0.20 per run at 2026 Sonnet-class prices (assumption; check current pricing); saves ~45-60 min per client per month. Worth building at 3+ clients (execution skeptic's threshold). |
+| Cost / savings | n8n Cloud Starter $24/mo or self-hosted free; Fireflies Business +$9-11/mo if the API is Business-only on your plan; Claude API ~$0.05-0.20 per run at 2026 Sonnet-class prices (assumption; check current pricing); saves ~45-60 min per client per month. Worth building at 3+ clients or after two completed client-months, whichever comes first (execution skeptic's threshold). |
 
 **Automation B: monthly analytics recap**
 
@@ -276,7 +276,7 @@ Claude Pro Project per client (voice guide pinned), Fireflies bot on Google Meet
 | Failure handling | Unknown column headers (LinkedIn changes export formats): stop, email "schema changed" with the header row; operator fixes the mapping in the Sheet. Missing prior month: compute no deltas and say so. Any post with a recorded slop flag: force a "flagged" section into the prompt input. The operator always edits and sends; nothing goes to the client automatically. |
 | Cost / savings | Same n8n seat; ~30-40 min saved per client per month. |
 
-### Month 4+ (only if 3+ clients)
+### Later (only if 3+ clients)
 - Outreach prep (not sending): a Make or n8n flow that takes a Sheet row (name, profile text pasted by hand, last post pasted by hand) and returns the opener + sample rewrite into the Sheet. Sending stays manual.
 - Client review nudges: Google Apps Script that emails the client if a draft Doc has had no comment or approval after 48 hours.
 - Do not build: auto-posting from the operator's account, auto-commenting, connection automation, profile scraping. Each is a LinkedIn User Agreement 8.2 violation ([Northlight, 2026](https://northlight.ai/blog/is-linkedin-automation-against-the-rules)).
@@ -287,10 +287,10 @@ One Google Sheet, three tabs, updated every Sunday (15 minutes).
 
 | Tab | Metric | How captured | Why |
 |---|---|---|---|
-| Outreach | Messages sent (by niche, by channel) | Manual tally, daily | Kill criterion input (150 in 6 weeks) |
+| Outreach | Touches sent (connection requests, sample DMs, emails; by niche, by channel) | Manual tally, daily | Kill criterion input (150 connection requests with follow-ups + 60 emails by day 45) |
 | Outreach | Connection acceptances, replies, calls booked, pilots closed | Manual | Conversion funnel vs assumptions (acceptance ~26%, reply 5-10%, call-to-pilot ~30%) |
 | Delivery | Posts shipped per client, edit minutes per post, revision rounds per post | Manual from the Doc | Hours per client (target 10-12 steady state); revision rounds should fall from 2-3 to <1 by month 4 |
-| Delivery | Posts flagged as AI slop (client reports the analytics notification) | Client tells you; ask monthly | P0 incident; any flag triggers a process review |
+| Delivery | Posts reported as AI slop (client relays the post-analytics notification; this, not reach, is the observable guarantee trigger) | Client tells you; ask monthly | P0 incident; any report triggers a process review |
 | Delivery | Days from call to client approval | Doc timestamps | Approval friction; enforce the 48-h rule |
 | Results | Per client: impressions/post, engagement rate, saves, profile views, followers, inbound DMs, calls booked, referrals | Client's monthly export + client's verbal report | The only numbers that prevent churn |
 | Money | Invoices sent/paid, MRR, tool spend, payment fees, hours total | Wave export + tally | Effective hourly; tax set-aside 25-30% |
@@ -302,6 +302,7 @@ Review cadence: weekly funnel check (are messages on pace?), monthly per-client 
 
 - [LinkedIn says 1M people have reported AI slop (Social Media Today, Aug 2026)](https://www.socialmediatoday.com/news/linkedin-says-1m-people-have-reported-ai-slop/828465/)
 - [LinkedIn's 'Seems Like AI Slop' button drops views by 40% (Yahoo Finance, Aug 2026)](https://finance.yahoo.com/technology/ai/articles/linkedin-seems-ai-slop-button-195000046.html)
+- [Users mash LinkedIn's AI slop button 1M times; no single report changes distribution (The Register, 2026-08-24)](https://www.theregister.com/ai-and-ml/2026/08/24/users-mash-linkedins-ai-slop-button-1m-times-in-3-weeks/5291802)
 - [LinkedIn Character Limits 2026: best post length data, 372,126 posts (AuthoredUp, 2026)](https://authoredup.com/blog/linkedin-character-limit)
 - [LinkedIn Organic Benchmarks 2026 (Socialinsider, 2026)](https://www.socialinsider.io/social-media-benchmarks/linkedin)
 - [LinkedIn Automation Rules 2026: Banned vs. Safe Tools (Northlight, 2026)](https://northlight.ai/blog/is-linkedin-automation-against-the-rules)
@@ -312,16 +313,24 @@ Review cadence: weekly funnel check (are messages on pace?), monthly per-client 
 - [Claude pricing in 2026 (CloudZero, 2026)](https://www.cloudzero.com/blog/claude-pricing/)
 - [Fireflies.ai Pricing 2026 (Claap, 2026)](https://www.claap.io/blog/fireflies-pricing)
 - [Fireflies.ai Pricing: How Much Does It Really Cost in 2026 (Sonix, 2026)](https://sonix.ai/resources/fireflies-ai-pricing/)
+- [Learn about the Fireflies free plan: 800 storage minutes per seat (Fireflies help)](https://guide.fireflies.ai/articles/4027724828-learn-about-the-fireflies-free-plan)
+- [Learn about Fireflies Pro tier features; API listed under Business (Fireflies help)](https://guide.fireflies.ai/articles/1092250300-learn-about-fireflies-pro-tier-features)
+- [Fireflies API quickstart (Fireflies developer docs)](https://docs.fireflies.ai/getting-started/quickstart)
 - [Otter AI Pricing 2026 (Claap, 2026)](https://www.claap.io/blog/otter-pricing)
 - [Canva Pricing in 2026 (Designrr, 2026)](https://designrr.io/canva-pricing/)
+- [Canva pricing: Pro annual $144-180/yr depending on region (CostBench, Aug 2026)](https://costbench.com/software/design/canva/)
 - [Taplio Pricing 2026 (Taplio blog, 2026)](https://taplio.com/blog/taplio-pricing)
 - [Taplio Review 2026: AI features start at Growth (Supergrow, 2026)](https://www.supergrow.ai/blog/taplio-review)
 - [n8n Pricing 2026: Cloud Plans and Self-Hosting (No Code MBA, 2026)](https://www.nocode.mba/articles/n8n-pricing)
 - [Zapier Free plan contents (Zapier Help)](https://help.zapier.com/hc/en-us/articles/32337438839565-What-s-included-in-Zapier-s-Free-plan)
 - [Wave Invoicing Pricing and Fees (tech.co, 2026)](https://tech.co/accounting-software/wave-invoicing)
 - [Stripe Invoicing Fees 2026 (FeeTrace, 2026)](https://feetrace.com/blog/stripe-invoicing-fees-for-b2b-saas-in-2026)
+- [Stripe Invoicing pricing: 0.4% per paid invoice; ACH Direct Debit 0.8% capped at $5 (Stripe support)](https://support.stripe.com/questions/stripe-invoicing-pricing)
+- [Stripe pricing breakdown 2026 (Flexprice, 2026)](https://flexprice.io/blog/stripe-pricing-breakdown-2026)
 - [AI Meeting Recorder Lawsuits 2026: Otter.ai, Fireflies (tl;dv, 2026)](https://tldv.io/blog/ai-meeting-recorder-lawsuits/)
 - [Recording Meetings in Two-Party Consent States, 2026 guide (Basil AI, 2026-07-07)](https://basilai.app/articles/2026-07-07-recording-meetings-two-party-consent-states-ai-notetaker-compliance-guide-2026.html)
 - [The Consumer Reviews and Testimonials Rule: Q&A (FTC)](https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers)
+- [FTC's Endorsement Guides: What People Are Asking; '#partner' alone is ambiguous (FTC)](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking)
+- [AI meeting assistants and biometric privacy: lessons from the Fireflies.AI lawsuit (Workplace Privacy Report, Apr 2026)](https://www.workplaceprivacyreport.com/2026/04/articles/artificial-intelligence/ai-meeting-assistants-and-biometric-privacy-governance-lessons-from-the-fireflies-ai-lawsuit/)
 - [Copyright and AI, Part 2: Copyrightability (US Copyright Office, 2025-01-29)](https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf)
 - Vault: [[research/candidates/linkedin-founder-ghostwriting]] · [[research/candidates/linkedin-founder-ghostwriting-skeptic-execution]] · [[decisions/final-selection]] · [[reports/linkedin-founder-ghostwriting/report]] · [[reports/linkedin-founder-ghostwriting/plan]]
