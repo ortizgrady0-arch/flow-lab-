@@ -1,7 +1,7 @@
 ---
 title: "Lens: AI services sold to local & small businesses"
 tags: [research, lens, local-smb-services]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
@@ -24,7 +24,7 @@ updated: 2026-09-10
 
 ## Candidate 1: After-hours and overflow AI phone answering for home-service contractors
 
-See [[research/candidates/home-services-ai-phone-answering]].
+See [[research/candidates/ai-front-desk-home-services]].
 
 **Offer**: Inbound-only AI receptionist on Retell or Vapi that answers when the contractor's line is busy or after hours, captures name/address/problem, books or requests a slot on the contractor's calendar, texts a summary to the owner, and escalates true emergencies (burst pipe, no heat) by warm-transfer or immediate SMS. Sold flat at $149-$299/mo plus a $250-$500 setup fee; target 1-5 truck HVAC, plumbing, electrical, garage door, and restoration companies.
 
@@ -56,7 +56,7 @@ See [[research/candidates/home-services-ai-phone-answering]].
 
 ## Candidate 2: Missed-call text-back plus two-way SMS follow-up for appointment businesses
 
-See [[research/candidates/missed-call-textback-sms-followup]].
+See [[research/candidates/ai-front-desk-home-services]].
 
 **Offer**: For salons, barbers, auto repair, chiropractors, and dental offices: when a call goes unanswered, an automatic SMS fires within seconds ("Sorry we missed you, what can we help with?"), an AI (GHL Conversation AI or n8n + Claude) handles the reply thread, and bookings drop into the client's calendar. Sold at $49-$99/mo, or bundled into Candidate 1 or 4.
 
@@ -78,7 +78,7 @@ See [[research/candidates/missed-call-textback-sms-followup]].
 
 ## Candidate 3: Review-reply drafting plus review-request automation for high-volume local businesses
 
-See [[research/candidates/review-reply-and-request-automation]].
+See [[research/shortlist#Rejected outright]].
 
 **Offer**: For restaurants, auto repair, dental, and vet clinics: post-visit SMS/email review requests (no gating, no incentives), AI-drafted replies to every Google/Yelp review queued for one-click owner approval, weekly sentiment digest, and flagging of policy-violating reviews for removal requests. $150-$300/mo per location.
 
@@ -101,7 +101,7 @@ See [[research/candidates/review-reply-and-request-automation]].
 
 ## Candidate 4: Google Business Profile setup and monthly optimization for unclaimed or neglected profiles
 
-See [[research/candidates/gbp-setup-and-optimization]].
+See [[research/shortlist#Rejected outright]].
 
 **Offer**: Audit, claim/verify, categories, services, attributes, AI-drafted description and Q&A, 4-8 AI-drafted GBP posts per month from the owner's photos, photo upload cadence, and monthly ranking/call report. One-time setup $300-$499, then $200-$400/mo. Target new businesses, businesses whose profile was never claimed, and multi-location owners.
 
@@ -123,7 +123,7 @@ See [[research/candidates/gbp-setup-and-optimization]].
 
 ## Candidate 5: Fixed-scope n8n/Make lead-intake workflow builds for one vertical
 
-See [[research/candidates/n8n-lead-intake-workflows-vertical]].
+See [[research/candidates/ai-front-desk-home-services]].
 
 **Offer**: A productized "lead intake to booked appointment" build for one vertical (e.g. independent insurance agents, real-estate teams, roofing companies): web form/phone/email leads normalized by an LLM, pushed to the CRM, instant SMS/email reply, calendar booking, and a Slack/SMS alert, plus a dashboard. $750-$2,000 per build, $50-$150/mo hosting and maintenance.
 
@@ -146,7 +146,7 @@ See [[research/candidates/n8n-lead-intake-workflows-vertical]].
 
 ## Candidate 6: Website chatbot with lead capture for law firms and med spas
 
-See [[research/candidates/website-chatbot-lead-capture]].
+See [[research/shortlist#Rejected outright]].
 
 **Offer**: RAG chatbot trained on the firm's site and FAQ, qualifies the visitor, captures contact info, books a consult, and hands off to a human via SMS. $300-$800 setup, $50-$150/mo hosting.
 
@@ -169,7 +169,7 @@ See [[research/candidates/website-chatbot-lead-capture]].
 
 ## Candidate 7: AI-assisted local social content retainer built from the owner's phone footage
 
-See [[research/candidates/local-social-content-retainer]].
+See [[research/shortlist#Rejected outright]].
 
 **Offer**: Owner sends 10-15 raw photos/clips per month; you deliver 12 posts plus 4 short-form videos with captions, hashtags, and scheduling across Instagram/Facebook/GBP, plus a monthly stat sheet. $300-$600/mo. Target restaurants, gyms, salons, home services.
 
@@ -190,7 +190,7 @@ See [[research/candidates/local-social-content-retainer]].
 
 ## Candidate 8: Consent-based reactivation campaigns for existing-customer lists
 
-See [[research/candidates/consent-based-reactivation-campaigns]].
+See [[research/shortlist#Rejected outright]].
 
 **Offer**: For dental (overdue recalls), auto shops (service reminders), and med spas (lapsed clients): a two-way AI SMS (and optionally AI voice) campaign to customers who have an existing relationship and prior consent, booking them back onto the calendar. Priced per booked appointment ($25-$50) or $300-$500/mo. Never cold lists.
 

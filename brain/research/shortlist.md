@@ -1,7 +1,7 @@
 ---
 title: "Shortlist: 10 AI-leveraged side hustles for deep research"
 tags: [research, shortlist]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
@@ -41,7 +41,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** One recorded 45-60 min webinar/Zoom per month becomes 3-4 long-form episodes, 10-12 Shorts, thumbnails, titles, chapters, descriptions and a monthly analytics memo; $800-1,500/mo per firm. Thumbnail + title A/B packs ($150-400/mo for 4-8 videos, $25-35 Fiverr entry) as the foot-in-the-door offer.
 - **Primary platform:** YouTube (client channels).
-- **Dossier:** [[research/candidates/fractional-youtube-channel-manager]]
+- **Dossier:** [[research/candidates/youtube-manager-expert-firms]]
 - **Merged from:** "Fractional YouTube channel manager for expert-service businesses" (youtube-longform, primary); "AI-assisted thumbnail and packaging service with CTR test reporting" (youtube-longform); "Thumbnail + title A/B packs for mid-size YouTube channels" (freelance-marketplaces).
 - **Why shortlisted:** Published retainer tiers ($1,500-3,000+/mo freelance strategists; $2,500-5,000/mo boutique agencies per Modern Marketing Partners Aug 2026, OverseerOS, Humble & Brag) leave room for a solo $800-1,500 offer that undercuts every tier. Finance/legal are the highest-RPM advertiser-safe niches ($12-45 and $15-28 RPM, FluxNote/Vexub 2026), so clients see value fast. Client is on camera with real footage, so zero synthetic-content disclosure exposure. ~62% automation (Descript/OpusClip/Claude/Canva/n8n), $150 startup, first client in 2-6 weeks from 30-60 outbound touches, month-6 $1,600-4,000/mo.
 - **Skeptic check:** Sits entirely outside the faceless-channel warning. Standalone thumbnail gigs are a race to the bottom on Fiverr ($5-55, avg ~$18), which is why they are folded in as entry offer rather than kept as a separate pick.
@@ -51,7 +51,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** Weekly 12-25 min screen-recorded tutorials showing real automations for one profession the operator can credibly demo (bookkeepers, real-estate teams, wedding photographers), monetized first by affiliate links (n8n, ElevenLabs, Descript, HeyGen-class programs), then a $49-99 Gumroad template pack / micro-course, then AdSense; an optional $29-49/mo community only after 20+ buyers.
 - **Primary platform:** YouTube long-form (Shorts as funnel), Gumroad for the product.
-- **Dossier:** [[research/candidates/ai-tools-tutorial-channel]]
+- **Dossier:** [[research/candidates/workflow-tutorial-channel]]
 - **Merged from:** "Screen-recorded AI-tools and workflows tutorial channel (long-form)" (youtube-longform, primary); "Direct-sold micro-course + Skool/Gumroad community on 'AI workflow for one profession' fed by YouTube Shorts" (digital-products); "Skool/Whop paid community + async course teaching one AI workflow to one profession" (owned-audience-seo); "Vertical n8n workflow templates plus paid install for one niche" (emerging-2026, template-product half).
 - **Why shortlisted:** This is the operator's stated interest (YouTube) in the only owned-channel form that the skeptic's evidence says survives: real screen footage, human demonstration, an editorial point of view. No synthetic-media disclosure trigger and no template signature under the July 2025 inauthentic-content rule. Tech/software RPM $8-30 (FluxNote/Vexub 2026). Every 2026 template/course guide names the same success factor: specific niche + a content channel + multiple price points; multi-product Gumroad sellers average 5.7x single-product sellers (Insight Raider scrape of 146K products). n8n template marketplaces pay 85% to sellers at $29-299 per template. ~50% automation on the channel (topic mining, scripts, edit, metadata), higher on the product side. $120 startup.
 - **Skeptic check:** Faceless-template YouTube is dead; this is the named "what still works" version. Also the "prompts packaged inside a workflow or template for a specific job" clause. Weakness: month-6 income is $50-700; this pick is strategic (distribution for picks 5, 6, 7 and the template product), not a fast earner.
@@ -61,7 +61,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** 10-20 short vertical ad variants per month (hooks x scripts x AI actors, product-in-frame b-roll) plus a one-page hook report for brands spending $2-20K/mo on Meta/TikTok ads; $150-300 per 10-variant batch as entry, $500-1,500/mo retainer; sold explicitly as labeled AI-presenter creative for testing, never as testimonials.
 - **Primary platform:** Meta/TikTok paid ads (client accounts); acquisition via Fiverr AI Video Hub, Upwork, cold DM to stores running TikTok ads.
-- **Dossier:** [[research/candidates/ai-ugc-ad-variant-batches]]
+- **Dossier:** [[research/candidates/ai-actor-ad-packs-dtc]]
 - **Merged from:** "AI-UGC ad-variant batches for DTC brands (productized creative testing)" (shortform-social, primary); "AI-avatar 'UGC-style' ad batches for DTC brands" (freelance-marketplaces); "AI UGC ad-variation packs for small Shopify DTC brands" (emerging-2026).
 - **Why shortlisted:** The one emerging-2026 play with three independent lenses converging. Fiverr's Q2 2026 earnings call named UGC video among its three highest-margin categories (verified); influencer budgets rising (87% of brands expect increases, IMH 2026 via secondary); human UGC average fell to ~$198/deliverable as AI tools entered, which is exactly the gap for volume testing. Tool costs are known (Creatify $39-99/mo, Arcads ~$11/video, ~75% machine time). Month-6 $700-2,500 net from 2-3 brands; $150-250 startup.
 - **Skeptic check:** Commodity Fiverr AI gigs are collapsing ($5-35 tier), so the offer must be framed around ad-testing outcomes in one product category, not "AI UGC video." Policy: FTC fake-testimonial rule (Oct 2024) and Meta/TikTok synthetic-media labels are hard constraints; health/beauty claims need discipline. Avatar-tool vendors sell direct to brands, so the moat is the testing loop and hook strategy.
@@ -71,7 +71,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** After-hours/overflow voice receptionist on Retell/Vapi (captures job details, offers service windows, books to calendar/CRM, texts the owner, escalates emergencies) bundled with missed-call text-back and an n8n lead-intake-to-booking pipeline; $199-499/mo per shop plus $250-1,000 setup; inbound only.
 - **Primary platform:** Retell/Vapi + Twilio + n8n; local outreach for acquisition.
-- **Dossier:** [[research/candidates/home-services-ai-phone-answering]]
+- **Dossier:** [[research/candidates/ai-front-desk-home-services]]
 - **Merged from:** "After-hours and overflow AI phone answering for home-service contractors" (local-smb-services, primary); "Inbound AI missed-call receptionist for plumbing/HVAC shops" (emerging-2026); "Missed-call text-back plus two-way AI SMS follow-up for appointment businesses" (local-smb-services); "Fixed-scope n8n/Make lead-intake-to-booked-appointment builds for one vertical" (local-smb-services).
 - **Why shortlisted:** Best-evidenced pain in the whole set: ~62% missed-call rate in home services (ServiceTitan, 50K+ lines, via vendor blogs), 78% of consumers abandon a business after an unanswered call (CallRail Sept 2025, n=1,000), Google Ads CPL for plumbing $55-183. Retail price bands already exist ($149-299/mo flat AI; $255-1,275 human-hybrid; agencies resell at $297-797/mo with 60-80% margins). Platform cost $0.13-0.31/min all-in gives 53-85% gross margin. ~70% automation; $75-150 startup on Retell's free credit; month-6 $750-2,700/mo from 3-7 shops. Folding in text-back and the intake pipeline turns three low-ticket SKUs into one $199-499 stack sold to one vertical, which is the skeptic's prescribed form.
 - **Skeptic check:** The generic "AI automation agency" pitch is saturated; this is its named "what still works" version (one vertical, one measurable outcome, one delivery template, a handful of clients). Inbound-only avoids the FCC Feb-2024 AI-voice TCPA ruling; two-party recording-consent states and AI disclosure still apply. Threat: Jobber/ServiceTitan bundling AI receptionists at $29-99 compresses price, so the value must sit in setup, call-flow design and being the local human who fixes it.
@@ -91,7 +91,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** 500-2,000 verified decision-maker contacts for a defined ICP, enriched with 2-3 custom AI research columns and personalized first lines, delivered as CSV/Sheet/CRM import; $150-600 per list or $300-800/mo monthly refresh.
 - **Primary platform:** Upwork (plus direct outreach to agencies); Apollo/Clay/n8n/Claude stack.
-- **Dossier:** [[research/candidates/lead-list-enrichment]]
+- **Dossier:** [[research/candidates/b2b-lead-list-enrichment]]
 - **Merged from:** none (single candidate, freelance-marketplaces).
 - **Why shortlisted:** Highest automation of any service candidate (~80%: sourcing, enrichment waterfalls, AI research columns, verification, dedupe, delivery all scripted) and the most direct use of the operator's n8n/light-scripting skills. Demand evidence: Upwork maintains active hire pages for lead-generation specialists, data scrapers, enrichment and Apollo freelancers (Sep 2026); Upwork AI Integration & Automation GSV +50% YoY in Q1 2026 and Business Plus SMB clients +219% (verified). Month-6 $500-2,000/mo; $200 startup (Clay only once a client pays for it).
 - **Skeptic check:** Not a writing gig and not a commodity prompt gig; the deliverable is data plus judgment (ICP call, 5-10% row spot-checks, source compliance). Medium policy risk: use licensed data (Apollo/Clay), never scrape LinkedIn or personal emails; CAN-SPAM/GDPR liability mainly sits with the client.
@@ -101,7 +101,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** 1-3 short human demo/review clips per day of free-sample products in one category (kitchen gadgets, cleaning, beauty under $40) with TikTok Shop affiliate links; an n8n + Claude scorer picks high-commission (20%+), 4.5-star, fast-selling products from the marketplace export; AI writes scripts, hooks, captions and comment replies; the operator's real hands/face do the demo.
 - **Primary platform:** TikTok Shop.
-- **Dossier:** [[research/candidates/tiktok-shop-affiliate-demo-clips]]
+- **Dossier:** [[research/candidates/tiktok-shop-affiliate-demos]]
 - **Merged from:** "TikTok Shop affiliate: hands-on demo clips in one sub-$40 product category" (shortform-social, primary); "TikTok Shop affiliate: AI-scripted, phone-filmed 30-second problem/solution clips for $15-40 beauty and home products from the free-sample program" (commerce-arbitrage).
 - **Why shortlisted:** Largest evidenced demand pool of any candidate: US TikTok Shop GMV $15.1B in 2025 (+68% YoY, Momentum Works via Axis Intelligence), affiliate content ~42% of US GMV, average US commission ~13% (beauty 15-30%), closed-loop conversion ~4.7%. Free samples mean near-zero COGS; $100-200 startup. The skeptic's short-form entry explicitly names "TikTok Shop affiliate with real product handling and demonstration" as what still works. Automation ~50-55% (research, scripting, editing, scheduling, reporting), lower than the services but it is the only pure creator/commerce social play with real money behind it and the operator wants a social-media line.
 - **Skeptic check:** Earnings are extremely skewed (top 0.5% of creators drive 38% of affiliate GMV; nano creators $200-1,500/mo anecdotal; many earn near zero). Rules changed twice in 2026: AIGC label mandatory, AI voices and avatars banned from Shop LIVE, virtual influencers cannot make experience claims, some brands (SharkNinja) ban AI affiliate content and claw back commissions. Design keeps AI entirely off-camera.
@@ -111,7 +111,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** Parent uploads a photo, name and three interests; deliver a 16-24 page illustrated story with the child as hero as a digital PDF ($15-25) or POD hardcover ($40-55) via Lulu/Printify, with seasonal hooks (birthday, new sibling, first day of school); disclosed as AI-assisted and "Designed by".
 - **Primary platform:** Etsy (own store + Pinterest/short-form later).
-- **Dossier:** [[research/candidates/personalized-digital-products]]
+- **Dossier:** [[research/candidates/personalized-ai-kids-books]]
 - **Merged from:** none (single candidate, emerging-2026).
 - **Why shortlisted:** The digital-product/marketplace pick that matches the skeptic's Etsy "what still works" clause word for word: personalization and custom orders with real design work on top of an AI base, honest disclosure, and a per-order product that cannot be flooded by bulk listings. Etsy has dedicated market pages for "personalized ai books" and "ai custom book" (observed Sep 2026); price bands $2.50 digital to $50+ printed with AI-illustrated hardcovers approaching traditional personalized-book pricing (lullaby.ink, little-hero.app 2026). Etsy marketplace itself is healthy (Q2 2026 GMS $2.6B, +7.5%; 87M buyers, 10-Q). ~65% automation (story template, character-consistent illustration, scripted layout, API fulfilment); $100 startup; month-6 $200-1,500/mo gross at 40-60% margin on print. Best month-6 estimate of any product candidate.
 - **Skeptic check:** Not the Etsy AI-art dump. Risks: high listing competition, face-likeness QC across pages (AI drifts on children's faces), a proof round per order, and a mandatory child-photo privacy/deletion policy. Etsy AI disclosure and "Designed by" attribution must be correct on every listing (Q1 2026 enforcement targeted undisclosed AI).
@@ -121,7 +121,7 @@ Lens notes consulted: [[research/lenses/youtube-longform]], [[research/lenses/sh
 
 - **Offer:** A "what's happening this week" email for one under-served US county or suburb (50-300K population, no Axios Local/6AM City/Patch presence) built from n8n-scraped council agendas, minutes, permits, event calendars and local RSS summarized by Claude; monetized with flat then CPM-priced local ad slots; the same pipeline renders a disclosed ElevenLabs-voiced "[County] in 5" podcast sold as a sponsor add-on.
 - **Primary platform:** beehiiv (email), Spotify/Apple/YouTube for the audio add-on.
-- **Dossier:** [[research/candidates/hyperlocal-newsletter]]
+- **Dossier:** [[research/candidates/hyperlocal-newsletter-audio]]
 - **Merged from:** "Hyperlocal county/suburb newsletter (beehiiv) sold to local business advertisers" (owned-audience-seo, primary); "Hyperlocal 5-minute daily AI-voiced audio briefing bundled with the local newsletter, sold as a sponsor add-on" (owned-audience-seo).
 - **Why shortlisted:** The only low-saturation, non-platform-dependent asset in the set with a named revenue comp: Naptown Scoop (Annapolis) ~$200-300K/yr on ~18K subs at ~$70 CPM (~$1/sub/month, first-person interview); 6AM City ~$10M/yr across 31 markets; beehiiv ran a Local Newsletter Summit (Apr 2025). Acquisition runs through local Facebook groups, Nextdoor and QR flyers, so the 2025-26 Google traffic collapse does not apply. ~60% automation on the newsletter, ~85% on the audio add-on; $150 startup; month-6 $300-1,500/mo from 2-6 local advertisers. Satisfies the skeptic's "traffic you own" pattern and gives the portfolio an owned audience.
 - **Skeptic check:** Not an AI-affiliate site and not a generic AI podcast ("podslop" backlash; Spotify's own May 2026 Studio/Personal Podcasts push). Every local fact must be human-verified before send; AI-hallucinated local news is a reputational kill-shot. The revenue lever (selling ads by phone/email) is manual and is the item to stress-test.

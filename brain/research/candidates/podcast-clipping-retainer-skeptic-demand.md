@@ -1,7 +1,7 @@
 ---
 title: "Skeptic (demand lens): Podcast-to-Shorts clipping retainer"
 tags: [research, skeptic, demand, podcast-clipping-retainer]
-updated: 2026-09-10
+updated: 2026-09-11
 lens: demand
 target: "[[research/candidates/podcast-clipping-retainer]]"
 ---
@@ -136,7 +136,7 @@ target: "[[research/candidates/podcast-clipping-retainer]]"
 
 - Target dossier: [[research/candidates/podcast-clipping-retainer]]
 - Independent pricing and platform data: [[research/lenses/freelance-marketplaces]], [[research/lenses/shortform-social]], [[research/lenses/youtube-longform]]
-- Pattern notes: [[research/saturated-overhyped]] (middle-tier price collapse, platform anti-slop rules), [[research/candidates/whop-clipping-campaigns]] (labor-pool supply side), [[research/candidates/fractional-youtube-channel-manager]] (the bundled, higher-ticket version that the Upwork posts actually describe)
+- Pattern notes: [[research/saturated-overhyped]] (middle-tier price collapse, platform anti-slop rules), [[research/lenses/youtube-longform#Candidate: Whop Content Rewards campaign clipping (cash-flow starter)]] (labor-pool supply side), [[research/candidates/youtube-manager-expert-firms]] (the bundled, higher-ticket version that the Upwork posts actually describe)
 
 ## Sources
 

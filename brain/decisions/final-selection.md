@@ -6,14 +6,14 @@ updated: 2026-09-11
 
 # Final selection: the three side hustles to run
 
-Synthesis of the three judge lenses ([[decisions/judge-speed-and-feasibility]], [[decisions/judge-automation-leverage]], [[decisions/judge-durability-and-risk]]) over the ten dossiers in `research/candidates/`, with every headline number taken from the skeptic notes rather than the dossier self-scores. Operator profile per [[research/shortlist]]: one person in the US, side hustle at 10-15 h/wk, under $500 starting capital, fluent with Claude/ChatGPT and n8n/Make/Zapier, no audience, no credential, explicit interest in YouTube and social media.
+Synthesis of the three judge lenses ([[decisions/judge-speed-and-feasibility]], [[decisions/judge-automation-leverage]], [[decisions/judge-durability-and-risk]]) over the ten dossiers in `research/candidates/`, with every headline number taken from the skeptic notes rather than the dossier self-scores, and, for the three finalists, reconciled on 2026-09-11 to the revised report packages ([[reports/linkedin-founder-ghostwriting/report]], [[reports/youtube-manager-expert-firms/report]], [[reports/ai-front-desk-home-services/report]]), which are authoritative where they differ. Operator profile per [[research/shortlist]]: one person in the US, side hustle at 10-15 h/wk, under $500 starting capital, fluent with Claude/ChatGPT and n8n/Make/Zapier, no audience, no credential, explicit interest in YouTube and social media.
 
 ## TL;DR
 
 - **Finalists: [[research/candidates/linkedin-founder-ghostwriting]] (cash-flow engine), [[research/candidates/youtube-manager-expert-firms]] (durable YouTube retainer), [[research/candidates/ai-front-desk-home-services]] (scalable MRR system).** They are the three lens winners (speed #1, durability #1, automation #1) and three of the four candidates tied at the top of the aggregate.
 - The top four were a statistical tie: rank-sums across the three judges are front desk 9, ghostwriting 10, podcast clipping 10, YouTube manager 12; score-sums 17.5 / 17.0 / 16.5 / 16.5. Below them there is a clear gap (next best 13.8). Portfolio logic, not raw score, decided the fourth slot, and the rules allow that only because clipping and the front desk are not materially different on evidence.
 - **[[research/candidates/podcast-clipping-retainer]] is the first alternate**, not a loser: it lost the slot because it overlaps the YouTube manager's stack and skills, is the fastest-commoditizing service in the set (free TikTok Smart Split, YouTube Studio highlights, Riverside), and its corrected month-6 base ($500-1,200) is the thinnest of the four services with linear hours.
-- Skeptic-corrected headline numbers: ghostwriting $55-75 startup, first $300-600 pilot at 4-12 weeks, month-6 base $1,600-2,400 at ~$45-65/h pre-tax; YouTube manager ~$150 startup, $150-300 A/B pack at 6-10 weeks, first retainer 2-4 months, month-6 base $1,000-2,000 at $35-45/h; front desk ~$150 startup, first $250-500 setup fee at 60-90 days, month-6 base $250-750 MRR with 85-90% gross margin but 15-25% monthly churn (vendor claim).
+- Headline numbers (skeptic-corrected, reconciled to the report packages): ghostwriting $55-75 startup, $56-66/mo tools, first $300-600 pilot at 4-12 weeks after ~200-300 touches, retainer $500-1,200 then $800-1,500, month-6 base $1,600-2,400 at ~$28-43/h pre-tax on 12.5-13 h/wk, ~55% automation; YouTube manager ~$150 startup budget ($59-124 cash), $112-156/mo tools, $150-300 A/B pack at 6-10 weeks, first retainer 2-4 months, Core $800 (band $600-1,000), month-6 base $1,600 (range $1,000-2,000) at $26-34/h on 10-13 h/wk, 25-40% automation; front desk ~$150 startup, ~$50/mo fixed + $30-45/shop, $149-249/mo + $250-500 setup, first dollar ~day 35-60 in the base ramp (60-90 if pilot 1 slips), month-6 base $250-750 MRR at ~77-85% gross margin after payment fees, 45-55% automation (delivery 85-90%), 10-12 h/wk, but 15-25% monthly churn (vendor claim).
 - Biggest judge disagreements: the front desk (automation #1 vs speed #5) and the YouTube manager (durability #1 vs automation #8). Resolved by giving each a role it wins on and a hard 60-day kill criterion, rather than by averaging them out.
 - The front desk is the conditional pick: it works only if the day job allows short in-person or phone touches with shop owners in the 7-8 am, lunch and 4-6 pm windows. If it cannot, swap in podcast clipping and the portfolio becomes three services.
 - If you can only do one: LinkedIn founder ghostwriting. Cheapest, fastest to a paid pilot, highest corrected month-6 revenue, no camera, no local presence; validate with 150 hand-sent messages in 6 weeks.
@@ -58,25 +58,26 @@ Where they disagreed, and how it was resolved:
 
 ### 1. LinkedIn founder ghostwriting from a weekly voice interview
 
-Note: [[research/candidates/linkedin-founder-ghostwriting]] (skeptics: [[research/candidates/linkedin-founder-ghostwriting-skeptic-demand]], [[research/candidates/linkedin-founder-ghostwriting-skeptic-execution]]).
+Note: [[research/candidates/linkedin-founder-ghostwriting]] (skeptics: [[research/candidates/linkedin-founder-ghostwriting-skeptic-demand]], [[research/candidates/linkedin-founder-ghostwriting-skeptic-execution]]). Report package: [[reports/linkedin-founder-ghostwriting/report]], [[reports/linkedin-founder-ghostwriting/automation-stack]], [[reports/linkedin-founder-ghostwriting/plan]].
 
 **Role in portfolio:** fast cash-flow service; the first dollar and the income floor for the other two.
 
 **Why:** the only candidate whose skeptic-corrected numbers still clear "real revenue inside 60-90 days at near-zero capital", the highest corrected month-6 base of any candidate, and the only offer with a first-hand no-audience starter analog (Dunham: $300/mo per client via cold DMs, $800/mo after six months). The work (30-minute evening call, Claude drafting inside a project, 20-45 minute specificity edit) fits the operator's existing skills, needs no camera, no credential and no local presence. LinkedIn's anti-AI posture is a moat for the human editor and a threat to anyone who ships unedited drafts; the operator must be the former.
 
-**Headline numbers (skeptic-corrected):**
+**Headline numbers (skeptic-corrected; reconciled to the report package, which changed the touch count, hours and implied hourly rate):**
 
 | Item | Dossier | Corrected | Source |
 |---|---|---|---|
 | Startup | ~$50 | $55-75 | execution skeptic |
-| Tools at 2 clients | ~$45/mo | $55-66/mo monthly billing (paid notetaker required) | execution skeptic |
-| First dollar | ~35 days | 4-12 weeks (median ~7), $300-600 pilot billed upfront, after 100-200 hand-sent messages | both skeptics |
+| Tools at 2 clients | ~$45/mo | $56-66/mo monthly billing, $39-44 annual (paid notetaker required) | execution skeptic; report 7.2 |
+| First dollar | ~35 days | 4-12 weeks (median ~7), $300-600 pilot billed upfront, after ~200-300 hand-sent touches (connection requests, sample DMs and cold emails, each counted once) | both skeptics; plan section 3 (updated after report review) |
 | Starter retainer | $1,000-2,000/mo | $500-1,200/mo (median ~$800); $800-1,500 after proof | demand skeptic |
 | Month-6 base | $2,500 | $1,600-2,400 (conservative ~$600, upside $3,000-4,000) | execution skeptic; demand skeptic $1,600 |
-| Hours | 10-12 h/client/mo | 13-16 h/client/mo in months 1-3, 10-12 after; onboarding 4-8 h | execution skeptic |
+| Hours | 10-12 h/client/mo | 13-16 h/client/mo in months 1-3, 10-12 after; onboarding 4-8 h; 12.5-13 h/wk all-in at month 6 (delivery, outreach, own profile, admin) | execution skeptic; plan section 8 |
+| Gross margin | - | ~93-96% before operator time (tools $56-66/mo plus ~1-3.5% payment fees on $1,600-2,400) | derived from report 7.2 |
 | Automation | 58% | 45-50% early, ~55% steady state | execution skeptic |
-| Implied hourly at month 6 | $82-90 | $45-65 pre-tax, $35-55 after SE tax | execution skeptic |
-| Ceiling | - | ~3 clients in 10-15 h/wk | automation judge |
+| Implied hourly at month 6 | $82-90 | $28-43 pre-tax, $24-36 after SE tax on the full 12.5-13 h/wk (the execution skeptic's $45-65 counted delivery and sales hours only) | report 7.3 |
+| Ceiling | - | ~3-4 clients in 10-15 h/wk (~$3,200-4,800/mo at corrected prices); automation judge said ~3 | report 7.3; automation judge |
 
 **Live risks to manage:** the "Seems like AI slop" report button (2026-07-30, ~40% fewer views for flagged posts, poster notified); reported overall reach decline as a churn driver; Otter and Fireflies both defendants in wiretap/BIPA suits, so get written recording consent and prefer a notetaker with a clean record; churn assumed at or above 25% by month 3 until measured.
 
@@ -84,25 +85,26 @@ Note: [[research/candidates/linkedin-founder-ghostwriting]] (skeptics: [[researc
 
 ### 2. Fractional YouTube channel manager for expert-service firms
 
-Note: [[research/candidates/youtube-manager-expert-firms]] (skeptics: [[research/candidates/youtube-manager-expert-firms-skeptic-demand]], [[research/candidates/youtube-manager-expert-firms-skeptic-execution]]).
+Note: [[research/candidates/youtube-manager-expert-firms]] (skeptics: [[research/candidates/youtube-manager-expert-firms-skeptic-demand]], [[research/candidates/youtube-manager-expert-firms-skeptic-execution]]). Report package: [[reports/youtube-manager-expert-firms/report]], [[reports/youtube-manager-expert-firms/automation-stack]], [[reports/youtube-manager-expert-firms/plan]].
 
 **Role in portfolio:** the YouTube/content play, and the most durable revenue line; the retainer that should still exist at the same price in 2027.
 
 **Why:** durability winner by a margin (7.5 vs 6.5). A licensed human on camera is the exact opposite of YouTube's July 2026 demonetization target ("AI personas giving advice on finance or legal issues"); both skeptics kept platform-crackdown risk at low; revenue is a client retainer rather than a platform payout; and the compliance layer (SEC Marketing Rule, FINRA 2210, state-bar ad rules, Florida's $250/ad filing) is friction that a $100/mo DIY stack cannot copy (skeptic estimate: DIY replicates ~60%, leaving compliance, segment judgment, the memo and the relationship). The $150-300 thumbnail-and-title A/B pack is a credible, low-commitment first dollar. It satisfies the operator's stated YouTube interest without asking them to build an audience of their own.
 
-**Headline numbers (skeptic-corrected):**
+**Headline numbers (skeptic-corrected; reconciled to the report package, which changed the tool band, month-6 base point estimate and implied hourly rate):**
 
 | Item | Dossier | Corrected | Source |
 |---|---|---|---|
-| Startup | ~$150 | ~$150 holds; add FL Bar $250/ad exposure for Florida law clients | execution skeptic |
-| Tools | ~$110/mo | $110-140/mo (Descript metered, OpusClip Pro 300 credits, Canva Pro, Claude Pro) | execution skeptic |
+| Startup | ~$150 | ~$150 budget ($59-124 cash in month 0); add FL Bar $250/ad exposure for Florida law clients | execution skeptic; report 7.1 |
+| Tools | ~$110/mo | $112-156/mo, working midpoint $125 (Descript Creator metered, OpusClip Pro 300 credits, Canva Pro, Claude Pro, n8n, top-ups, Stripe ACH fees) | execution skeptic; report 7.2 (updated after report review) |
 | First dollar | ~30 days | 6-10 weeks via $150-300 A/B pack | both skeptics |
 | First retainer | 30-45 days | 2-4 months after 150-300 personalized touches (financial-services cold-email reply ~1.5%) | execution skeptic |
 | Retainer band | $800-1,500/mo | $600-1,000/mo for one recording; $1,200-1,500 only with a second recording or LinkedIn cutdowns | demand skeptic |
-| Month-6 base | $3,000 | $1,000-2,000 (conservative ~$1,000, upside $3,000) | execution skeptic; demand skeptic $1,600 |
-| Hours | 12 h/client-month | 16-22 h/client-month; two clients is the ceiling inside 15 h/wk | execution skeptic |
+| Month-6 base | $3,000 | $1,600 (2 x $800 Core; range $1,000-2,000; conservative ~$1,000, upside $3,000) | report 7.3; both skeptics |
+| Hours | 12 h/client-month | 16-22 h/client-month; 10-13 h/wk at two clients (plan: 11-15 with outreach running); two clients is the ceiling inside 15 h/wk | execution skeptic; report 7.4 |
+| Gross margin | - | ~92% before operator time ($1,600 less ~$125 tools) | derived from report 7.2-7.4 |
 | Automation | 58% | 25-40% on production | execution skeptic |
-| Implied hourly at month 6 | ~$55 | $35-45 | execution skeptic; demand skeptic ~$37 |
+| Implied hourly at month 6 | ~$55 | $26-34 at $800 Core (conservative 1-client case $21-25, a demotion signal); ~$47 only at $1,000 and 16 h/client; the $35-45 band was the execution skeptic's arithmetic on the dossier's 3-client base | report 7.4 |
 | Verticals | CPA, law, advisors | RIAs first, estate/PI/business law second, CPAs opportunistic | demand skeptic |
 
 **Live risks to manage:** Zoom webinar recordings are the worst-case 9:16 input (20-40% of AI clips unusable); 2-4 week initial compliance review and 2-3 revision rounds; each owner must OAuth into the operator's Google Cloud project for analytics; the open risk that YouTube ships native auto-clipping plus AI titles and thumbnails (would narrow the residue to compliance and relationship, still first on durability but closer to 6.5).
@@ -111,29 +113,30 @@ Note: [[research/candidates/youtube-manager-expert-firms]] (skeptics: [[research
 
 ### 3. Inbound AI front desk for 1-5-truck HVAC, plumbing and electrical shops (conditional)
 
-Note: [[research/candidates/ai-front-desk-home-services]] (skeptics: [[research/candidates/ai-front-desk-home-services-skeptic-demand]], [[research/candidates/ai-front-desk-home-services-skeptic-execution]]).
+Note: [[research/candidates/ai-front-desk-home-services]] (skeptics: [[research/candidates/ai-front-desk-home-services-skeptic-demand]], [[research/candidates/ai-front-desk-home-services-skeptic-execution]]). Report package: [[reports/ai-front-desk-home-services/report]], [[reports/ai-front-desk-home-services/automation-stack]], [[reports/ai-front-desk-home-services/plan]].
 
 **Role in portfolio:** the product/scalable-system play; the only candidate where income is MRR per instance rather than hours per deliverable, and the one that uses the operator's n8n skills most directly.
 
-**Why:** automation winner (7.0, next best 5.5). Delivery (answer, book, text-back, owner alert, report, bill) runs 85-90% machine per paying shop even after the execution skeptic cut overall automation to 45-55%; real call logs put platform cost at $12-40/shop/month against a $149-249 price, so gross margin before operator time is 85-90%. Every new shop reuses the same trade-specific call flow, n8n intake and onboarding template (6-10 h first time, ~4 h templated). Demand pain is the best-evidenced in the portfolio (even after discounting the vendor-relayed 62% missed-call figure to a 14-62% range), there is no social-platform dependence, and the stack (Retell/Twilio/n8n) is portable. It is the only route in this set to income that does not stop when the operator stops.
+**Why:** automation winner (7.0, next best 5.5). Delivery (answer, book, text-back, owner alert, report, bill) runs 85-90% machine per paying shop even after the execution skeptic cut overall automation to 45-55%; real call logs put platform cost at $12-17/shop/month on Retell ($30-45 all-in with number, 10DLC, SMS and Stripe fees) against a $149-249 price, so gross margin before operator time is ~77-85% after payment fees (85-90% before). Every new shop reuses the same trade-specific call flow, n8n intake and onboarding template (6-10 h first time, ~4 h templated). Demand pain is the best-evidenced in the portfolio (even after discounting the vendor-relayed 62% missed-call figure to a 14-62% range), there is no social-platform dependence, and the stack (Retell/Twilio/n8n) is portable. It is the only route in this set to income that does not stop when the operator stops.
 
 **Why it is conditional:** the acquisition channel is the whole problem. Contractors are cold-pitched by 15+ SaaS vendors plus Avoca's funded sales team, so the uncrowded channel is local, in-person, referral-based outreach in owner-available windows (7-8 am, lunch, 4-6 pm). The dossier concedes this works only if the day job allows short calls, and the only documented beginner attempt (ClawOps, Feb-Mar 2026) closed nothing. If the operator cannot make 30+ local touches per week in those windows, this pick fails on schedule, not on merit, and podcast clipping takes the slot.
 
-**Headline numbers (skeptic-corrected):**
+**Headline numbers (skeptic-corrected; reconciled to the report package, which changed the first-dollar timing, gross margin and implied hourly rate):**
 
 | Item | Dossier | Corrected | Source |
 |---|---|---|---|
-| Startup | ~$150 | ~$150 holds (10DLC cheaper than modelled: $4.50 brand + $15 vetting + $1.50-10/mo) | execution skeptic |
-| Fixed tools | ~$50/mo | ~$50/mo; platform minutes ~110 billable/shop/mo = $12-17 on Retell, $15-40 on Vapi | execution skeptic |
+| Startup | ~$150 | ~$150 holds (~$95-115 cash plus a $40 pilot-minute reserve; 10DLC cheaper than modelled: $4.50 brand + $15 vetting + $1.50-10/mo) | execution skeptic; report 7.1 |
+| Fixed tools | ~$50/mo | ~$40-50/mo fixed; per shop ~110 billable minutes = $12-17 on Retell, $30-45 all-in including number, 10DLC, SMS and Stripe fees | execution skeptic; report 7.2 |
 | Price | $199-499/mo + $300-500 setup | $149-249/mo + $250-500 setup; $299 only with suite/calendar integration | both skeptics |
-| First dollar | ~40 days | 60-90 days (setup fee after a 2-week pilot, 10DLC approval, 2-6 week B2B cycle) | both skeptics |
-| Month-6 base | ~$1,650 | $250-750 MRR (demand skeptic ~$600 = 3 x $199; upside ~$1,500) | both skeptics |
+| First dollar | ~40 days | ~35-60 days in the plan's base ramp (setup fee and first month invoiced at go-live, day 15 of a free 14-day pilot); 60-90 days if pilot 1 slips (10DLC approval, 2-6 week B2B cycle) | report 1 and plan section 3 (updated after report review); both skeptics for the 60-90 band |
+| Month-6 base | ~$1,650 | $250-750 MRR (~$597 = 3 x $199; upside ~$1,300); month-3 base 2 shops = $398 MRR, exactly the day-60 kill gate | both skeptics; report 7.3 |
+| Gross margin | 60-85% | ~77-85% at $199 after payment fees (85-90% before), before operator time | report 7.2 |
 | Automation | 65% | 45-55% overall; delivery 85-90% machine | execution skeptic |
 | Hours at 5 shops | ~7 h/wk ops | 10-12 h/wk including 3-6 h/mo babysitting per client | execution skeptic |
 | Churn | ~7%/mo | 15-25% monthly in year one (vendor claim); plus seasonal pausing | execution skeptic |
-| Implied hourly at month 6 | $25-30 | $10-15 (demand skeptic) | demand skeptic |
+| Implied hourly at month 6 | $25-30 | ~$9-10 net of tools (demand skeptic: $10-15); ~$23 at month 12 base | report 7.3; demand skeptic |
 
-**Live risks to manage:** build on Retell, not Vapi (63 incidents in 90 days, silent breaking changes, 14-day transcript purge); 10DLC campaigns get rejected on the client's website Terms/Privacy pages and the rejection is cached; suite bundling (Jobber $29 add-on, Housecall Pro CSR AI, Workiz, ServiceTitan) caps price, so target shops not on those suites; 13 two-party recording states, bot-disclosure laws (CA, UT, CO), and keep the product inbound-only so the FCC AI-voice TCPA ruling does not reach it.
+**Live risks to manage:** build on Retell, not Vapi (63 incidents in 90 days, silent breaking changes, 14-day transcript purge); 10DLC campaigns get rejected on the client's website Terms/Privacy pages and the rejection is cached; suite bundling (Jobber $29 add-on, Housecall Pro CSR AI, Workiz, ServiceTitan) caps price, so target shops not on those suites; 11 clear all-party recording states plus 4 mixed (treat all 15 as all-party), bot-disclosure laws (CA, UT, ME; Colorado delayed to 2027), and keep the product inbound-only so the FCC AI-voice TCPA ruling does not reach it.
 
 **Kill criterion (from the dossier, endorsed by both judges who ranked it high):** fewer than 2 paying shops after 60 days of 30+ local touches/week, or first-pilot transcripts under ~80% correct intake on real calls.
 
@@ -143,7 +146,7 @@ Note: [[research/candidates/ai-front-desk-home-services]] (skeptics: [[research/
 - **All three lens winners are in.** Each judge's first choice made the cut, so no lens was overruled; the trade-off was made inside the tie at the top, where the rules permit portfolio reasoning.
 - **The rejected alternative (ghostwriting + YouTube manager + clipping)** would be three linear-hours services, two of which share a clip-and-caption stack and a professional-services buyer, with the automation judge's ranks 5, 8 and 3 and its #1 excluded. For an operator whose brief is to lean as hard as possible on AI automation, excluding the only instance-based MRR play would be a worse answer than accepting a conditional pick with a kill date.
 - **The other rejected alternative (ghostwriting + clipping + front desk)** drops the durability winner and the only YouTube line, which cuts against the operator's stated interest and leaves the portfolio with two commoditizing content services.
-- **Sequencing that follows from the roles:** start ghostwriting outreach in week 1 (cheapest, fastest); sell YouTube A/B packs in parallel from week 2-3 because the first retainer is 2-4 months out; begin front-desk local outreach only once the first ghostwriting pilot is paid (roughly week 6-8) so the $500 cap is never carrying three ramps at once. Total startup for all three is ~$355-375 plus $215-256/mo of tools at full load, inside the cap only if staged.
+- **Sequencing that follows from the roles:** start ghostwriting outreach in week 1 (cheapest, fastest); sell YouTube A/B packs in parallel from week 2-3 because the first retainer is 2-4 months out; begin front-desk local outreach only once the first ghostwriting pilot is paid (roughly week 6-8) so the $500 cap is never carrying three ramps at once. Total startup for all three is ~$355-375 plus ~$220-270/mo of tools at full load ($56-66 + $112-156 + ~$50 fixed, before per-shop variable cost), inside the cap only if staged.
 
 ## Runners-up and why each lost
 
@@ -159,12 +162,12 @@ Note: [[research/candidates/ai-front-desk-home-services]] (skeptics: [[research/
 
 ## How to choose if you can only do one
 
-**Default: LinkedIn founder ghostwriting.** It is the cheapest to hold open while prospecting ($55-75 startup, $55-66/mo), the fastest to a paid pilot (4-12 weeks, cash upfront), the highest corrected month-6 revenue ($1,600-2,400), and the only candidate with a first-hand no-audience starter analog. It needs no camera, no credential, no local route and no daytime availability; two clients fit inside 10-15 h/wk. Its risks (LinkedIn AI suppression, notetaker consent, churn) raise the quality bar on month two but do not delay the first dollar.
+**Default: LinkedIn founder ghostwriting.** It is the cheapest to hold open while prospecting ($55-75 startup, $56-66/mo), the fastest to a paid pilot (4-12 weeks, cash upfront), the highest corrected month-6 revenue ($1,600-2,400), and the only candidate with a first-hand no-audience starter analog. It needs no camera, no credential, no local route and no daytime availability; two clients fit inside 10-15 h/wk. Its risks (LinkedIn AI suppression, notetaker consent, churn) raise the quality bar on month two but do not delay the first dollar.
 
 Override that default in exactly two cases:
 
 - **You cannot or will not send 100-200 cold messages and run a weekly call with a founder**, and the YouTube interest is what motivates you: take the YouTube manager, sell the $150-300 A/B pack first, cap at two clients, and accept that the first retainer is 2-4 months out and that it is the least AI-leveraged pick.
-- **Your day job allows short local calls and drop-ins during 7-8 am, lunch and 4-6 pm, and you want an asset rather than a wage**: take the front desk on Retell, run 30+ local touches per week, and hold yourself to the 60-day kill criterion. Expect the first 8 weeks to pay nothing and month 6 to be $250-750 MRR; the payoff is that the revenue keeps running when you stop.
+- **Your day job allows short local calls and drop-ins during 7-8 am, lunch and 4-6 pm, and you want an asset rather than a wage**: take the front desk on Retell, run 30+ local touches per week, and hold yourself to the 60-day kill criterion. Expect the first 5-8 weeks to pay nothing (first go-live around day 35-60) and month 6 to be $250-750 MRR; the payoff is that the revenue keeps running when you stop.
 
 Whichever one you choose, the validation window is the same: 60 days of measured outreach, with the speed judge's tripwires deciding whether to continue or switch to the alternate.
 
@@ -178,6 +181,8 @@ Whichever one you choose, the validation window is the same: 60 days of measured
 
 ## Sources
 
+- Report packages (authoritative for finalist numbers): [[reports/linkedin-founder-ghostwriting/report]], [[reports/youtube-manager-expert-firms/report]], [[reports/ai-front-desk-home-services/report]]
+- [[decisions/comparison-matrix]]
 - [Judge: speed and feasibility](judge-speed-and-feasibility.md)
 - [Judge: automation leverage](judge-automation-leverage.md)
 - [Judge: durability and risk](judge-durability-and-risk.md)

@@ -1,12 +1,12 @@
 ---
 title: "Short-form social lens: AI-leveraged side hustles on TikTok, Reels and Shorts"
 tags: [research, lens, shortform-social]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
 
-- Best risk-adjusted bets in this lens are B2B services where AI does 60-75% of the work and a human supplies the "authenticity" every platform now rewards: LinkedIn founder ghostwriting (entry retainers $1,200-$2,000/mo for 4-6 posts), a vertical-niche local-business short-form package ($500-$1,000/mo), and productized AI-UGC ad-variant batches for DTC brands (Fiverr market observed at $5-$180/gig; Creatify $39-$99/mo). See [[research/candidates/linkedin-founder-ghostwriting]], [[research/candidates/local-vertical-shortform-package]], [[research/candidates/ai-ugc-ad-variant-batches]].
+- Best risk-adjusted bets in this lens are B2B services where AI does 60-75% of the work and a human supplies the "authenticity" every platform now rewards: LinkedIn founder ghostwriting (entry retainers $1,200-$2,000/mo for 4-6 posts), a vertical-niche local-business short-form package ($500-$1,000/mo), and productized AI-UGC ad-variant batches for DTC brands (Fiverr market observed at $5-$180/gig; Creatify $39-$99/mo). See [[research/candidates/linkedin-founder-ghostwriting]], [[research/shortlist#Rejected outright]], [[research/candidates/ai-actor-ad-packs-dtc]].
 - TikTok Shop affiliate is the largest pure-platform opportunity (US GMV $15.1B in 2025, affiliate content ~42% of US GMV, average US commission ~13%) but earnings are extremely skewed (top 0.5% of creators drive 38% of affiliate GMV) and AI use is constrained: AIGC label mandatory, AI voices banned in Shop LIVEs since 2026-05-23, virtual influencers cannot make experience claims, and some brands (SharkNinja) ban AI affiliate content and claw back commissions.
 - Whop clipping is real money but thin: $0.20-$6 per 1,000 views (average near $1), ~98,000 registered clippers competing for >$1M/month of brand spend; independently tracked payouts of $2.58M across 8,466 earners imply roughly $300 lifetime per earner. Treat it as a cash-flow warm-up, not a business.
 - Every platform moved against low-effort AI in 2025-26: YouTube "inauthentic content" (renamed July 2025; January 2026 wave terminated channels with 35M combined subscribers; 3-strike system), Meta unoriginal-content crackdown (2025-07-15; ~500k accounts actioned, ~10M impersonation profiles removed), LinkedIn Authenticity Update (March 2026; generic AI posts reportedly lose up to 47% reach). Pure-AI faceless Shorts farms and repost meme pages are now the worst bets here.
@@ -21,7 +21,7 @@ updated: 2026-09-10
 - **Survey/analytics**: third-party analytics or survey (Momentum Works, Tabcut, Clutch, Metricool, Influencer Marketing Hub) relayed by a secondary article.
 - **Anecdotal**: blog/guru/forum/SEO-article estimates. Useful for ranges, not for planning.
 
-Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $500 capital, no audience, comfortable with Claude/ChatGPT, image/video/voice generators, n8n/Make/Zapier. See [[research/lenses/index]] for the other lenses.
+Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $500 capital, no audience, comfortable with Claude/ChatGPT, image/video/voice generators, n8n/Make/Zapier. See [[00-Index#Research]] for the other lenses.
 
 ## TikTok Shop affiliate: hands-on demo clips in one sub-$40 product category
 
@@ -43,7 +43,7 @@ Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $50
 
 **Economics.** Startup ~$100-$250 (tripod/light, CapCut, Claude; samples are free). Time to first dollar 6-12 weeks (follower threshold plus first conversions). Realistic month-6: $0-$800/mo, heavily skewed; many accounts earn near zero. Saturation: high (800k+ US affiliates). Policy risk: medium (AIGC label, LIVE AI-voice ban, Creator Health Rating penalties, brand-specific AI bans, clawbacks).
 
-**Verdict.** Worth running as a content-flywheel alongside a service business, not as the primary income plan. Cross-ref [[research/candidates/tiktok-shop-affiliate-demo-clips]].
+**Verdict.** Worth running as a content-flywheel alongside a service business, not as the primary income plan. Cross-ref [[research/candidates/tiktok-shop-affiliate-demos]].
 
 ## AI-UGC ad-variant batches for DTC brands (productized creative testing)
 
@@ -61,7 +61,7 @@ Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $50
 
 **Economics.** Startup ~$80-$200 first month. Time to first dollar 1-4 weeks (Fiverr/Upwork plus cold DMs to Shopify stores with active TikTok ads). Realistic month-6: $300-$1,500/mo. Saturation: high at the $5-$35 Fiverr floor; medium for a performance-framed offer to brands already buying ads. Policy risk: medium (Meta and TikTok require AI disclosure for synthetic people in ads; TikTok bars virtual-influencer experience claims; some brand categories such as health need extra care).
 
-**Verdict.** The strongest AI-native offer in this lens for someone with no audience. Cross-ref [[research/candidates/ai-ugc-ad-variant-batches]].
+**Verdict.** The strongest AI-native offer in this lens for someone with no audience. Cross-ref [[research/candidates/ai-actor-ad-packs-dtc]].
 
 ## Whop Content Rewards clipping (AI-clipped volume across 3-5 accounts)
 
@@ -78,7 +78,7 @@ Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $50
 
 **Economics.** Startup ~$20-$60/mo. Time to first dollar 1-3 weeks (verification windows). Realistic month-6: $50-$500/mo; outliers higher. Saturation: high. Policy risk: high on distribution (YouTube inauthentic-content and Meta unoriginal-content policies target exactly this kind of reposted material; clipped accounts rarely qualify for platform monetization).
 
-**Verdict.** Use for a few weeks to learn what hooks work and bank a few hundred dollars, then move the skill into candidate 4. Cross-ref [[research/candidates/whop-clipping-volume]].
+**Verdict.** Use for a few weeks to learn what hooks work and bank a few hundred dollars, then move the skill into candidate 4. Cross-ref [[research/shortlist#Rejected outright]].
 
 ## Direct clipping retainers for podcasters, coaches and webinar hosts
 
@@ -112,7 +112,7 @@ Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $50
 
 **Economics.** Startup ~$50-$150. Time to first dollar 2-6 weeks (walk-ins, local Facebook groups, Chamber, a free 3-post trial). Realistic month-6: $1,000-$2,500/mo with 2-3 clients. Saturation: medium (every town has freelancers; a single vertical with a repeatable system and proof differentiates). Policy risk: low (original content).
 
-**Verdict.** Most reliable path to $1k+/mo in this lens; least AI-leveraged of the top picks because of filming. Cross-ref [[research/candidates/local-vertical-shortform-package]].
+**Verdict.** Most reliable path to $1k+/mo in this lens; least AI-leveraged of the top picks because of filming. Cross-ref [[research/shortlist#Rejected outright]].
 
 ## LinkedIn founder ghostwriting: "voice interview to 8-12 posts" pipeline
 
@@ -145,7 +145,7 @@ Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $50
 
 **Economics.** Startup ~$15-$40/mo. Time to first dollar 1-4 weeks. Realistic month-6: $300-$1,200/mo. Saturation: high as a standalone commodity design gig; low policy risk (original content).
 
-**Verdict.** Add-on, not a headline business. Cross-ref [[research/candidates/carousel-design-productized]].
+**Verdict.** Add-on, not a headline business. Cross-ref [[research/candidates/linkedin-founder-ghostwriting]].
 
 ## Faceless finance/tech Shorts channel with human-written scripts (funnel, flagged)
 
@@ -162,7 +162,7 @@ Operator assumptions for all estimates: one US person, 10-15 hrs/week, under $50
 
 **Economics.** Startup ~$30-$100/mo. Time to first dollar 3-9+ months. Realistic month-6: $0-$200/mo from AdSense; affiliate upside undocumented. Saturation: high. Policy risk: high.
 
-**Verdict.** Only run as a top-of-funnel for one of the service offers, never as the plan. Cross-ref [[research/candidates/faceless-finance-shorts-funnel]].
+**Verdict.** Only run as a top-of-funnel for one of the service offers, never as the plan. Cross-ref [[research/shortlist#Rejected outright]].
 
 ## Saturated or restricted in this lens
 

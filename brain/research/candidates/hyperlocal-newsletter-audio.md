@@ -1,7 +1,7 @@
 ---
 title: "Candidate dossier: Hyperlocal county/suburb newsletter (beehiiv) with AI agenda-scraping pipeline + 5-minute AI-voiced daily briefing"
 tags: [research, candidate, hyperlocal-newsletter-audio]
-updated: 2026-09-10
+updated: 2026-09-11
 status: dossier
 slug: hyperlocal-newsletter-audio
 ---
@@ -19,7 +19,7 @@ slug: hyperlocal-newsletter-audio
 ## Method and evidence quality
 - 28 WebSearch queries completed on 2026-09-10 before the session-wide search budget (200/200) was exhausted; the egress proxy blocked WebFetch/curl for every primary page attempted (beehiiv, ElevenLabs, n8n, Apple Podcasters, YouTube Help, FTC eCFR, Copyright Office, Nieman Lab, Adweek, Press Gazette, Side Hustle Nation, Creator Spotlight, Paved, Apify, Variety, TechCrunch and others returned 403). Only github.com fetched successfully.
 - Consequence: every figure below is as reported in search-result snippets attributed to the linked URL, not re-read on the primary page. Tiers: **[V]** platform/company-owned page, government or academic report as relayed by snippet; **[P]** press coverage (Nieman Lab, Adweek, Press Gazette, Variety, TechCrunch, Radio Ink, GeekWire); **[A]** anecdotal / vendor blog / creator interview / Reddit; **[E]** my derived estimate. "No data found" means the query was run (or blocked) and returned nothing usable.
-- Prior notes this dossier builds on: [[research/lenses/owned-audience-seo]] (Candidates 1 and 7), [[research/saturated-overhyped]] ("traffic you own" pattern), [[research/shortlist]] (pick 10). Adjacent dossiers: [[research/candidates/state-grant-rfp-digest]], [[research/candidates/str-regulation-tracker-newsletter]].
+- Prior notes this dossier builds on: [[research/lenses/owned-audience-seo]] (Candidates 1 and 7), [[research/saturated-overhyped]] ("traffic you own" pattern), [[research/shortlist]] (pick 10). Adjacent dossiers: [[research/lenses/owned-audience-seo#Candidate 3: Paid "grant & RFP radar" newsletter for small contractors/nonprofits in one state (data-product paid tier)]], [[research/lenses/owned-audience-seo#Candidate 2: Short-term-rental ordinance & regulation tracker newsletter (state-by-state) for Airbnb/VRBO hosts, sponsored by STR SaaS + paid "my jurisdictions" tier]].
 
 ## 1. Demand evidence
 
@@ -154,7 +154,7 @@ Assumptions: 1 county of 50-300K pop.; weekly email plus 5 audio episodes/week; 
 - **Hyperlocal AI-voiced daily audio briefing tied to a newsletter**: no named operator found (query blocked by search budget) - **no data found**. The nearest precedents are platform-level (Spotify's own AI podcast tooling; 35.4% of new feeds AI), which is a warning, not a comp.
 
 ## 9. Open questions for a go/no-go
-1. Does the operator live in a 50-300K county and can they do in-person sales? If no, drop to the bench alternatives ([[research/candidates/state-grant-rfp-digest]], [[research/candidates/str-regulation-tracker-newsletter]]).
+1. Does the operator live in a 50-300K county and can they do in-person sales? If no, drop to the bench alternatives ([[research/lenses/owned-audience-seo#Candidate 3: Paid "grant & RFP radar" newsletter for small contractors/nonprofits in one state (data-product paid tier)]], [[research/lenses/owned-audience-seo#Candidate 2: Short-term-rental ordinance & regulation tracker newsletter (state-by-state) for Airbnb/VRBO hosts, sponsored by STR SaaS + paid "my jurisdictions" tier]]).
 2. Fetch and confirm (blocked this session): beehiiv pricing page, ElevenLabs pricing/TOS, n8n pricing, Apple Podcasts guideline text, YouTube monetization policy text, Gmail bulk-sender rules, Spotify for Creators hosting terms.
 3. Check the target county for existing Patch AI digest, 6AM City seed, Axios, and any Substack local; subscribe to all for two weeks and log their errors as the differentiation pitch.
 4. Validate demand with 10 local business conversations before writing a line of code: "Would you pay $100/month to be in front of 2,000 verified local households?"

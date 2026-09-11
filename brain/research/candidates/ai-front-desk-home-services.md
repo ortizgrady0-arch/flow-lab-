@@ -1,7 +1,7 @@
 ---
 title: "Inbound AI front desk for 1-5-truck HVAC, plumbing and electrical shops"
 tags: [research, candidate, ai-front-desk-home-services]
-updated: 2026-09-10
+updated: 2026-09-11
 status: dossier
 slug: ai-front-desk-home-services
 ---
@@ -156,7 +156,7 @@ Net at base month 6: $1,650 - (5 x $75 variable) - $50 fixed = **~$1,225/mo**.
 - **Suite bundling.** Jobber $29 add-on (unlimited on Plus), Housecall Pro CSR AI, ServiceTitan Virtual Agent [S: help.getjobber.com, projul, nextiva 2026]. If a client upgrades to those suites they may drop you; position as the integrator that connects the AI to whatever they use.
 - **FTC / advertising.** Do not publish fabricated "recovered $X" testimonials; recovered-revenue reports should attribute only jobs the agent actually booked (FTC fake-review/endorsement rule, effective Oct 21, 2024, up to $53,088 per violation, per [[research/saturated-overhyped]]). Disclose that the receptionist is AI in the shop's own marketing if the shop advertises "24/7 live answering."
 - **Copyright of AI output:** irrelevant to revenue here; prompts and workflows are your trade secret, and transcripts belong to the client shop (put that in the contract).
-- **YouTube/social AI-content rules:** only relevant if you build a companion channel (see [[research/candidates/n8n-tutorial-channel]] if it exists); the July 2025 inauthentic-content policy does not touch a B2B phone service.
+- **YouTube/social AI-content rules:** only relevant if you build a companion channel (see [[research/candidates/workflow-tutorial-channel]] if it exists); the July 2025 inauthentic-content policy does not touch a B2B phone service.
 - **Liability edge cases:** the agent must never give safety advice beyond "if you smell gas, leave and call 911/the utility"; put a limitation-of-liability clause and an "AI may err" clause in the service agreement; carry general liability only if a client requires it (cost: no data found).
 
 ## 7. Skills needed and learning curve (for the stated profile)

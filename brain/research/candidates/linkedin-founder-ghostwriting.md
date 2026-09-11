@@ -1,7 +1,7 @@
 ---
 title: "LinkedIn founder ghostwriting from a weekly 30-minute voice interview"
 tags: [research, candidate, linkedin-founder-ghostwriting]
-updated: 2026-09-10
+updated: 2026-09-11
 status: dossier
 slug: linkedin-founder-ghostwriting
 aliases: [linkedin-ghostwriting]
@@ -193,7 +193,7 @@ Verify first (all blocked this session):
 5. FTC 2026 AI-endorsement guidance on ftc.gov (the "May 2026" claim is vendor-sourced).
 6. LinkedIn help page "Prohibited software and extensions" wording.
 
-Related: [[research/candidates/podcast-clipping-retainer]] (same client, clip add-on), [[research/candidates/lead-list-enrichment]] (prospecting overlap), [[research/lenses/shortform-social]], [[research/lenses/freelance-marketplaces]], [[research/shortlist]], [[research/saturated-overhyped]].
+Related: [[research/candidates/podcast-clipping-retainer]] (same client, clip add-on), [[research/candidates/b2b-lead-list-enrichment]] (prospecting overlap), [[research/lenses/shortform-social]], [[research/lenses/freelance-marketplaces]], [[research/shortlist]], [[research/saturated-overhyped]].
 
 ## Sources
 

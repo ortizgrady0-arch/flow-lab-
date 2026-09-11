@@ -1,7 +1,7 @@
 ---
 title: Saturated & Overhyped AI Side Hustles (Skeptic Notes)
 tags: [research, skeptic]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
@@ -13,7 +13,7 @@ updated: 2026-09-10
 - The pattern of what survives: AI as the production layer under an original point of view, a narrow vertical, first-hand input, disclosure, and traffic you own (email, own store, direct clients) rather than platform search or platform payouts.
 - For our operator (solo, 10-15 hrs/wk, <$500): avoid faceless-template YouTube, bulk KDP, Etsy prompt/AI-art dumps, generic Fiverr writing, AI streaming music, and "AI automation agency" as pitched. Treat those as "worked in 2023, policy-killed by 2026."
 - Method caveat: 16 web searches completed before the session's search budget was exhausted; direct page fetches were blocked by the egress proxy, so figures are as reported by the linked sources (tiered A-D below) and not independently re-verified against primary pages. Six planned categories got no data (listed at the end).
-- Cross-refs for future sessions: [[research/lenses/platform-policy-risk]], [[research/lenses/what-survives-ai-flooding]], and per-hustle candidate dossiers under [[research/candidates/]] should cite this note before shortlisting anything in these categories.
+- Cross-refs for future sessions: [[research/lenses/youtube-longform#Policy baseline (applies to every owned-channel candidate)]], [[research/saturated-overhyped#Cross-cutting patterns (the skeptic's rules)]], and per-hustle candidate dossiers under [[00-Index#Research]] should cite this note before shortlisting anything in these categories.
 
 ## Method and limitations
 
@@ -40,7 +40,7 @@ updated: 2026-09-10
 - 13 Jul 2026 policy clarification ("generic or repetitive," "fake AI experts") - tier B (Tubefilter).
 - "Thousands of AI channels suspended" - tier C (MilX).
 
-**What still works:** Faceless is not banned; templated is. Channels survive when there is an original script from real research, a consistent narrator persona and editorial point of view, curation or analysis that transforms sources, and a visual style that is not interchangeable. AI is acceptable as the research assistant, editor, thumbnail generator, and even the voice, provided the content is transformative. Treat AdSense as secondary and plan sponsorship/affiliate/product revenue, because a single policy strike zeroes AdSense. For a 10-15 hr/wk operator: one channel, one niche, weekly cadence, not ten channels daily. See [[research/candidates/faceless-youtube-original-pov]].
+**What still works:** Faceless is not banned; templated is. Channels survive when there is an original script from real research, a consistent narrator persona and editorial point of view, curation or analysis that transforms sources, and a visual style that is not interchangeable. AI is acceptable as the research assistant, editor, thumbnail generator, and even the voice, provided the content is transformative. Treat AdSense as secondary and plan sponsorship/affiliate/product revenue, because a single policy strike zeroes AdSense. For a 10-15 hr/wk operator: one channel, one niche, weekly cadence, not ten channels daily. See [[research/candidates/workflow-tutorial-channel]].
 
 ### 2. Amazon KDP AI-generated ebooks and low-content books
 
@@ -53,7 +53,7 @@ updated: 2026-09-10
 - Low-content policy: allowed but duplicates/mass uploads removed; no stated limit - tier C (pubnook 2026).
 - Sales numbers for AI books: no data found.
 
-**What still works:** Disclosed, human-edited, niche nonfiction where you contribute real expertise, original data, interviews, or a genuinely new structure; one series with reader retention rather than 50 orphans; pairing with Amazon's own Virtual Voice audiobook (see #11) and a small email list. Use AI for outlining, drafting, and editing, not for the whole interior. See [[research/candidates/kdp-niche-nonfiction]].
+**What still works:** Disclosed, human-edited, niche nonfiction where you contribute real expertise, original data, interviews, or a genuinely new structure; one series with reader retention rather than 50 orphans; pairing with Amazon's own Virtual Voice audiobook (see #11) and a small email list. Use AI for outlining, drafting, and editing, not for the whole interior. See [[research/lenses/digital-products]].
 
 ### 3. Etsy AI art, AI printables, and AI prompt bundles
 
@@ -67,7 +67,7 @@ updated: 2026-09-10
 - ~12,000 listings removed in one quarter - tier C, unverified.
 - Sales data for AI art sellers: no data found.
 
-**What still works:** "Designed by" listings with honest disclosure where AI is the base and you do real design work on top (composition, typography, editing); personalization and custom orders (buyer-specific input is hard to flood); functional printables for a specific profession or life situation rather than generic planners; selling from your own store/Shopify with Pinterest or short-form traffic so one policy change cannot delete the business. See [[research/candidates/personalized-digital-products]].
+**What still works:** "Designed by" listings with honest disclosure where AI is the base and you do real design work on top (composition, typography, editing); personalization and custom orders (buyer-specific input is hard to flood); functional printables for a specific profession or life situation rather than generic planners; selling from your own store/Shopify with Pinterest or short-form traffic so one policy change cannot delete the business. See [[research/candidates/personalized-ai-kids-books]].
 
 ### 4. Fiverr commodity AI gigs (writing, voiceover, logo, "I'll use ChatGPT for you")
 
@@ -81,7 +81,7 @@ updated: 2026-09-10
 - Fiverr shifting to high-end work, 2025 results/2026 outlook - tier C (HR Tech Feed).
 - "AI cut freelance rates 30%"; early adapters earn 40-60% more per hour - tier C (Winvesta blog), directional only.
 
-**What still works:** Pick one industry and go deep (the writers still earning on Fiverr "picked one industry and went deep"); sell outcomes and judgment (e.g., a conversion-tested landing page for a specific vertical) with AI as the invisible backend; productize higher-ticket packages and move repeat clients off-platform. See [[research/candidates/vertical-content-ops]].
+**What still works:** Pick one industry and go deep (the writers still earning on Fiverr "picked one industry and went deep"); sell outcomes and judgment (e.g., a conversion-tested landing page for a specific vertical) with AI as the invisible backend; productize higher-ticket packages and move repeat clients off-platform. See [[research/candidates/youtube-manager-expert-firms]].
 
 ### 5. Upwork generalist AI-assisted writing and copyediting
 
@@ -95,7 +95,7 @@ updated: 2026-09-10
 - Ramp Feb 2026: >50% of 2022 freelance-platform spenders stopped by 2025 - tier B (via Mediabistro).
 - AI-related projects earn 44% more per hour than non-AI projects; content writing in top 10 in-demand AI-related skills Sept 2025 - tier B (Upwork research via Mediabistro/Upwork blog).
 
-**What still works:** Position as the "AI-related" freelancer, not the writer: content systems, AI editing/QA for regulated or technical domains, prompt-and-workflow builds, documentation for AI products. Domain expertise plus AI fluency is the only pricing power left in this category. See [[research/candidates/ai-workflow-freelancing]].
+**What still works:** Position as the "AI-related" freelancer, not the writer: content systems, AI editing/QA for regulated or technical domains, prompt-and-workflow builds, documentation for AI products. Domain expertise plus AI fluency is the only pricing power left in this category. See [[research/lenses/freelance-marketplaces]].
 
 ### 6. AI-written niche / affiliate websites for Google traffic
 
@@ -110,7 +110,7 @@ updated: 2026-09-10
 - Small publishers 60-75%+; CTR down up to 89% on some queries - tier C (magazinecoalition, psyke).
 - Business Insider -55%; Stereogum -70% ad revenue - tier B (AdExchanger / press coverage).
 
-**What still works:** Sites with first-hand testing, original data, calculators/tools, and a product to sell (not display ads); traffic from YouTube, Pinterest, newsletters, and communities rather than Google; being the cited source inside AI answers for a narrow topic. Affiliate-only AI content sites should be treated as end-of-life. See [[research/lenses/traffic-you-own]].
+**What still works:** Sites with first-hand testing, original data, calculators/tools, and a product to sell (not display ads); traffic from YouTube, Pinterest, newsletters, and communities rather than Google; being the cited source inside AI answers for a narrow topic. Affiliate-only AI content sites should be treated as end-of-life. See [[research/lenses/owned-audience-seo]].
 
 ### 7. Medium Partner Program with AI-generated stories
 
@@ -149,7 +149,7 @@ updated: 2026-09-10
 - Redbubble AI-permitted-but-IP-policed; Amazon rights responsibility - tier C (merchbanao, pixelforge).
 - Etsy June 2025 rules - see #3.
 
-**What still works:** Sharp niche plus personalization, trend responsiveness, hand-refined AI concepts, and your own audience/store as the traffic source rather than marketplace search. See [[research/candidates/personalized-digital-products]].
+**What still works:** Sharp niche plus personalization, trend responsiveness, hand-refined AI concepts, and your own audience/store as the traffic source rather than marketplace search. See [[research/candidates/personalized-ai-kids-books]].
 
 ### 10. AI-generated music uploaded to Spotify/Deezer for streaming royalties
 
@@ -216,7 +216,7 @@ updated: 2026-09-10
 - Demand-side support: AI-related projects +44%/hr on Upwork - tier B (see #5).
 - Agency revenue/failure statistics: no data found.
 
-**What still works:** One vertical, one measurable outcome, one delivery template (e.g., missed-call text-back and appointment reminders for one type of local business), sold as a maintained retainer to a handful of clients found through local referrals. Two or three clients is the realistic ceiling at this time budget. See [[research/candidates/vertical-automation-retainer]].
+**What still works:** One vertical, one measurable outcome, one delivery template (e.g., missed-call text-back and appointment reminders for one type of local business), sold as a maintained retainer to a handful of clients found through local referrals. Two or three clients is the realistic ceiling at this time budget. See [[research/candidates/ai-front-desk-home-services]].
 
 ## Cross-cutting patterns (the skeptic's rules)
 

@@ -1,7 +1,7 @@
 ---
 title: "TikTok Shop affiliate: phone-filmed hands-on demo clips in one sub-$40 category (AI off-camera)"
 tags: [research, candidate, tiktok-shop-affiliate-demos]
-updated: 2026-09-10
+updated: 2026-09-11
 status: dossier
 slug: tiktok-shop-affiliate-demos
 ---
@@ -162,7 +162,7 @@ Total learning load is light; the constraint is willingness to be on camera dail
 - **Survivorship data**: 59% churn by month 12, survivors' median up 6x ([Dashboardly](https://www.dashboardly.io/statistics/tiktok-shop-affiliate-creator-statistics), [wecantrack](https://wecantrack.com/insights/tiktok-affiliate-marketing-statistics/), 2026). **Secondary analytics**; primary dataset not identified.
 - **Creator educator on CHR**: @mikeymeltss TikTok explaining the Jan 2026 CHR switch ([video](https://www.tiktok.com/@mikeymeltss/video/7592170356643810568)). **Anecdotal**; useful as proof that working affiliates track this.
 - **Brands banning AI affiliate content**: SharkNinja removing commissions on AI content ([Affiverse](https://www.affiversemedia.com/tiktok-shop-ai-generated-videos-affiliate-trust/), 2026). **Secondary reporting**; confirms the human-demo design choice.
-- Named individual nano/micro affiliates in kitchen/cleaning with published earnings: **no data found** this session (search budget exhausted before creator interviews/Reddit threads could be queried). Follow-up in [[research/todo]].
+- Named individual nano/micro affiliates in kitchen/cleaning with published earnings: **no data found** this session (search budget exhausted before creator interviews/Reddit threads could be queried). Follow-up in [[00-Index#Open gaps and follow-ups]].
 
 ## 9. Decision summary
 

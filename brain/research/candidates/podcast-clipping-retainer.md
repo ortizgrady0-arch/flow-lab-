@@ -1,7 +1,7 @@
 ---
 title: "Podcast-to-Shorts clipping retainer for interview podcasters and coaches"
 tags: [research, candidate, podcast-clipping-retainer]
-updated: 2026-09-10
+updated: 2026-09-11
 status: dossier
 slug: podcast-clipping-retainer
 ---
@@ -19,7 +19,7 @@ slug: podcast-clipping-retainer
 
 ## 1. What the business is
 
-One US operator, 10-15 hrs/week, sells a monthly subscription to interview podcasters, coaches and course sellers who already publish 2-8 long-form episodes a month but have no short-form operation. Each month the client gets 20-30 captioned 9:16 clips with hook text, a scheduled posting calendar across Shorts/TikTok/Reels/LinkedIn (posted from the client's accounts via a scheduler), and a one-page performance sheet. Entry gig ($25-40 per clip on Fiverr/Contra) exists to generate leads and testimonials, not income. Related notes: [[research/lenses/shortform-social]], [[research/lenses/youtube-longform]], [[research/lenses/freelance-marketplaces]], [[research/saturated-overhyped]], [[research/candidates/whop-clipping-campaigns]], [[research/candidates/fractional-youtube-channel-manager]].
+One US operator, 10-15 hrs/week, sells a monthly subscription to interview podcasters, coaches and course sellers who already publish 2-8 long-form episodes a month but have no short-form operation. Each month the client gets 20-30 captioned 9:16 clips with hook text, a scheduled posting calendar across Shorts/TikTok/Reels/LinkedIn (posted from the client's accounts via a scheduler), and a one-page performance sheet. Entry gig ($25-40 per clip on Fiverr/Contra) exists to generate leads and testimonials, not income. Related notes: [[research/lenses/shortform-social]], [[research/lenses/youtube-longform]], [[research/lenses/freelance-marketplaces]], [[research/saturated-overhyped]], [[research/lenses/youtube-longform#Candidate: Whop Content Rewards campaign clipping (cash-flow starter)]], [[research/candidates/youtube-manager-expert-firms]].
 
 Evidence grades used below: **[verified]** platform/official report, press release, reputable press, or a price observed in a marketplace listing title; **[secondary]** third-party blog or analytics relaying data; **[anecdotal]** guru/blog/forum claims. Because fetches were blocked, "verified" here means the search-engine summary of the primary page; the URL is given so it can be re-read.
 

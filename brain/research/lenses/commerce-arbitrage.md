@@ -1,12 +1,12 @@
 ---
 title: "Lens: AI-assisted commerce and arbitrage"
 tags: [research, lens, commerce-arbitrage]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
 
-- Best risk-adjusted fit for a $500 / 10-15 h/wk solo operator: **marketplace flipping with an AI listing pipeline** (eBay hard goods, Depop clothing at 0% commission) - first dollar in 1-2 weeks, ~40% automatable, no platform AI-content risk. See [[research/candidates/ebay-hard-goods-flipping-ai-listing]] and [[research/candidates/depop-thrift-flipping-ai-listing]].
+- Best risk-adjusted fit for a $500 / 10-15 h/wk solo operator: **marketplace flipping with an AI listing pipeline** (eBay hard goods, Depop clothing at 0% commission) - first dollar in 1-2 weeks, ~40% automatable, no platform AI-content risk. See [[research/shortlist#Rejected outright]] and [[research/shortlist#Rejected outright]].
 - **TikTok Shop affiliate** is the biggest evidenced demand pool (US GMV $15.1B in 2025, +68%; avg affiliate commission ~13%) but the money-making part (a real human on camera) is the part AI cannot do: AI visuals must be labeled, AI voices/avatars are banned from LIVE as of 2026-07-31, and avatars may not claim first-hand use. Use AI for scripting/selection/editing only (the "70/30" pattern).
 - **Amazon Merch on Demand changed the game on 2026-06-01**: organic-only sellers were cut to $2.44 per $19.99 tee (Creator tier); 15%+ external traffic doubles it (Plus, 2x) and 35%+ pays 2.16x (Premium). Merch is now only worth doing as a social/Pinterest traffic play, and approval reportedly runs 30-40%.
 - **Etsy now requires AI disclosure** (Jan 2026: "Designed by" attribution + disclosure line) and since 2025-06-10 requires original design; Q1 2026 enforcement hit undisclosed AI POD and digital-download sellers hardest. Fee stack ~9.75% + $0.45 before the 12-15% Offsite Ads fee. Disclosed, niche POD (tabletop: tarot/puzzles/cards) still viable.
@@ -24,7 +24,7 @@ updated: 2026-09-10
 - **Anecdotal (A)**: creator-earnings tiers, guru claims, "what works" blog posts.
 - Tool prices marked "approx." are general knowledge, not verified this session.
 
-Related lenses: [[research/lenses/creator-economy]], [[research/lenses/ai-services]]. Operator profile: [[research/operator-profile]].
+Related lenses: [[research/lenses/shortform-social]], [[research/lenses/local-smb-services]]. Operator profile: [[research/shortlist#Selection criteria]].
 
 ## TikTok Shop affiliate: AI-scripted, phone-filmed 30-second "problem/solution" clips for $15-40 beauty and home products from the free-sample program
 
@@ -164,7 +164,7 @@ Related lenses: [[research/lenses/creator-economy]], [[research/lenses/ai-servic
 - **Redbubble/TeePublic passive POD**: 10-20% royalties, $3-5 per $25 tee vs $10-15 self-priced (R). Saturated, low margin; use only as a free extra channel.
 - **Amazon online arbitrage under $500**: fees 25-35% of price plus a 3.5% fuel/logistics surcharge from 2026-04-17 and Jan-15-2026 fee increases (V, AMZ Prep / Amazon Selling Partners / Feedvisor); inventory float and brand gating make it capital-constrained for this operator.
 - **Paid-ad dropshipping generally**: TikTok $500 minimum campaign; AI-UGC conversion penalty on higher-ticket items (R). Saturated.
-- **Not researched (no data found)**: Whatnot/eBay Live live-selling fees and seller stats; Amazon Influencer Program onsite commissions; Etsy digital-only printables listing counts; Reddit income reports for part-time resellers; POD tool pricing pages (Printify/Printful/Shopify blocked). Follow-ups tracked in [[research/todo]].
+- **Not researched (no data found)**: Whatnot/eBay Live live-selling fees and seller stats; Amazon Influencer Program onsite commissions; Etsy digital-only printables listing counts; Reddit income reports for part-time resellers; POD tool pricing pages (Printify/Printful/Shopify blocked). Follow-ups tracked in [[00-Index#Open gaps and follow-ups]].
 
 ## Sources
 

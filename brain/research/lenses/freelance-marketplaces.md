@@ -1,7 +1,7 @@
 ---
 title: "Lens: AI-augmented freelance services on marketplaces (Upwork / Fiverr / Contra / AI-training platforms)"
 tags: [research, lens, freelance-marketplaces]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
@@ -21,7 +21,7 @@ Sixteen web searches on 2026-09-10 across every category in the lens. Direct pag
 
 Operator assumptions: one US person, 10-15 hrs/week, <$500 capital, comfortable with ChatGPT/Claude, image/video/voice generators, n8n/Make/Zapier; no audience, no credential.
 
-Related: [[research/lenses/index]] (other lenses), candidate stubs under [[research/candidates/]].
+Related: [[00-Index#Research]] (other lenses), candidate stubs under [[00-Index#Research]].
 
 ## Market context (read this before any candidate)
 
@@ -75,7 +75,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 - Human: choosing/cropping the creator's expression, typography hierarchy, brand consistency, reading the niche's thumbnail meta, revisions. Photopea (free) or Canva Pro (~$15/mo approx.).
 - Tools total: ~$30-55/mo.
 
-**Economics (estimates)**: startup <$100. First dollar 2-5 weeks. Month 6: 3-6 channels, $400-1,400/mo. Saturation: high at the $5-15 tier (global supply plus free AI thumbnail makers); medium for retainer packs sold as "CTR testing" rather than "design". Policy: low; disclose AI-generated backgrounds if a client asks; avoid likeness of third parties. See [[research/candidates/thumbnail-ab-packs]].
+**Economics (estimates)**: startup <$100. First dollar 2-5 weeks. Month 6: 3-6 channels, $400-1,400/mo. Saturation: high at the $5-15 tier (global supply plus free AI thumbnail makers); medium for retainer packs sold as "CTR testing" rather than "design". Policy: low; disclose AI-generated backgrounds if a client asks; avoid likeness of third parties. See [[research/candidates/youtube-manager-expert-firms]].
 
 ## B2B lead-list building and enrichment with Clay/Apollo (AI-research columns)
 
@@ -92,7 +92,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 - Human: ICP definition call, spot-checking 5-10% of rows, handling edge cases, compliance decisions.
 - Tools total: $30-200/mo depending on whether Clay is used; keep to Apollo + scripts until a client pays for Clay.
 
-**Economics (estimates)**: startup $100-250. First dollar 2-6 weeks. Month 6: $500-2,000/mo (2-5 lists or 1-2 refresh retainers). Saturation: medium; huge overseas supply for raw scraping, but AI-research enrichment and US-timezone communication differentiate. Policy: medium: LinkedIn scraping violates LinkedIn ToS (use Apollo/Clay's licensed data), CAN-SPAM/GDPR/CCPA responsibility on the client but reputational on you; do not scrape personal emails. See [[research/candidates/lead-list-enrichment]].
+**Economics (estimates)**: startup $100-250. First dollar 2-6 weeks. Month 6: $500-2,000/mo (2-5 lists or 1-2 refresh retainers). Saturation: medium; huge overseas supply for raw scraping, but AI-research enrichment and US-timezone communication differentiate. Policy: medium: LinkedIn scraping violates LinkedIn ToS (use Apollo/Clay's licensed data), CAN-SPAM/GDPR/CCPA responsibility on the client but reputational on you; do not scrape personal emails. See [[research/candidates/b2b-lead-list-enrichment]].
 
 ## LinkedIn ghostwriting from founder voice memos
 
@@ -108,7 +108,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 - Human: the interview itself, taste on what is post-worthy, voice matching and de-AI-ifying, client approvals, reacting to news.
 - Tools total: ~$20-60/mo.
 
-**Economics (estimates)**: startup <$100. First dollar 3-8 weeks (needs a portfolio; write 10 posts for yourself or a friend first). Month 6: 1-3 clients, $500-2,500/mo. Saturation: medium and rising (very popular 2025-26 offer); low ticket sizes on Fiverr, real money only via retainers. Policy: low; ghostwriting needs no disclosure; LinkedIn ToS forbids automated posting tools that are not API partners. See [[research/candidates/linkedin-ghostwriting]].
+**Economics (estimates)**: startup <$100. First dollar 3-8 weeks (needs a portfolio; write 10 posts for yourself or a friend first). Month 6: 1-3 clients, $500-2,500/mo. Saturation: medium and rising (very popular 2025-26 offer); low ticket sizes on Fiverr, real money only via retainers. Policy: low; ghostwriting needs no disclosure; LinkedIn ToS forbids automated posting tools that are not API partners. See [[research/candidates/linkedin-founder-ghostwriting]].
 
 ## AI-avatar "UGC-style" ad batches for DTC brands
 
@@ -124,7 +124,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 - Human: hook strategy, brand fit, compliance review, a few cuts per variant, client feedback.
 - Tools total: ~$60-150/mo (start with one avatar tool).
 
-**Economics (estimates)**: startup $150-300. First dollar 3-8 weeks. Month 6: $400-1,500/mo. Saturation: medium; the tools are new enough that brands are still testing, but the tool vendors themselves sell direct to brands. Policy: **medium-high**: FTC's fake-review/testimonial rule (effective Oct 2024) makes AI avatars posing as real customers illegal; Meta and TikTok require synthetic-media labelling for realistic AI people in ads; some brands' platforms reject AI UGC. Keep it clearly "AI presenter" creative. See [[research/candidates/ai-ugc-ad-batches]].
+**Economics (estimates)**: startup $150-300. First dollar 3-8 weeks. Month 6: $400-1,500/mo. Saturation: medium; the tools are new enough that brands are still testing, but the tool vendors themselves sell direct to brands. Policy: **medium-high**: FTC's fake-review/testimonial rule (effective Oct 2024) makes AI avatars posing as real customers illegal; Meta and TikTok require synthetic-media labelling for realistic AI people in ads; some brands' platforms reject AI UGC. Keep it clearly "AI presenter" creative. See [[research/candidates/ai-actor-ad-packs-dtc]].
 
 ## Gamma-drafted pitch/sales decks with human narrative and polish
 
@@ -140,7 +140,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 - Human: story logic, what to cut, data accuracy, brand typography, export hygiene, presenting revisions.
 - Tools total: ~$30-45/mo.
 
-**Economics (estimates)**: startup <$100. First dollar 2-6 weeks. Month 6: 1-3 decks/month, $300-2,000/mo. Saturation: medium; commodity tier collapsing to AI tools, so position on narrative + polish for startups and agencies on Contra/Upwork. Policy: low. See [[research/candidates/ai-pitch-decks]].
+**Economics (estimates)**: startup <$100. First dollar 2-6 weeks. Month 6: 1-3 decks/month, $300-2,000/mo. Saturation: medium; commodity tier collapsing to AI tools, so position on narrative + polish for startups and agencies on Contra/Upwork. Policy: low. See [[research/shortlist#Rejected outright]].
 
 ## Multi-language AI dubbing QA for YouTube creators (weak standalone; add-on only)
 
@@ -154,7 +154,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 
 **Automation breakdown (~75%)**: AI does transcription, translation, voice cloning, timing; human does QA listening in the target language (you need a fluent checker per language, so realistically only Spanish for a US solo operator), fixing names/jargon, uploading tracks. Tools ~$22-99/mo.
 
-**Economics (estimates)**: startup <$150. First dollar 3-8 weeks. Month 6: $0-800/mo, highly uncertain. Saturation: high (free platform-native alternative; Fiverr voiceover gigs $5-30). Policy: medium (mandatory disclosure of AI voice on Fiverr when primary output; watermark makes it detectable; consent required for any voice clone). Verdict: only bundle with clipping/retainer clients. See [[research/candidates/ai-dubbing-qa]].
+**Economics (estimates)**: startup <$150. First dollar 3-8 weeks. Month 6: $0-800/mo, highly uncertain. Saturation: high (free platform-native alternative; Fiverr voiceover gigs $5-30). Policy: medium (mandatory disclosure of AI voice on Fiverr when primary output; watermark makes it detectable; consent required for any voice clone). Verdict: only bundle with clipping/retainer clients. See [[research/shortlist#Rejected outright]].
 
 ## AI-training platforms as an hourly floor (DataAnnotation, Outlier, Mercor, Alignerr)
 
@@ -166,7 +166,7 @@ Related: [[research/lenses/index]] (other lenses), candidate stubs under [[resea
 
 **Automation breakdown (0%)**: platforms prohibit using AI on tasks and run detection; automation attempts get accounts banned. Only meta-automation is allowed (queue-checking alerts, time tracking).
 
-**Economics (estimates)**: startup $0. First dollar 1-4 weeks (unpaid assessments, then weekly PayPal/bank payouts). Month 6 at 10-15 hrs/week: $300-1,500/mo depending on queue availability. Saturation: high (queue droughts are the norm). Policy: high (contractor status, abrupt terminations, 1099 income, no recourse). See [[research/candidates/ai-training-platforms]].
+**Economics (estimates)**: startup $0. First dollar 1-4 weeks (unpaid assessments, then weekly PayPal/bank payouts). Month 6 at 10-15 hrs/week: $300-1,500/mo depending on queue availability. Saturation: high (queue droughts are the norm). Policy: high (contractor status, abrupt terminations, 1099 income, no recourse). See [[research/shortlist#Rejected outright]].
 
 ## Saturated or restricted in this lens
 

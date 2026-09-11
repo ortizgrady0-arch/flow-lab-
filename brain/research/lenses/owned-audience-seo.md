@@ -1,7 +1,7 @@
 ---
 title: "Lens: Owned-audience plays (newsletters, niche sites, Pinterest, podcasts, communities)"
 tags: [research, lens, owned-audience-seo]
-updated: 2026-09-10
+updated: 2026-09-11
 ---
 
 ## TL;DR
@@ -18,7 +18,7 @@ updated: 2026-09-10
 - Searches completed (9): beehiiv sponsorship CPMs; Substack revenue stats; Google AI Overviews traffic decline; Pinterest affiliate 2026; Medium Partner Program 2026; Skool statistics; Whop creator revenue; AI podcasts/Spotify policy; hyperlocal newsletters (Naptown Scoop / 6AM City).
 - Searches blocked by budget (not run): programmatic SEO + scaled-content-abuse policy; AI-tool affiliate commission rates; Pinterest GenAI labeling policy; podcast CPMs / Spotify Partner Program thresholds; Medium AI-content policy; newsletter sponsorship marketplaces (Paved/Swapstack/Passionfroot).
 - Evidence tiers used below: **Verified** = platform report / platform-owned page / named analytics vendor (Chartbeat, GetLatka, Sacra) as relayed in snippets; **Aggregator** = stats roundup sites (backlinko, revenuegeeks, quickseo, xseek); **Anecdotal** = creator interviews, vendor blogs, Medium/Reddit posts. Where no number was found: "no data found".
-- Cross-links: [[00-Index]], [[research/shortlist]], [[research/saturated-hustles]]. Candidate dossiers to create: [[research/candidates/hyperlocal-newsletter]], [[research/candidates/str-regulation-tracker-newsletter]], [[research/candidates/state-grant-rfp-digest]], [[research/candidates/pinterest-rental-upgrades-affiliate]], [[research/candidates/profession-ai-workflow-community]], [[research/candidates/ai-tool-affiliate-vertical]], [[research/candidates/hyperlocal-audio-briefing]].
+- Cross-links: [[00-Index]], [[research/shortlist]], [[research/saturated-overhyped]]. Candidate dossiers to create: [[research/candidates/hyperlocal-newsletter-audio]], [[research/shortlist#Rejected outright]], [[research/shortlist#Rejected outright]], [[research/shortlist#Rejected outright]], [[research/candidates/workflow-tutorial-channel]], [[research/shortlist#Rejected outright]], [[research/candidates/hyperlocal-newsletter-audio]].
 
 ## Candidate 1: Hyperlocal weekly/daily newsletter for one under-served US county or suburb (beehiiv), monetized by local business ads
 **Offer/format.** A "what's happening this week" email for one specific geography (target: 50k-300k population county or suburb with no Axios Local / 6AM City / Patch presence). Sections: local government decisions, openings/closings, events, school news, real-estate snapshot. Revenue = flat-rate local ad slots first, CPM-priced slots later, plus a local-events board.
