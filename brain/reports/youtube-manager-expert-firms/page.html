@@ -346,7 +346,7 @@
     border-top: 1px solid var(--rule);
     align-items: start;
   }
-  .stage:first-of-type { border-top: 2px solid var(--ink); }
+  .pipe > li:first-child > .stage { border-top: 2px solid var(--ink); }
   .lane {
     font-family: var(--mono);
     font-size: 9.5px;
@@ -367,7 +367,7 @@
     padding-left: 18px;
   }
   .fan .stage { grid-template-columns: 74px minmax(0, 1fr); }
-  .fan .stage:first-of-type { border-top: 1px solid var(--rule); }
+  .fan .stage { border-top: 1px solid var(--rule); }
 
   .gate {
     margin: 18px 0;
@@ -456,6 +456,7 @@
   .g-band { fill: var(--band); }
   .g-line { fill: none; stroke: var(--verify); stroke-width: 2; stroke-linejoin: round; }
   .g-dot { fill: var(--verify); }
+  .g-range { stroke: var(--verify); stroke-width: 5; stroke-linecap: round; }
   .g-lab { fill: var(--ink); font-family: var(--mono); font-size: 13px; font-weight: 500; }
   .g-ann { fill: var(--ink-3); font-family: var(--mono); font-size: 11px; }
   .g-ann-line { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
@@ -603,7 +604,7 @@
         <div class="sec-head">
           <span class="sec-num">&sect;01 &mdash; Why now</span>
           <h2>Three dated changes made a compliance-grade channel service sellable</h2>
-          <p>None of them is a trend line. They are supply-side facts with dates, which is the only kind of timing evidence that survived review.</p>
+          <p>None of them is a trend line. Two are supply-side facts with dates, the only kind of timing evidence that survived review; the third is a vendor survey of advisers and is directional only.</p>
         </div>
 
         <ol class="why">
@@ -624,7 +625,7 @@
           <li>
             <time>Apr 2026</time>
             <div>
-              <h4>Advisers want video and cannot produce it <span class="chip c-ver"><i>&#10003;</i> verified</span> <span class="chip c-asm"><i>&mdash;</i> vendor survey</span></h4>
+              <h4>Advisers want video and cannot produce it <span class="chip c-asm"><i>&mdash;</i> vendor survey, directional</span></h4>
               <p>Idea Decanter&rsquo;s adviser survey: 88% think they should make video, 52% do, 83% say video helped increase assets under management, 80% give it only a few hours a month, 49% track nothing. Obstacles rank time 56%, hands-on shooting and editing expertise 52%, fresh ideas 38% &mdash; and cost last at 21%. Sample size unpublished, so treat as directional.</p>
             </div>
           </li>
@@ -652,7 +653,7 @@
             <tbody>
               <tr><td>Long-form episodes, 8&ndash;15 min</td><td class="num">3</td><td class="num">4</td><td>Text-based edit, chapters, lower thirds, disclaimer card at open and close</td></tr>
               <tr><td>Shorts, 9:16, captioned</td><td class="num">8</td><td class="num">12</td><td>Every caption proofread against the client&rsquo;s glossary of statutes and form names</td></tr>
-              <tr><td>Titles and thumbnails</td><td class="num">3 + 3</td><td class="num">3 + 3</td><td>Per episode, run through Test &amp; Compare; the client&rsquo;s real face only</td></tr>
+              <tr><td>Titles and thumbnails</td><td class="num">3 + 2&ndash;3</td><td class="num">3 + 2&ndash;3</td><td>Titles plus thumbnail variants per episode, run through Test &amp; Compare; the client&rsquo;s real face only</td></tr>
               <tr><td>Descriptions, chapters, pinned disclaimer, tracked links</td><td class="num">per ep.</td><td class="num">per ep.</td><td>No superlatives, no performance claims, UTM booking link in every description</td></tr>
               <tr><td>Compliance package</td><td class="num">1</td><td class="num">1</td><td>Checklist plus an archive of approved versions, dated and attributed</td></tr>
               <tr><td>Monthly memo</td><td class="num">1 page</td><td class="num">1 page</td><td>Three numbers, one recommendation, one question for the next recording</td></tr>
@@ -693,7 +694,7 @@
 
         <p><strong>Terms that matter.</strong> Monthly in advance by ACH, which costs 0.8% capped at $5 against 2.9% plus 30&cent; on cards. Thirty-day cancellation. The client owns regulatory approval. Nothing publishes without written sign-off. All deliverables assigned to the client. Five-business-day approval service level from month two, and expect two to four weeks in months one and two while their reviewer builds a template.</p>
 
-        <p><strong>The price step.</strong> Raise Core from $800 to $1,000 for new clients only after two attributable results: a consultation booked through a tracked link, or a Test &amp; Compare win with a click-through lift. That evidence is the condition for holding price above the $250 anchor, and it is what moves the effective rate from $26&ndash;34 to about $47 an hour.</p>
+        <p><strong>The price step.</strong> Raise Core from $800 to $1,000 for new clients only after two attributable results: a consultation booked through a tracked link, or a Test &amp; Compare win with a click-through lift. That evidence is the condition for holding price above the $250 anchor. Together with templating the polish steps down to about 16 hours a client, it is what moves the effective rate from $26&ndash;34 to about $47 an hour; the price step on its own does not get you there.</p>
       </section>
 
       <section id="buyer">
@@ -725,7 +726,7 @@
               <tr>
                 <td class="num">3</td>
                 <td><b>Estate and elder-law firms, 1&ndash;5 attorneys, in non-filing states</b></td>
-                <td>Evergreen topics, older audiences watch long-form, and bar advertising rules are lighter than investment-adviser review. 30% of firms use video.</td>
+                <td>Evergreen topics, older audiences watch long-form, and bar advertising rules are lighter than investment-adviser review. 30% of firms used video as of the American Bar Association&rsquo;s 2023 report, up from 24% in 2020. <span class="chip c-ver"><i>&#10003;</i> verified</span></td>
                 <td>Florida charges $250 per timely ad filing and $750 late from 1 Jul 2026; Texas requires filing within ten days. Exclude both from your first cohort.</td>
               </tr>
               <tr>
@@ -738,7 +739,7 @@
                 <td class="num">5</td>
                 <td><b>Accounting firms with an advisory line</b></td>
                 <td>Tax-season search volume is enormous, and &ldquo;we run it while you cannot&rdquo; is a real pitch.</td>
-                <td><span class="chip c-asm"><i>&mdash;</i> no data found</span> on accountant video adoption or spend. Twenty outbound touches in October as a test, nothing more until data exists.</td>
+                <td><span class="chip c-asm"><i>&mdash;</i> no data found</span> on accountant video adoption or spend. Accountants are unreachable from January to April, so the sales window is October and November: twenty outbound touches then as a test, nothing more until data exists.</td>
               </tr>
             </tbody>
           </table>
@@ -748,10 +749,9 @@
           <div class="panel flag">
             <h3>Exclude from the first cohort</h3>
             <ul>
-              <li><b>Broker-dealer affiliated advisers.</b> Principal pre-approval on every retail communication means 14&ndash;16 approval items a month. Check the adviser registration record before spending a touch. A 2026 proposal would move this to risk-based supervision; revisit in 2027 if it is adopted.</li>
+              <li><b>Broker-dealer affiliated advisers.</b> Principal pre-approval on retail communications reaching more than 25 retail investors in 30 days, which in practice is 14&ndash;16 approval items a month. Check the adviser registration record before spending a touch. A 2026 proposal would move this to risk-based supervision; revisit in 2027 if it is adopted.</li>
               <li><b>Law firms in Florida and Texas.</b> Per-ad filing fees and deadlines turn every deliverable into an administrative step with a cost.</li>
               <li><b>Compliance-only accounting shops.</b> Lead value is too low to carry the retainer.</li>
-              <li><b>Channels with no recent uploads.</b> A test needs roughly 1,000&ndash;5,000 fresh impressions per variant inside two weeks, so lifetime views on an old video will read &ldquo;inconclusive&rdquo;.</li>
             </ul>
           </div>
           <div class="panel">
@@ -760,8 +760,8 @@
               <li>Registered adviser with no broker-dealer affiliation, or a law firm in a non-filing state.</li>
               <li>An existing recording habit: a quarterly webinar, a podcast, past videos.</li>
               <li>Fewer than one upload a month. They have the raw material and no throughput.</li>
-              <li>For an A/B pack, the last three uploads average 1,000+ views <em>and</em> the most recent is inside 90 days.</li>
-              <li>Advanced Features enabled on the channel, which Test &amp; Compare requires. If not, it is a five-minute verification on their side.</li>
+              <li>For an A/B pack, the last three uploads average 1,000+ views <em>and</em> the most recent is inside 90 days. A test needs roughly 1,000&ndash;5,000 fresh impressions per variant inside two weeks, so if nothing recent qualifies, run the test on their next upload rather than on an old video.</li>
+              <li>Advanced Features enabled on the channel, which Test &amp; Compare requires. You cannot see this from outside, so confirm it on the call rather than while building the list. It sits in Studio under Settings, Channel, Feature eligibility, and is a five-minute verification on their side.</li>
             </ul>
           </div>
         </div>
@@ -775,12 +775,13 @@
         </div>
 
         <ol class="pipe">
+          <li><div class="stage"><div class="lane human">human</div><div><b>Onboarding, before the first recording</b><span>Collect the named compliance owner and their email, the exact disclaimer text and any required labels, a 30-term glossary of statutes and form names, brand assets and a head-shot, the booking link with tracked links live, channel Manager access, and the owner&rsquo;s one-time authorisation for read-only analytics. <em>1&ndash;1.5 h per client</em></span></div></div></li>
           <li><div class="stage"><div class="lane">client</div><div><b>Records 45&ndash;60 minutes</b><span>Camera and screen as separate tracks &mdash; put this in the contract. A composite recording forces square Shorts and costs hours.</span></div></div></li>
           <li><div class="stage"><div class="lane machine">machine</div><div><b>Transcript and cleanup</b><span>Descript: transcript, long silences out, filler removal at moderate, studio sound on the camera track only. <em>15&ndash;20 min hands-on</em></span></div></div></li>
           <li><div class="stage"><div class="lane machine">machine</div><div><b>Segment proposal</b><span>Claude returns three stand-alone episodes with verbatim cold opens, chapter marks, and a list of every sentence that names a rule, a form or a number so a human can verify it. <em>1 h</em></span></div></div></li>
           <li>
             <div class="fan">
-              <div class="stage"><div class="lane human">human</div><div><b>Cut and polish the long form</b><span>Choose the segments, text-based cut, chapters on screen, three to five stat callouts, disclaimer card. This is the single biggest block of hours. <em>7&ndash;10 h</em></span></div></div>
+              <div class="stage"><div class="lane human">human</div><div><b>Cut and polish the long form</b><span>Choose the segments, text-based cut, chapters on screen, three to five stat callouts, disclaimer card. This is the single biggest block of hours, and the figure assumes a competent editor&rsquo;s pace: if you have never edited video, expect to run above the band for the first two client-months. <em>7&ndash;10 h</em></span></div></div>
               <div class="stage"><div class="lane machine">machine + human</div><div><b>Shorts</b><span>OpusClip proposes 15&ndash;20 candidates; you keep eight, fix the cuts to sentence boundaries and proofread every caption. Expect about 40% of candidates to need rework. <em>3&ndash;4 h</em></span></div></div>
               <div class="stage"><div class="lane machine">machine + human</div><div><b>Packaging</b><span>Claude drafts titles, descriptions, chapters and the pinned disclaimer; thumbnails composed in Canva from a real frame, checked at 120 pixels wide. <em>2 h</em></span></div></div>
             </div>
@@ -790,7 +791,7 @@
             <div class="gate">
               <div class="mark">approved<b>for release</b>signature &middot; date</div>
               <div class="txt">
-                <p><b>The compliance gate.</b> Claude runs a pre-check and flags performance claims, implied testimonials, superlatives and missing disclaimers. Then a human works the checklist, and the package goes to the named reviewer with an approval form. <b>Nothing is scheduled until written sign-off arrives</b>, and every approved version is archived with its date and approver. Revisions route back to the cut. <em>1&ndash;3 h including two rounds</em></p>
+                <p><b>The compliance gate.</b> Claude runs a pre-check and flags performance claims, implied testimonials, superlatives and missing disclaimers. Then a human works the checklist, and the package goes to the named reviewer with an approval form. <b>Nothing is scheduled until written sign-off arrives</b>, and every approved version is archived with its date and approver. Revisions route back to the cut. <em>2&ndash;3 h including two rounds</em></p>
               </div>
             </div>
           </li>
@@ -849,7 +850,7 @@
             <span><i class="sw-band"></i>Conservative to upside</span>
           </div>
           <div class="chart-scroll">
-            <svg viewBox="0 0 620 290" role="img" aria-label="Gross monthly revenue by month. Base case: zero in month 1, about $400 in month 3, $1,600 in month 6, $2,000 in month 12. The conservative-to-upside range runs from zero up to $250 in month 1 and from $800 up to $3,400 by month 12.">
+            <svg viewBox="0 0 620 290" role="img" aria-label="Gross monthly revenue by month. Base case: zero in month 1, $250 to $500 in month 3, $1,600 in month 6, $2,000 in month 12. The conservative-to-upside range runs from zero up to $250 in month 1 and from $800 up to $3,400 by month 12.">
               <line class="g-grid" x1="66" y1="49.5" x2="596" y2="49.5"></line>
               <line class="g-grid" x1="66" y1="108.4" x2="596" y2="108.4"></line>
               <line class="g-grid" x1="66" y1="167.2" x2="596" y2="167.2"></line>
@@ -867,7 +868,7 @@
 
               <polyline class="g-line" points="66,226 162.4,202.5 306.9,131.9 596,108.4"></polyline>
               <circle class="g-dot" cx="66" cy="226" r="4"></circle>
-              <circle class="g-dot" cx="162.4" cy="202.5" r="4"></circle>
+              <line class="g-range" x1="162.4" y1="211.3" x2="162.4" y2="196.6"></line>
               <circle class="g-dot" cx="306.9" cy="131.9" r="4"></circle>
               <circle class="g-dot" cx="596" cy="108.4" r="4"></circle>
 
@@ -880,7 +881,7 @@
               <text class="g-tick" x="596" y="248" text-anchor="end">M12</text>
             </svg>
           </div>
-          <figcaption>Gross monthly revenue, months 1 to 12, on a linear month axis. Months 1 to 3 are the reviewer&rsquo;s &ldquo;zero to one retainer&rdquo; window, so the base case books its first retainer at the end of month three. Exact figures below.</figcaption>
+          <figcaption>Gross monthly revenue, months 1 to 12, on a linear month axis. Months 1 to 3 are the reviewer&rsquo;s &ldquo;zero to one retainer&rdquo; window, so the base case books its first retainer at the end of month three or during month four. Month 3 is drawn as a bar because the base case there is a $250&ndash;500 range rather than a point. Exact figures below.</figcaption>
         </figure>
 
         <div class="scroll">
@@ -907,9 +908,10 @@
               <li>Descript Hobbyist, one month &mdash; <b>$24</b>. The free tier caps at 60 media minutes with watermarked exports, so it cannot hold two portfolio webinars.</li>
               <li>Claude Pro &mdash; <b>$20</b>. OpusClip Free or Starter &mdash; <b>$0&ndash;15</b>. Canva Free &mdash; <b>$0</b>.</li>
               <li>Domain and a one-page site &mdash; <b>$15&ndash;25</b>. The site also needs a privacy page and a support email, because publishing the analytics consent screen requires both.</li>
-              <li>Portfolio: two public-domain federal recordings re-cut into samples &mdash; <b>$0</b> and about ten hours. Federal works carry no copyright; label both &ldquo;sample re-edit, not a client&rdquo;.</li>
+              <li>Portfolio: two public-domain federal recordings re-cut into samples &mdash; <b>$0</b> and about ten hours. Federal works carry no copyright, but strip any third-party footage or music embedded in them, never imply the agency endorses you, and label both &ldquo;sample re-edit, not a client&rdquo;.</li>
               <li>No company, no annual plans, no paid outreach tools until the first retainer clears.</li>
               <li><b>Total $59&ndash;124 cash; budget $150.</b> The remainder funds the $43 a month step up to paid tiers in the first client month.</li>
+              <li><b>What it costs to reach the first retainer.</b> Months 1 to 3 still carry roughly $45&ndash;60 a month at the $50 tier, so getting to a signed retainer costs about $200&ndash;350 all in. The $125 a month figure applies only once two clients are running.</li>
             </ul>
           </div>
           <div class="panel">
@@ -929,7 +931,7 @@
         <div class="sec-head">
           <span class="sec-num">&sect;06 &mdash; First 90 days</span>
           <h2>Build a portfolio you do not have a client for, then send</h2>
-          <p>Week one exists to make the first touch credible: two sample re-edits, a one-page site, ninety qualified firms, and a sending address that will not land in spam.</p>
+          <p>Week one exists to make the first touch credible: two sample re-edits, a one-page site, ninety qualified firms, and a sending address that will not land in spam. Be honest about the load &mdash; this is a 25 to 30 hour setup week. On a 10 to 15 hour budget, spread it across two calendar weeks and expect the first touches to go out late in the second.</p>
         </div>
 
         <div class="scroll">
@@ -939,13 +941,13 @@
               <tr><th class="num">Day</th><th>Do</th><th>End the day with</th></tr>
             </thead>
             <tbody>
-              <tr><td class="num">1</td><td>Buy the domain, create the business mailbox, set the three mail authentication records and start the warm-up. Subscribe Descript and Claude. Build the prospect sheet columns, including registration type and broker-dealer flag.</td><td>An empty but structured pipeline and both compliance checklists loaded</td></tr>
-              <tr><td class="num">2</td><td>Find 30 fee-only advisers with a webinar or podcast and under one upload a month; check the registration record for broker-dealer affiliation. Add 15 estate firms in non-filing states.</td><td>45 qualified rows with last-video view counts</td></tr>
+              <tr><td class="num">1</td><td>Buy the domain, create the business mailbox, set SPF, DKIM and DMARC, and start the warm-up: low daily sends and replies with accounts you control, for two to three weeks. Subscribe Descript and Claude. Build the prospect sheet columns, including registration type and broker-dealer flag. Write the two compliance checklists: the SEC Marketing Rule for advisers (no testimonials, no performance claims, retain marketing as used together with its approvals) and ABA Model Rules 7.1 and 7.2 plus the relevant state bar rule for law firms.</td><td>A structured pipeline and both checklists written</td></tr>
+              <tr><td class="num">2</td><td>Find 30 fee-only advisers with a webinar or podcast and under one upload a month: search YouTube for the vertical&rsquo;s webinar and topic terms, then look each firm up by name in the SEC&rsquo;s adviser search and check whether it is broker-dealer affiliated. Add 15 estate firms in non-filing states.</td><td>45 qualified rows with last-video view counts</td></tr>
               <tr><td class="num">3</td><td>Re-cut portfolio sample one from a public-domain federal recording: one ten-minute episode, three Shorts, three thumbnails. Log your hours per step.</td><td>Sample set one, and your first real time log</td></tr>
               <tr><td class="num">4</td><td>Re-cut sample two for the legal vertical. Write the mock memo. Publish the one-page site with both samples, a privacy page and a support email.</td><td>Sample set two, site live</td></tr>
               <tr class="row-hi"><td class="num">5</td><td>Send 15 first-touch emails from your aged personal address, not the four-day-old business mailbox. Ten connection notes. Record a 90-second walkthrough of what a test changes on a real prospect&rsquo;s video.</td><td>25 touches out and a reusable walkthrough link</td></tr>
-              <tr><td class="num">6</td><td>Finish the sheet to 60 advisers and 30 law firms. Build the approval form and the six-folder client template. Set up payments and the e-sign contract.</td><td>90 rows and the delivery infrastructure</td></tr>
-              <tr><td class="num">7</td><td>Compare your logged sample hours against the 16&ndash;22 hour target. Write next week&rsquo;s send list. Check the mailbox warm-up.</td><td>Week one in the tracker</td></tr>
+              <tr><td class="num">6</td><td>Finish the sheet to 60 advisers and 30 law firms. Build the approval form &mdash; video, version, approver name and date, approved yes or no, notes &mdash; and the client folder template: raw, transcripts, Shorts captions, package draft, approved, published. Draft the contract from the terms in &sect;02, then set up payments and e-signature.</td><td>90 rows and the delivery infrastructure</td></tr>
+              <tr><td class="num">7</td><td>Compare your logged sample hours against the 16&ndash;22 hour target &mdash; the two samples are half a client-month, so expect 8&ndash;11 hours. Write next week&rsquo;s send list. Check the mailbox warm-up.</td><td>Week one in the tracker</td></tr>
             </tbody>
           </table>
         </div>
@@ -1000,7 +1002,7 @@ Worth a two-week test on that video?
               <tr><th>Risk</th><th class="num">Likelihood</th><th>What you do about it</th></tr>
             </thead>
             <tbody>
-              <tr><td><b>Do-it-yourself substitution.</b> A $100 a month stack replicates roughly 60% of the deliverable, and Studio already suggests titles and thumbnails.</td><td class="num">Medium-high</td><td>Sell compliance packaging, segment judgement, the memo and reliability. If YouTube ships automatic long-to-Shorts clipping for everyone and two prospects cite it, re-price to $600&ndash;800 within 60 days or demote.</td></tr>
+              <tr><td><b>Do-it-yourself substitution.</b> A $100 a month stack replicates roughly 60% of the deliverable, and Studio already suggests titles and thumbnails.</td><td class="num">Medium-high</td><td>Sell compliance packaging, segment judgement, the memo and reliability. If YouTube ships automatic long-to-Shorts clipping for everyone and two prospects cite it, re-price to $600&ndash;800 immediately; if that does not close inside 60 days, demote.</td></tr>
               <tr><td><b>AI output quality.</b> About 38% of auto-generated clips needed rework in one test; transcription slips on proper nouns.</td><td class="num">High</td><td>A human fix pass on every Short, a 30-term glossary per client fed to the tools, and separate camera and screen tracks written into the contract.</td></tr>
               <tr><td><b>Adviser marketing rules.</b> Everything you produce is the adviser&rsquo;s own advertisement, and they must retain it as used, with approvals.</td><td class="num">Medium</td><td>Contract puts approval on the client; nothing publishes unsigned; archive approved versions. No testimonials, no performance claims, no superlatives, ever.</td></tr>
               <tr><td><b>The client finds it too cumbersome.</b> 6% of advisers quit video in the last year; two to four hours a month of partner and reviewer time is real.</td><td class="num">Medium</td><td>One recording, one approval batch, and a memo with an attributable number every single month. Set up tracked links during onboarding so that number exists.</td></tr>
@@ -1011,7 +1013,7 @@ Worth a two-week test on that video?
 
         <h3>Kill triggers</h3>
         <ol class="kill">
-          <li>Fewer than <b>three A/B packs</b> sold to qualifying channels within eight weeks of the first send.</li>
+          <li><b>Zero A/B packs</b> sold after 200 touches, roughly eight weeks from the first send. One or two sold is the three-week extension in the day-60 gate, not a kill.</li>
           <li>No retainer at <b>$800 or more by the end of month four</b>, after 300 personalised touches.</li>
           <li>Two retainers running but <b>per-client hours still above 22 at month six</b>. The economics do not work at $800 and 22 hours.</li>
           <li>YouTube ships <b>automatic clipping plus AI packaging for all creators</b> and two prospects name it as the reason not to buy.</li>
@@ -1027,11 +1029,11 @@ Worth a two-week test on that video?
           <h2>What this is built on, and what to check before you sign anything</h2>
         </div>
 
-        <p>This page is the third pass over the idea. A research dossier was written first, then two adversarial reviewers attacked it: one on demand, one on execution. Both weakened it; neither refuted it. Three judges then ranked it against nine other candidates, where it placed first on durability, second overall, and eighth on automation. Every number here is the post-review figure.</p>
+        <p>This page is the third pass over the idea. A research dossier was written first, then two adversarial reviewers attacked it: one on demand, one on execution. Both weakened it; neither refuted it. Three judges then ranked it against nine other candidates. It placed first on durability and eighth of ten on automation, finishing inside a four-way tie at the top of the aggregate. The automation rank is the one that should change your behaviour: only 25 to 40% of production time can be automated, which is why the ceiling is two clients and why the hours check at day 90 is the real gate. Every number here is the post-review figure.</p>
 
         <div class="panel flag">
           <h3>The honest caveat</h3>
-          <p>No session in this research could fetch a primary page: the network proxy blocked every direct fetch. Every figure is relayed through search-result summaries of the linked sources, dated where the source is dated. Treat the whole page as &ldquo;start here and validate inside 60 days&rdquo;, not as a forecast.</p>
+          <p>No session in this research could fetch a primary page: the network proxy blocked every direct fetch. Every figure is relayed through search-result summaries of the linked sources, dated where the source is dated. Treat the whole page as &ldquo;start here and validate before you sign anything&rdquo;, not as a forecast.</p>
         </div>
 
         <h3>Verify these five before a contract</h3>
